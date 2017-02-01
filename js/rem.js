@@ -1,4 +1,4 @@
-var designWidth = 1080;	//设计稿的宽度
+var designWidth = 750;	//设计稿的宽度
 
 //初始化
 resize();
