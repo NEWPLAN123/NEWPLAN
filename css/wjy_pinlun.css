@@ -151,7 +151,6 @@ letter-spacing:0.01rem;
 	float: right;
 	width: 0.82rem;
 	height: 0.42rem;
-	margin-top:0.25rem;
 	margin-right:0.3rem;
 }
 .wjy_sectione_one_right img{
@@ -238,6 +237,7 @@ margin-left: 0.44rem;
 .wjy_sectionr_q img{
 width: 100%;
 height: 100%;
+float: left;
 }
 .wjy_sectionr_input{
 	width: 4.42rem;
@@ -261,6 +261,7 @@ height: 100%;
 .wjy_sectionr_jia img{
 	width: 100%;
 	height: 100%;
+	float: left;
 }
 .wjy_sectionr_a{
 	margin-top:0.1rem;
