@@ -5,55 +5,39 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="renderer" content="webkit"/>
+    <script src="js/rem.js"></script>
     <title>Document</title>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/rem.js"></script>
+    
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-    <cnitem>
+<body ng-controller="c">
 
-    </cnitem>
-    <div class="cninner">
-        <div class="cnout">
-            <div class="cntu">
-                <img src="images/cn1.png" alt="">
-            </div>
-        </div>
-        <div class="cnxiao">
-            <div class="cnxiaobox">
-                <div class="cnxiaobox1">
-                    <img src="images/cn2.png" alt="">
-                </div>
-                <div class="cnxiaobox1">
-                    <img src="images/cn2.png" alt="">
-                </div>
-                <div class="cnxiaobox1">
-                    <img src="images/cn2.png" alt="">
-                </div>
-                <!--<div class="cnxiaobox1">-->
-                    <!--<img src="images/cn2.png" alt="">-->
-                <!--</div>-->
-            </div>
-        </div>
-    </div>
-   <p class="cn-yy">iWatch Mock</p>
-  <p class="cn-zw">智能手表UI设计 |  新鲜创意图纸概念设计之一</p>
-<div class="cn-di">
-    <div class="cn-dibox">
-        <img src="images/cn7.png" alt="">
-        <span>5946</span>
+    <!--<a href="#!/">首页</a>-->
+    <!--<a href="#!/cnwatch">watch</a>-->
+    <!--<a href="">web</a>-->
+    <!--<a href="#!/personCenter">个人中心</a>-->
 
-    </div>
-    <div class="cn-dibox">
-        <img src="images/cn6.png" alt="">
-        <span>5946</span>
-    </div>
-    <div class="cn-dibox"></div>
+
+<cnitem>
+
+</cnitem>
+
+<!--<cnindex ng-repeat='v in data' data='v'></cnindex>-->
+
+<div ng-view>
+
+
 
 </div>
+
+
+<script src="js/controller.js"></script>
+    <script src="js/directive.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/zepto.min.js"></script>
+
 </body>
 </html>

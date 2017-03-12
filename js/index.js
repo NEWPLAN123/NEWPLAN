@@ -13,26 +13,20 @@ var shuju=[
     }
 ]
 
-var app=angular.module("app",[]);
-//顶部
+
+
+var app=angular.module("app",["ngRoute","ctrl","direct"]);
+//顶部 
+
+
+
+
+
+
+
 app.controller('c',function($scope){
     $scope.data=shuju;
 })
 
-app.directive('cnitem',function () {
-    return {
-        templateUrl:"tpl/cnitem.html",
-        replace:true
-    }
-})
-app.directive('cnindex1',function () {
-    return {
-        templateUrl:"tpl/cnindex1.html",
-        replace:true,
-        scope:{
-          data:'=data'
-        }
-    }
-})
-// var aa=document.querySelector('#yi');
-// console.log(aa)
+
+var aa=document.querySelector('#yi');

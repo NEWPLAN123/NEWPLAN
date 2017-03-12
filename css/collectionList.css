@@ -1,0 +1,197 @@
+@import url(base.css);
+.hr_38{
+	height: .38rem;
+}
+.bgword2{
+	margin: 0 auto;
+	position: relative;
+	width: 7.2rem;
+	height:.55rem ;
+	background: url(../img/4.png) no-repeat  left center/cover ;
+	margin-bottom: .52rem;
+}
+.addbtn{
+	position: absolute;
+	width: 0.67rem;
+	height: 0.67rem;
+	top: .07rem;
+	right: .3rem;
+	background:url(../img/9.png) center center/cover no-repeat;
+}
+
+/*列表*/
+.itembox{
+	height: 2.7rem;
+	width: 6.8rem;
+	margin: 0 auto;
+	margin-bottom: .86rem;
+	position: relative;
+}
+.itemUp{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: -1.23rem;
+	top: 0;
+	z-index: 2;
+	border: 1px solid #E9E9E9;
+	border-radius: 10px;
+	box-shadow: 1px 1px 1px #eee;
+	background: #fff;
+}
+.itemUp .inner{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	box-shadow: -1px -1px 2px #eee;
+}
+.touxiang{
+	width: 1.26rem;
+	height: 1.26rem;
+	position: absolute;
+	left: -1.37rem;
+	top: -0.46rem;
+	z-index: 3;
+	border-radius: 50%;
+}
+.itemUp h3{
+	font-size: .3rem;
+	margin-left: 1.67rem;
+	padding-top: .2rem;
+	padding-bottom: .1rem;
+	position: relative;
+}
+.itemUp .p1{
+	text-indent: 1.67rem;
+	margin-bottom: .15rem;
+}
+.itemUp .p1 span{
+	font-size: .2rem;
+	color: #ccc;
+	/*margin-right: .05rem;*/
+}
+.itemUp .p2{
+	font-size: .24rem;
+	margin-left: .86rem;
+	line-height: .36rem;
+	width: 4.9rem;
+	margin-bottom: .15rem;
+}
+.itemUp .infobox{
+	margin-left: .86rem;
+}
+.itemUp .dot{
+	width: 4.9rem;
+	height: 1px;
+	margin: 0 auto;
+	margin-left: .86rem;
+	background:url(../img/hx.png) left center/cover no-repeat;
+}
+
+.infobox{
+	padding-top: .15rem;
+	font-size: .18rem;
+	width: 4.9rem;
+}
+.infobox i,.infobox em,.infobox b{
+	font-style: normal;
+	float: left;
+}
+.infobox span{
+	float: left;
+}
+.infobox i{
+	background: url(../img/14.png) left top/cover no-repeat;
+	width: .28rem;
+	height: .28rem;
+}
+.infobox .fl span{
+	color: #ccc;
+	margin-left: .12rem;
+}
+.infobox .fr .note{
+	margin-right:.6rem; 
+}
+.infobox .fr span{
+	margin-left: .05rem;
+}
+.infobox em{
+	background: url(../img/12.png) left top/contain no-repeat;
+	width: .28rem;
+	height: .28rem;
+}
+.infobox b{
+	background: url(../img/13.png) left top/cover no-repeat;
+	width: .28rem;
+	height: .28rem;
+}
+
+.itemDown{
+	position: absolute;
+	left: 0;
+	top: 0.07rem;
+	z-index: 1;
+	background: #FFFF00;
+	height: 2.6rem;
+	width: 6.7rem;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px #eee;
+}
+.itemDown .inner1{
+	width: 100%;
+	position: relative;
+	height: 100%;
+	border-radius: 10px;
+	box-shadow: -1px -1px 2px #eee;
+}
+.itemDown .inner1 .write{
+	position: absolute;
+	right: .42rem;
+	top: 0.59rem;
+	width: .46rem;
+	height: .46rem;
+	background: url(../img/10.png) left top/cover no-repeat;
+}
+.itemDown .inner1 .del{
+	background:#FFFF00 url(../img/11.png) left top/cover no-repeat;
+	width: .44rem;
+	height: .47rem;
+	position: absolute;
+	right: 0.42rem;
+	bottom:.42rem;
+}
+
+.itembox1{
+	height: 3.96rem;
+	width: 6.8rem;
+	margin: 0 auto;
+	margin-bottom: .86rem;
+	position: relative;
+}
+.itembox1 .itemDown{
+	position: absolute;
+	left: 0;
+	top: 0.09rem;
+	z-index: 1;
+	background: #FFFF00;
+	height: 3.81rem;
+	width: 6.7rem;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px #eee;
+}
+.itembox1 .picbox{
+	margin-left: .83rem;
+	height: 1.02rem;
+}
+.itembox1 .picbox .pic{
+	/*margin-right: ;*/
+	width: 1.02rem;
+	height: 1.02rem;
+}
+.not{
+	width: 4.9rem;
+	height: 1px;
+	margin: 0 auto;
+	margin-left: .86rem;
+	background:url(../img/hx.png) left center/cover no-repeat;
+}
