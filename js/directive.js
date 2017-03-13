@@ -10,23 +10,29 @@ direct.directive("cnitem",function(){
         link:function(scope,element){
             // kx_js开始
             var kaa=document.querySelector('.kx_search_right');
+            var kaab=document.querySelector('.kx_search_left');
+            var kaac=document.querySelector('.kx_search_left2');
             var kssearch=document.querySelector('#ks_search');
             var kbb=document.querySelector('.kx_search_quxiao');
             var kcc=document.querySelector('.kx_search_box');
             kaa.onclick=function(){
                 kssearch.style.display='block';
                 kaa.style.display='none';
-                kbb.style.display='block';
+                kbb.style.display='inline-block';
+                kaab.style.display='inline-block';
+                kaac.style.display='none';
             };
             kbb.onclick=function () {
                 kssearch.style.display='none';
                 kbb.style.display='none';
-                kaa.style.display='block';
+                kaa.style.display='inline-block';
                 kcc.style.display='none';
+                kaab.style.display='none';
+                kaac.style.display='inline-block';
             };
             kssearch.onfocus=function () {
                 kcc.style.display='block';
-            }
+            };
 
             // kx_js结束
         }
