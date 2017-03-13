@@ -22,11 +22,18 @@ body{
     background: url(../images/kx_images/Back.png) no-repeat;
     background-size: cover;
 }
-.kx_header input{
-    width: 5.7rem;
+#ks_search{
+    width: 5.5rem;
     height: .54rem;
     border: 0;
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
     border-radius: 5px;
+    display: none;
     padding-left: .2rem;
 }
 .kx_header span:nth-child(3){
@@ -38,12 +45,13 @@ body{
 .kx_search_box{
     width: 5.7rem;
     height: auto;
+    display: none;
     overflow: hidden;
     background-color: #FFFFFF;
     position: absolute;
     left: 50%;
     margin: 0 0 0 -2.85rem;
-    box-shadow: 3px 3px 3px #E5E5E5;
+    box-shadow: 2px 2px 1px #E5E5E5;
     z-index: 99999;
     padding-left: .6rem;
     box-sizing: border-box;

@@ -8,10 +8,27 @@ direct.directive("cnitem",function(){
         templateUrl:"tpl/cntop.html",
         replace:true,
         link:function(scope,element){
-            var a = $(".cnimgbox")[2];
-            a.onclick=function(){
-                
+            // kx_js开始
+            var kaa=document.querySelector('.kx_search_right');
+            var kssearch=document.querySelector('#ks_search');
+            var kbb=document.querySelector('.kx_search_quxiao');
+            var kcc=document.querySelector('.kx_search_box');
+            kaa.onclick=function(){
+                kssearch.style.display='block';
+                kaa.style.display='none';
+                kbb.style.display='block';
+            };
+            kbb.onclick=function () {
+                kssearch.style.display='none';
+                kbb.style.display='none';
+                kaa.style.display='block';
+                kcc.style.display='none';
+            };
+            kssearch.onfocus=function () {
+                kcc.style.display='block';
             }
+
+            // kx_js结束
         }
     }
 });

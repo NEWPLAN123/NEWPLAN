@@ -4,32 +4,61 @@
     width: 100%;
     height: 0.9rem;
     background: #161616;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+
 }
 .cn-mid{
-    width: 6.55rem;
-    height: 0.47rem;
+    width: 7rem;
+    height: 100%;
+    line-height: .9rem;
+    margin: 0 auto;
+    position: relative;
+    /*height: 0.47rem;*/
     /*background: red;*/
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
 }
 .cnimgbox{
-    display: flex;
+    /*display: flex;*/
+    /*float: left;*/
+
+    display: inline-block;
 }
 .cnimgbox:nth-child(1){
-    width: 0.45rem;
+    width: 0.47rem;
     height: 0.47rem;
+    position: absolute;
+    left: 0;
+    margin: .235rem 0 0 0;
+    background: url("../images/cn/cn9.png") no-repeat center center/cover;
 }
 .cnimgbox:nth-child(2){
     width: 2.3rem;
-    height: 100%;
+    height: .39rem;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    left:0;
+    margin: auto;
+    background: url("../images/cn/cn10.png") no-repeat center center/cover;
 }
-.cnimgbox:nth-child(3){
-    width: 0.45rem;
-    height: 100%;
+.cnimgbox:nth-child(4){
+    width: 0.47rem;
+    height: .47rem;
+    position: absolute;
+    right: 0;
+    margin: .235rem 0 0 0;
+    background: url("../images/cn/cn11.png") no-repeat center center/cover;
+}
+.cnimgbox:nth-child(5) span{
+    font-size: .3rem;
+    position: absolute;
+    right: 0;
+    color: #ffffff;
+    font-weight: 600;
 }
 .cnimgbox img{
     width: 100%;
