@@ -8,17 +8,8 @@ direct.directive("cnitem",function(){
         templateUrl:"tpl/cntop.html",
         replace:true
     }
-});
-//设计师详情指令
-direct.directive('designer',function () {
-    return{
-        scope:{
-            data:"=data"
-        },
-        templateUrl:"kx_item.html"
+})
 
-    }
-});
 
 direct.directive("hello",function(){
     return {

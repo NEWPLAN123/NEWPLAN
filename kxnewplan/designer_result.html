@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="kx_app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/designer_result.css">
+</head>
+<body>
+<!--头部开始-->
+<div class="kx_header">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<!--头部结束-->
+<!--设计师列表开始-->
+<div class="kx_designer_list" ng-controller="kx_ctrl">
+    <designer ng-repeat="v in data track by $index " data="v"></designer>
+    <!--<div class="kx_show">-->
+        <!--<div class="kx_designer_pic">-->
+            <!--<span></span>-->
+            <!--<span>DESIGNER</span>-->
+        <!--</div>-->
+        <!--<div class="kx_designer_intro">-->
+            <!--<p>日本平面设计大师-原研哉/ Kenya</p>-->
+            <!--<p>专栏 - 设计师</p>-->
+            <!--<span></span>-->
+            <!--<span>4622</span>-->
+            <!--<span></span>-->
+            <!--<span>2188</span>-->
+            <!--<span></span>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<!--设计师列表结束-->
+<!--没有更多开始-->
+<div class="no_more">
+
+</div>
+<!--没有更多结束-->
+</body>
+<script src="js/rem.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/index.js"></script>
+</html>
