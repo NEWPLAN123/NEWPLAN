@@ -13,7 +13,7 @@ var data=[{
 },{
     id:7,src:'images/designer.png',keyword:'TNADE',name:'画册',little_title:'designer',title:'香港著名十佳设计师-张天爱',job:'专栏 - 设计师',article:'422',like:'2188'
 }];
-var app= angular.module('kx_app',['ngRoute']);
+var app= angular.module('app',['ngRoute']);
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/search_pages',{templateUrl:'search_pages.html'})
