@@ -248,3 +248,122 @@ width: 100%;
     left: 0.77rem;
     top:3.14rem;
 }
+
+/*web轮播*/
+
+.cnlunbo{
+    padding-top:0.2rem ;
+    width: 100%;
+    height:3.04rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.cn-web-inner{
+    width: 5.44rem;
+    height: 2.77rem;
+}
+.cn-web-inner li img{
+    width: 100%;
+}
+.cn-web-box{
+    width: 7.02rem;
+    height: 2.68rem;
+    margin: 0 auto;
+}
+
+
+
+html,body{
+    height: 100%;
+}
+
+/*header*/
+.header{
+    width: 100%;
+    height:1.47rem;
+}
+
+
+/*banner*/
+.banner{
+    width: 100%;
+    height: 3.1rem;
+}
+.swiper-container {
+    width: 100%;
+    height: 3.1rem;
+    margin: 10px auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width:5.1rem!important;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background: url("../images/cn/banner_03.png")no-repeat center center/cover;
+    border-radius: 5px;
+}
+.swiper-slide a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1!important;
+    background: #000 !important;
+    width: 20px!important;
+    height: 8px!important;
+    border-radius: 8px!important;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -20px!important;
+}
+/*内容*/
+.section{
+    width: 100%;
+    height:62%;
+    padding-top: .1rem;
+    position: relative;
+}
+.text{
+    font-size: 40px;
+    font-weight: bold;
+    color: #cccccc;
+    position: absolute;
+    right: 0;
+    z-index:-1;
+}
+.inner{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: .5rem .2rem 0rem;
+}
+.page1{
+    width: 100%;
+    height:2.68rem;
+    margin-bottom: .1rem;
+}
+
+.page1 a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.page1 img{
+    width: 100%;
+}
