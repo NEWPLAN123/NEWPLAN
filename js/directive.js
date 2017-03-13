@@ -8,14 +8,13 @@ direct.directive("cnitem",function(){
         templateUrl:"tpl/cntop.html",
         replace:true,
         link:function(scope,element){
-            var a = $(".kx_search_right");
-            console.log(444);
-            a.click(function(){
-                alert(1)
-            })
+            var a = $(".cnimgbox")[2];
+            a.onclick=function(){
+                
+            }
         }
     }
-})
+});
 
 
 direct.directive("hello",function(){
