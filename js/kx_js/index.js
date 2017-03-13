@@ -28,7 +28,7 @@ app.directive('designer',function () {
         scope:{
             data:"=data"
         },
-        templateUrl:"tpl/kx_item.html",
+        templateUrl:"kx_item.html",
         link:function (scope,element) {
             
         }
