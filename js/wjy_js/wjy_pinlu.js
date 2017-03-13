@@ -18,7 +18,7 @@ wjy_btn2.onclick=function(){
 		wjy_liuyanbox.className="wjy_liuyanbox"
 		wjy_liuyanbox.style="height:auto";
 
-		wjy_jianimg.style="background:url(../images/wjy_img/wjy_z01.png)no-repeat center center/cover;"
+		wjy_jianimg.style="background:url(../images/wjy_img/wjy_z01-top.png)no-repeat center center/cover;"
 	fal=!fal
 
 
