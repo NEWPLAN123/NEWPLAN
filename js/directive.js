@@ -39,6 +39,7 @@ direct.directive("hello",function(){
         	// js代码会这里被触发 
         	var a = $(".tou");
         	// console.dir($("a",angular.element()));
+            
         }
     }
 })
