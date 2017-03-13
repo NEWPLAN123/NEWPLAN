@@ -6,7 +6,14 @@ var direct=angular.module("direct",[]);
 direct.directive("cnitem",function(){
     return {
         templateUrl:"tpl/cntop.html",
-        replace:true
+        replace:true,
+        link:function(scope,element){
+            var a = $(".kx_search_right");
+            console.log(444);
+            a.click(function(){
+                alert(1)
+            })
+        }
     }
 })
 
