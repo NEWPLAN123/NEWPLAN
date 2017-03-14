@@ -33,3 +33,30 @@ for (var i = 0; i < wjy_btn2.length; i++) {
 	
 };
 
+
+var wjyxin =document.querySelectorAll(".wjyxin");
+var wjyjiayi =document.querySelectorAll(".wjyjiayi");
+
+
+for (var i = 0; i < wjyxin.length; i++) {
+	var num=1;
+	fax=true;
+	wjyxin[i].onclick=function(){
+		var index=$(this).index();
+			if (fax) {
+			this.style="background:url(../images/wjy_img/wjy_z5.png)no-repeat center center/cover"
+		// var nmm=parseInt($(".wjyjiayi").eq(index).text())+1;
+		// console.log()
+			}else{
+			this.style="background:url(../images/wjy_img/wjy_xin.png)no-repeat center center/cover"
+			}
+fax=!fax;
+}
+
+};
+
+
+
+
+
+

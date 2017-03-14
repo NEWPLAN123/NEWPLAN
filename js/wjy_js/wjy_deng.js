@@ -40,7 +40,7 @@ function wjy_clickmima(){
 var wjy_9x9_right=document.querySelector(".wjy_9x9_right");
 var wjy_shoumima=document.querySelector(".wjy_shoumima");
 
-wjy_9x9_right.touchstart=function(){
+wjy_9x9_right.onclick=function(){
 	if (wjy_shoumima.type=="password") {
 	wjy_shoumima.type="text";
 	}else{
