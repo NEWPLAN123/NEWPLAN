@@ -33,6 +33,9 @@ direct.directive("cnitem",function(){
             kssearch.onfocus=function () {
                 kcc.style.display='block';
             };
+            kssearch.onblur=function () {
+                kcc.style.display='none';
+            };
 
             // kx_js结束
         }
