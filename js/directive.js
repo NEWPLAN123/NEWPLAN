@@ -77,3 +77,36 @@ direct.directive("hello",function(){
 //         }
 //     }
 // })
+
+
+
+// zk开始
+
+// 个人上传
+direct.directive("myworks",function(){
+    return{
+        replace:true;
+        controller:function($scope,$http){
+            $http({
+                url:"php/"
+            }).then(function(data){
+                $scope.data=data;
+            })
+        },
+        link:function(scope,element){
+            var movebox=$("");
+            var flag=true;
+            touch.on(movebox,"touchstart",function(){
+                if(flag){
+                    // console.log($(this));
+                    $(this).css("left","-1.23rem");
+                    flag=false;
+                }else{
+                    $(this).css("left","0");
+                    flag=true;
+                }
+            })
+        }
+    }
+})
+// zk结束
