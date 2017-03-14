@@ -267,7 +267,7 @@ height: 100%;
 float: left;
 }
 .wjy_sectionr_input{
-	width: 4.42rem;
+	width: 5.42rem;
 	height: 100%;
 	background: #000;
 	border-radius: 20px;
@@ -291,18 +291,18 @@ float: left;
 	float: left;
 }
 .wjy_sectionr_a{
-	margin-top:0.1rem;
+	margin-top:0.06rem;
 	font-size: 0.26rem;
 	color: #757575;
 	float: left;
 	border-bottom:1px solid #C1BCBC;
 	margin-left: 0.22rem;
-	margin-top:0.2rem;
+	/*margin-top:0.2rem;*/
 }
 
 @media screen and (max-height:480px){
 	.wjy_sectionr_input{
-		width: 4.1rem
+		width: 5.1rem
 	}
 
 }
