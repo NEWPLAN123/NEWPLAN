@@ -31,20 +31,14 @@ function wjy_clickmima(){
 var wjy_9x9_right=document.querySelector(".wjy_9x9_right");
 var wjy_shoumima=document.querySelector(".wjy_shoumima");
 
-<<<<<<< HEAD
-wjy_9x9_right.onclick=function(){
-=======
+
 touch.on(wjy_9x9_right,"tap",function(){
->>>>>>> 307797bb2f70915544fe478ee6fd249c4812a7c3
 	if (wjy_shoumima.type=="password") {
 		wjy_shoumima.type="text";
 	}else{
 		wjy_shoumima.type="password"
 	}
 })
-
-
-
 }
 wjy_clickmima()
 

@@ -183,6 +183,7 @@ letter-spacing:0.01rem;
 .wjy_sectione_one_right img{
 	width: 100%;
 	height: 100%;
+	float: left;
 }
 .wjy_sectione_content{
 	width: 100%;
@@ -256,10 +257,12 @@ margin-left: 0.44rem;
 	padding: 0.2rem 0.41rem 0.2rem 0.49rem;
 }
 .wjy_sectionr_q{
-	width: 0.52rem;
 	float: left;
 	height: 0.42rem;
+	color: #fff;
+	font-size: 0.22rem;
 	margin-top:0.1rem;
+	display: none;
 }
 .wjy_sectionr_q img{
 width: 100%;
@@ -267,7 +270,7 @@ height: 100%;
 float: left;
 }
 .wjy_sectionr_input{
-	width: 5.42rem;
+	width: 4.92rem;
 	height: 100%;
 	background: #000;
 	border-radius: 20px;
@@ -302,7 +305,7 @@ float: left;
 
 @media screen and (max-height:480px){
 	.wjy_sectionr_input{
-		width: 5.1rem
+		width: 4.5rem
 	}
 
 }
