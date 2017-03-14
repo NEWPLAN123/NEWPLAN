@@ -8,7 +8,7 @@ ctrl.config(function($routeProvider) {
     }).when("/cnwatch",{
         templateUrl:'tpl/cnwatch.html'
     }).when("/personCenter",{
-        templateUrl:'tpl/personCenter.html'
+        templateUrl:'tpl/zkpersonCenter.html'
     }).when("/cnweb",{
         templateUrl:'tpl/cnweb.html'
     }).when('/search_pages',{
@@ -19,8 +19,10 @@ ctrl.config(function($routeProvider) {
         templateUrl:'designer_result.html'
     }).when('/upload',{
         templateUrl:'tpl/zkupload.html'
-    }).when('/',{
-        templateUrl:'tpl/'
+    }).when('/myworks',{
+        templateUrl:'tpl/zkcollectionList.html'
+    }).when('unlogin',{
+        templateUrl:'tpl/zkpersonCenterUn.html'
     })
 })
 
