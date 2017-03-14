@@ -1,14 +1,5 @@
 
-//注册主模块
-var login = angular.module("login",[]);
-
-//创建自定义指令
-login.directive("login",function(){
-	return{
-		replace:false,
-		link:function(){
-			setTimeout(function(){
-				var wjy_oneq=document.querySelectorAll(".wjy_tow_input_box_input_box_input");
+var wjy_oneq=document.querySelectorAll(".wjy_tow_input_box_input_box_input");
 var wjy_onew=document.querySelectorAll(".wjy_tow_input_box_input_box");
 
 // 光标加样式
@@ -40,13 +31,20 @@ function wjy_clickmima(){
 var wjy_9x9_right=document.querySelector(".wjy_9x9_right");
 var wjy_shoumima=document.querySelector(".wjy_shoumima");
 
+<<<<<<< HEAD
 wjy_9x9_right.onclick=function(){
+=======
+touch.on(wjy_9x9_right,"tap",function(){
+>>>>>>> 307797bb2f70915544fe478ee6fd249c4812a7c3
 	if (wjy_shoumima.type=="password") {
-	wjy_shoumima.type="text";
+		wjy_shoumima.type="text";
 	}else{
-	wjy_shoumima.type="password"
+		wjy_shoumima.type="password"
 	}
-}
+})
+
+
+
 }
 wjy_clickmima()
 
@@ -67,8 +65,10 @@ var wjy_weixin=document.querySelectorAll(".wjy_xuanxiangka");
 
 
 	// 点击事件
-	$(".wjy_tow_input_box_div>a").click(function(){
-		$(".wjy_tow_input_box_div>a").css("color","#fff").filter(this).css("color","#FFFF00")
+	var inputA = $(".wjy_tow_input_box_div>a");
+	inputA .click(function(){
+		inputA.css("color","#fff")
+		$(this).css("color","#FFFF00");
 		$(".wjy_xuanxiangka").css("display","none")
 		var index=$(this).index()
 		$(".wjy_xuanxiangka").eq(index).css("display","block")
@@ -101,10 +101,11 @@ num++;
 
 	$(".wjy_tow_input_box").on("swiperight",function(){
 		var index=$(this).index()
-		if(num>=0){
+		num--;
+		if(num<=0){
 			num=0;
 		}
-num--;
+		
 		wjyaa.css("color","#FFFFFF").eq(num).css("color","#FFFF00")
 		wjyxuan.css("display","none")
 		wjyxuan.eq(num).css("display","block")
@@ -114,10 +115,6 @@ num--;
 }
 
 wjy_hua()
-			},200)
-		}
-	}
-})
 
 
 
