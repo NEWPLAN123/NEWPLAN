@@ -36,7 +36,7 @@ direct.directive("cnitem",function(){
             kssearch.onblur=function () {
                 kcc.style.display='none';
             };
-
+            
             // kx_js结束
         }
     }
@@ -62,8 +62,10 @@ direct.directive("hello",function(){
         	// js代码会这里被触发 
         	var a = $(".tou");
         	// console.dir($("a",angular.element()));
-            var abc=document.querySelector('.kx_search_right')
-            console.log(abc);
+            //kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/cn/cn10.png') no-repeat center center/cover";
+            //kx_js结束
             
         }
     }

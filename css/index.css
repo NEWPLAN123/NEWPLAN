@@ -52,7 +52,7 @@
     bottom:0;
     left:0;
     margin: auto;
-    background: url("../images/cn/cn10.png") no-repeat center center/cover;
+    /*background: url("../images/cn/cn10.png") no-repeat center center/cover;*/
 }
 .cnimgbox:nth-child(5){
     width: 0.47rem;
