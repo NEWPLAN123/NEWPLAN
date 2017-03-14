@@ -15,7 +15,11 @@ ctrl.config(function($routeProvider) {
         templateUrl:'search_pages.html'
     }).when('/search_result/:id',{
         templateUrl:'search_result.html'
-    }).when('/designer_result',{templateUrl:'designer_result.html'})
+    }).when('/designer_result',{
+        templateUrl:'designer_result.html'
+    }).when('/upload',{
+        templateUrl:'tpl/zkupload.html'
+    })
 })
 
 
