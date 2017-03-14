@@ -85,7 +85,7 @@ direct.directive("hello",function(){
 // 个人上传
 direct.directive("myworks",function(){
     return{
-        replace:true;
+        replace:true,
         controller:function($scope,$http){
             $http({
                 url:"php/"
