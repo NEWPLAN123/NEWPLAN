@@ -16,7 +16,7 @@ direct.directive("cnitem",function(){
             var kbb=document.querySelector('.kx_search_quxiao');
             var kcc=document.querySelector('.kx_search_box');
             kaa.onclick=function(){
-                kssearch.style.display='block';
+                kssearch.style.display='inline-block';
                 kaa.style.display='none';
                 kbb.style.display='inline-block';
                 kaab.style.display='inline-block';
@@ -62,6 +62,8 @@ direct.directive("hello",function(){
         	// js代码会这里被触发 
         	var a = $(".tou");
         	// console.dir($("a",angular.element()));
+            var abc=document.querySelector('.kx_search_right')
+            console.log(abc);
             
         }
     }
