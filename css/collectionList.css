@@ -1,4 +1,34 @@
 @import url(base.css);
+.fl{float:left;}
+.fr{float:right;}
+
+.comWidth{
+	width: 5.9rem;
+	margin: 0 auto;
+}
+.clearfix:after{
+	content:"";
+	display: block;
+	line-height: 0;
+	height: 0;
+	clear: both;
+}
+.clearfix{
+	zoom:1;
+}
+html,body{
+	height: 100%;
+	width:100%;
+}
+a{
+	color:#000;-webkit-tap-highlight-color:transparent;
+}
+em{
+	font-style: normal;
+}
+body{
+	font-size: 16px;
+}
 .hr_38{
 	height: .38rem;
 }
@@ -7,7 +37,7 @@
 	position: relative;
 	width: 7.2rem;
 	height:.55rem ;
-	background: url(../img/4.png) no-repeat  left center/cover ;
+	background: url(../images/zk_images/4.png) no-repeat  left center/cover ;
 	margin-bottom: .52rem;
 }
 .addbtn{
@@ -16,7 +46,7 @@
 	height: 0.67rem;
 	top: .07rem;
 	right: .3rem;
-	background:url(../img/9.png) center center/cover no-repeat;
+	background:url(../images/zk_images/9.png) center center/cover no-repeat;
 }
 
 /*列表*/
@@ -85,7 +115,7 @@
 	height: 1px;
 	margin: 0 auto;
 	margin-left: .86rem;
-	background:url(../img/hx.png) left center/cover no-repeat;
+	background:url(../images/zk_images/hx.png) left center/cover no-repeat;
 }
 
 .infobox{
@@ -101,7 +131,7 @@
 	float: left;
 }
 .infobox i{
-	background: url(../img/14.png) left top/cover no-repeat;
+	background: url(../images/zk_images/14.png) left top/cover no-repeat;
 	width: .28rem;
 	height: .28rem;
 }
@@ -116,12 +146,12 @@
 	margin-left: .05rem;
 }
 .infobox em{
-	background: url(../img/12.png) left top/contain no-repeat;
+	background: url(../images/zk_images/12.png) left top/contain no-repeat;
 	width: .28rem;
 	height: .28rem;
 }
 .infobox b{
-	background: url(../img/13.png) left top/cover no-repeat;
+	background: url(../images/zk_images/13.png) left top/cover no-repeat;
 	width: .28rem;
 	height: .28rem;
 }
@@ -150,10 +180,10 @@
 	top: 0.59rem;
 	width: .46rem;
 	height: .46rem;
-	background: url(../img/10.png) left top/cover no-repeat;
+	background: url(../images/zk_images/10.png) left top/cover no-repeat;
 }
 .itemDown .inner1 .del{
-	background:#FFFF00 url(../img/11.png) left top/cover no-repeat;
+	background:#FFFF00 url(../images/zk_images/11.png) left top/cover no-repeat;
 	width: .44rem;
 	height: .47rem;
 	position: absolute;
@@ -193,5 +223,5 @@
 	height: 1px;
 	margin: 0 auto;
 	margin-left: .86rem;
-	background:url(../img/hx.png) left center/cover no-repeat;
+	background:url(../images/zk_images/hx.png) left center/cover no-repeat;
 }
