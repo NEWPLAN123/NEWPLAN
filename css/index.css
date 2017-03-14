@@ -63,12 +63,15 @@
     background: url("../images/cn/cn11.png") no-repeat center center/cover;
 }
 .cnimgbox:nth-child(6){
-    font-size: .3rem;
+    background: url(../images/cn/kx_quxiao.png) no-repeat center center/cover;
+    width: .57rem;
+    height: .29rem;
     display: none;
+    top:50%;
+    margin: -.145rem 0 0 0;
     position: absolute;
     right: 0;
     color: #ffffff;
-    font-weight: 600;
 }
 .cnimgbox img{
     width: 100%;
