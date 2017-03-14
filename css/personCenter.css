@@ -1,4 +1,34 @@
 @import url(base.css);
+.fl{float:left;}
+.fr{float:right;}
+
+.comWidth{
+	width: 5.9rem;
+	margin: 0 auto;
+}
+.clearfix:after{
+	content:"";
+	display: block;
+	line-height: 0;
+	height: 0;
+	clear: both;
+}
+.clearfix{
+	zoom:1;
+}
+html,body{
+	height: 100%;
+	width:100%;
+}
+a{
+	color:#000;-webkit-tap-highlight-color:transparent;
+}
+em{
+	font-style: normal;
+}
+body{
+	font-size: 16px;
+}
 .header{
 	height: 0.97rem;
 }
@@ -6,13 +36,13 @@
 	margin: 0 auto;
 	width: 7.2rem;
 	height:.55rem ;
-	background: url(../img/4.png) no-repeat  left center/cover ;
+	background: url(../images/zk_images/4.png) no-repeat  left center/cover ;
 }
 .personCenter{
 	position: relative;
 	margin-bottom: .76rem;
 	height: 6.6rem;
-	background: url(../img/2.png) no-repeat center center/cover ;
+	background: url(../images/zk_images/2.png) no-repeat center center/cover ;
 }
 
 /*头像*/
@@ -25,7 +55,7 @@
 	margin-left: -1rem;
 	border-radius: 50%;
 	z-index: 999;
-	background: url(../img/5.png) no-repeat center center/cover;
+	background: url(../images/zk_images/5.png) no-repeat center center/cover;
 }
 .portrait .tou{
 	width: 1.7rem;
@@ -52,25 +82,25 @@
 	width: .46rem;
 	height: .52rem;
 	background-size: cover;
-	background-image:url(../img/1.png);
+	background-image:url(../images/zk_images/1.png);
 	background-repeat: no-repeat;
 }
 .personCenter .e1{
 	margin-top: 0.22rem;
 	background-position:0 0 ;
-	/*background:url(../img/1.png) 0 0/cover no-repeat;*/
+	/*background:url(../images/zk_images/1.png) 0 0/cover no-repeat;*/
 }
 .personCenter .e2{
 	margin-top: 0.22rem;
-	background-position: 0 -85px;
+	background-position: 0 -.85rem;
 }
 .personCenter .e3{
 	margin-top: .2rem;
-	background-position:0 -170px ;
+	background-position:0 -1.7rem ;
 }
 .personCenter .e4{
 	margin-top: .22rem;
-	background-position:0 -264px ;
+	background-position:0 -2.64rem ;
 }
 .personCenter span{
 	float: left;
@@ -95,14 +125,14 @@
 	top:8rem;
 	width: 7.2rem;
 	height:.55rem ;
-	background: url(../img/4.png) no-repeat  left center/cover ;
+	background: url(../images/zk_images/4.png) no-repeat  left center/cover ;
 }
 /*最近收藏*/
 .collection{
 	margin-left: .3rem;
 	height: .6rem;
 	width: 2.9rem;
-	background:url(../img/8.png)  no-repeat left top/contain;
+	background:url(../images/zk_images/8.png)  no-repeat left top/contain;
 }
 
 
