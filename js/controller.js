@@ -12,11 +12,11 @@ ctrl.config(function($routeProvider) {
     }).when("/cnweb",{
         templateUrl:'tpl/cnweb.html'  //web列表页
     }).when('/search_pages',{
-        templateUrl:'search_pages.html'  //搜索页面
+        templateUrl:'tpl/search_pages.html'  //搜索页面
     }).when('/search_result/:id',{
-        templateUrl:'search_result.html'  //搜索作品结果
+        templateUrl:'tpl/search_result.html'  //搜索作品结果
     }).when('/designer_result',{
-        templateUrl:'designer_result.html'   //搜索设计师结果
+        templateUrl:'tpl/designer_result.html'   //搜索设计师结果
     }).when('/upload',{
         templateUrl:'tpl/zkupload.html'   //上传作品
     }).when('/myworks',{

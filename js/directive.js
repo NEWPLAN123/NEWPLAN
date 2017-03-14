@@ -43,6 +43,22 @@ direct.directive("cnitem",function(){
 });
 
 
+direct.directive('designer',function () {
+    return{
+        scope:{
+            data:"=data"
+        },
+        templateUrl:"tpl/kx_item.html",
+        link:function (scope,element) {
+
+        }
+
+
+    }
+});
+
+
+
 direct.directive("hello",function(){
     return {
         // templateUrl:"tpl/cntop.html",
