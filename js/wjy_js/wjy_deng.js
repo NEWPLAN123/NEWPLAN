@@ -1,8 +1,15 @@
-var wjy_oneq=document.querySelectorAll(".wjy_tow_input_box_input_box_input");
+
+//注册主模块
+var login = angular.module("login",[]);
+
+//创建自定义指令
+login.directive("login",function(){
+	return{
+		replace:false,
+		link:function(){
+			setTimeout(function(){
+				var wjy_oneq=document.querySelectorAll(".wjy_tow_input_box_input_box_input");
 var wjy_onew=document.querySelectorAll(".wjy_tow_input_box_input_box");
-
-
-
 
 // 光标加样式
 function wjy_input(){
@@ -107,6 +114,21 @@ num--;
 }
 
 wjy_hua()
+			},200)
+		}
+	}
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 
