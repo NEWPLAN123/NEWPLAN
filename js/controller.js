@@ -19,6 +19,8 @@ ctrl.config(function($routeProvider) {
         templateUrl:'designer_result.html'
     }).when('/upload',{
         templateUrl:'tpl/zkupload.html'
+    }).when('/',{
+        templateUrl:'tpl/'
     })
 })
 
