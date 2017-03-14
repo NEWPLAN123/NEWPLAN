@@ -9,7 +9,7 @@
     <!--<link rel="stylesheet" href="../css/search_pages.css">-->
 <!--</head>-->
 <!--<body>-->
-<div class="kx_search_pages" ng-controller="kx_ctrl">
+<div class="kx_search_pages" ng-controller="kx_ctrl" style="padding-top: .16rem">
 <!--头部开始-->
 <!--<div class="kx_header">-->
     <!--<span></span>-->
@@ -28,6 +28,7 @@
 <!--</ul>-->
 <!--搜索框结束-->
 <!--热门搜索开始-->
+    <hidden></hidden>
 <div class="kx_hot_search">
      <div class="kx_hot_search_top">
          <span></span>
@@ -36,7 +37,7 @@
          <span>TOP search</span>
      </div>
      <div class="kx_hot_search_bot">
-          <div class="inner even" ng-repeat="v in data track by $index">
+          <div class="kx_inner even" ng-repeat="v in data track by $index">
               <a href="#!/search_result/{{v.id}}">
               {{v.name}}
               </a>

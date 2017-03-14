@@ -43,6 +43,40 @@ direct.directive("cnitem",function(){
 });
 
 
+//头部隐藏添加标签开始
+direct.directive("hidden",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+                var hd=document.querySelector('.cntop1');
+                hd.style.display='none';
+
+            // kx_js结束
+        }
+    }
+});
+// 头部隐藏添加标签结束
+//头部显示添加标签开始
+direct.directive("show",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+            var hd=document.querySelector('.cntop1');
+            hd.style.display='block';
+
+            // kx_js结束
+        }
+    }
+});
+// 头部显示添加标签结束
+
+
+
+
 direct.directive('designer',function () {
     return{
         scope:{

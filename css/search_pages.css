@@ -120,7 +120,7 @@ body{
 .kx_hot_search_bot .even:nth-child(4n){
     margin-right: 0;
 }
-.kx_hot_search_bot .inner{
+.kx_hot_search_bot .kx_inner{
      height: .42rem;
      line-height: .42rem;
      padding-left: .19rem;
@@ -132,7 +132,7 @@ body{
      margin-right: .27rem;
      margin-bottom: .35rem;
  }
-.kx_hot_search_bot .inner a{
+.kx_hot_search_bot .kx_inner a{
     color: #ffffff;
 }
 .kx_hot_search_bot .inner_border{

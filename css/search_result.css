@@ -40,6 +40,7 @@
     box-shadow: 6px 6px 6px 6px #ECECEC;
     border-radius: 5px;
     position: relative;
+    z-index: 999;
 }
 
 .kx_show_bg .kx_show{
@@ -103,10 +104,10 @@
 }
 .kx_designer_intro span{
     float: left;
-    margin-right: .04rem;
+    margin-right: .03rem;
 }
 .kx_designer_intro span:nth-child(3){
-    background: url(../images/kx_images/Notepad1.png);
+    background: url(../images/kx_images/Notepad1.png) no-repeat center center;
     width: .23rem;
     height: .29rem;
     display: inline-block;
@@ -136,17 +137,14 @@
     margin-right: 0;
 }
 .kx_designer_intro .kx_more_designer{
-    width: 1.6rem;
-    height: .3rem;
-    font-size: .2rem;
+    width: 1.28rem;
+    height: .32rem;
     display: inline-block;
-    background-color: #767676;
-    text-align: center;
-    line-height: .3rem;
-    border-radius: 3px;
-}
-.kx_designer_intro .kx_more_designer a{
-    color: #ffffff;
+    background: url(../images/kx_images/kx_123.png) no-repeat center center/cover;
+    /*background-color: #767676;*/
+    /*text-align: center;*/
+    /*line-height: .3rem;*/
+    /*border-radius: 3px;*/
 }
 .kx_designer_result_list{
     width: 100%;
