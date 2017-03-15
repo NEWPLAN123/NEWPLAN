@@ -157,7 +157,7 @@
     width: 6.19rem;
     height: 1.08rem;
     margin-left: 0.9rem;
-    background: yellow;
+    /*background: yellow;*/
     margin-top: 0.34rem;
 }
 .cn-dibox:nth-child(1){
@@ -181,7 +181,7 @@
 .cn-content{
     width: 3.2rem;
     height: 5.1rem;
-    background: red;
+    /*background: red;*/
     border-radius: 0.1rem;
     /*margin-top: 1rem;*/
     box-shadow:0 0 0.1rem  #EEEEEE;
@@ -231,7 +231,17 @@
 .cnxia{
     width: 100%;
     height: 0.61rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
 }
+.cnn-left{
+    width: 0.86rem;
+    height: 0.3rem;
+    display: flex;
+    margin-left: 0.21rem;
+}
+
 .cnxianei{
     width:2.7rem ;
     height:  0.3rem;

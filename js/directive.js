@@ -209,3 +209,12 @@ direct.directive("setting",function(){
     }
 })
 // zk结束
+
+
+//cn数据
+direct.directive("cnshuju",function(){
+    return{
+        replace:true,
+        templateUrl:"tpl/cnindex1.html",
+    }
+})
