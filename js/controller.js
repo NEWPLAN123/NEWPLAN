@@ -23,6 +23,8 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/zkcollectionList.html'   //我的作品列表
     }).when('unlogin',{
         templateUrl:'tpl/zkpersonCenterUn.html'    //个人中心未登录
+    }).when('/setting',{
+        templateUrl:'tpl/zksetting.html'
     })
 })
 
