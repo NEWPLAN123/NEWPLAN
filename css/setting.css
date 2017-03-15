@@ -126,7 +126,7 @@ body{
 	border-radius: 0.2rem;
 	margin-top: 0.1rem;
 	margin-left: 0.1rem;
-	background:url(../img/thumb.png) center center/cover no-repeat;
+	background:url(../images/zk_images/thumb.png) center center/cover no-repeat;
 }
 .thumbsselect input{
 	opacity: 0;
