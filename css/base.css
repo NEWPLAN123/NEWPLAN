@@ -20,6 +20,7 @@ body{
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 input,textarea{
+	border: none;
 	outline: none;
 }
 /*单行文本*/
