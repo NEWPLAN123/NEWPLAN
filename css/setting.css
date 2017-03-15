@@ -1,0 +1,156 @@
+@import url(base.css);
+.fl{float:left;}
+.fr{float:right;}
+
+.comWidth{
+	width: 5.9rem;
+	margin: 0 auto;
+}
+.clearfix:after{
+	content:"";
+	display: block;
+	line-height: 0;
+	height: 0;
+	clear: both;
+}
+.clearfix{
+	zoom:1;
+}
+html,body{
+	height: 100%;
+	width:100%;
+}
+a{
+	-webkit-tap-highlight-color:transparent;
+}
+em{
+	font-style: normal;
+}
+body{
+	font-size: 16px;
+}
+.topbar0{
+	width: 100%;
+	height:.92rem; 
+	line-height: .92rem;
+	background: #161616;
+}
+.topbar0 .l{
+	margin-left: .48rem;
+}
+.topbar0  a{
+	color: #fff;
+	font-size: .3rem;
+}
+.topbar0 a:hover{
+	color: #A09F9F;
+}
+.topbar0 .m{
+	width: 1.78rem;
+	height: .44rem;
+	margin:0.2rem auto;
+	margin-left: 1.8rem;
+	background:url(../images/zk_images/t1.png) left center/cover no-repeat;
+}
+.topbar0 .r{
+	margin-right: .48rem;
+}
+
+/*内容选项*/
+.optionsbox{
+	width: 7rem;
+	margin: 0 auto;
+	height: 10rem;
+	margin-top: 0.2rem;
+	display: flex;
+	flex-direction:column;
+	font-size: 0.18rem;
+}
+.optionsbox .floor{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	height:1.2rem ;
+	width: 100%;
+	border-bottom: 1px solid #F5F5F5;
+}
+.optionsbox .floor span{
+	margin-left: 0.2rem;
+}
+.optionsbox .floor input{
+	height: 100%;
+	width: 2.2rem;	
+}
+.optionsbox .fr{
+	display: flex;
+	align-items:center;
+	justify-content:flex-end;
+}
+.optionsbox .floor em{
+	width: 0.3rem;
+	height: 0.3rem;
+	background:url(../images/zk_images/arrow.png) center center/cover no-repeat;
+}
+.optionsbox .floor1 .fr .thumbs{
+	height: 0.8rem;
+	width: 0.8rem;
+	margin-right: 0.5rem;
+	background: url(../images/zk_images/3.png) center center/cover no-repeat;
+}
+.thumbsselect{
+	display: none;
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+}
+.thumbsselect .thumbb{
+	height: 1.7rem;
+	width: 1.7rem;
+	border-radius: 0.1rem;
+	margin: auto;
+	/*margin-top:4rem ;*/
+	position: absolute;
+	left:0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #7D7D7D;
+}
+.thumbsselect .thumbb>div{
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 0.2rem;
+	margin-top: 0.1rem;
+	margin-left: 0.1rem;
+	background:url(../img/thumb.png) center center/cover no-repeat;
+}
+.thumbsselect input{
+	opacity: 0;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
