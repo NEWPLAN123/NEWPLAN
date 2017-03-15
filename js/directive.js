@@ -43,6 +43,21 @@ direct.directive("cnitem",function(){
 });
 
 
+direct.directive("hiddentop",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+            var hd=document.querySelector('.cn-top');
+            hd.style.display='none';
+
+            // kx_js结束
+        }
+    }
+});
+
+
 //头部隐藏添加标签开始
 direct.directive("hidden",function(){
     return {
