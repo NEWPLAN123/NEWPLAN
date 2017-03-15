@@ -13,7 +13,7 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/cnweb.html'  //web列表页
     }).when('/search_pages',{
         templateUrl:'tpl/search_pages.html'  //搜索页面
-    }).when('/search_result/:id',{
+    }).when('/search_result',{
         templateUrl:'tpl/search_result.html'  //搜索作品结果
     }).when('/designer_result',{
         templateUrl:'tpl/designer_result.html'   //搜索设计师结果
