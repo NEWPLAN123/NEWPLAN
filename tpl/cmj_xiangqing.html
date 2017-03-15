@@ -1,0 +1,96 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="../css/cmj_xiangqing.css">
+	<script src="../js/anjular.min.js"></script>
+	<script src="../js/rem.js"></script>
+	<script src="../js/cmj_xiangqing.js"></script>
+</head>
+<body>
+	<div class="details">
+		<div class="top">
+			<a href=""><img src="../images/cmj/tubiao.png" alt=""></a>
+		</div>
+		<img src="../images/cmj/tu.jpg" alt="">
+		<div class="content">
+				<div class="tubiao">
+					<div class="tubiao-1">
+						<img src="../images/cmj/touxiang.jpg" alt="">
+					</div>
+					<div class="title">
+						<div class="title-1">
+							<div class="title-s">
+								<em class="p1">SUNNY</em><em class="p2">-YANG</em>
+							</div>
+							<div class="xian">
+								<div class="xian-1"></div>
+							</div>
+							<div class="xian-1" ng-controller="ctrl">
+								<p>by</p>
+								<i>&nbsp;</i>
+								<p class="xp">HOCKER</p>
+								<i>&nbsp;&nbsp;&nbsp;</i>
+								<p class="">Feb</p>
+								<i>&nbsp;</i>
+								<p class="zp">2017</p>
+							</div>
+						</div>
+					</div>
+					<div class="guanzhu">
+						<div class="guanzhu-t">
+							<a href=""><img src="../images/cmj/guanzhu.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="zhan">
+					<div class="yan">
+						<div class="yan-1">
+							<div class="yan-1-1" ng-controller="zan">
+								<div class="yan-d" ng-click="age=age+1"><img src="../images/cmj/yan.jpg" alt=""></div><i>762</i>
+							</div>
+							<div class="yan-1-2">
+								<p>Views</p>
+							</div>
+						</div>
+					</div>
+					<div class="xu">
+						<img src="../images/cmj/xuxian.png" alt="">
+					</div>
+					<div class="yan">
+						<div class="yan-1">
+							<div class="yan-1-1">
+								<div class="yan-d"><img src="../images/cmj/xin.jpg" alt=""></div><i>627</i><!-- dirctiver 双向数据绑定 自增 自减 -->
+							</div>
+							<div class="yan-1-2">
+								<p>Likes</p>
+							</div>
+						</div>
+					</div>
+					<div class="xu">
+						<img src="../images/cmj/xuxian.png" alt="">
+					</div>
+					<div class="yan">
+						<div class="yan-1">
+							<div class="yan-1-1">
+								<div class="yan-d"><img src="../images/cmj/ben.jpg" alt=""></div><i>627</i>
+							</div>
+							<div class="yan-1-2">
+								<p>Writes</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<divc class="pin">
+                     <div class="pin-1">
+                     <span>作品介绍：</span>
+                     <h>一个冉冉升起的新星，瑞士-中国摄影师Jeff Hahn 创造了一组完美的姿态和令人回味的戏剧性时尚肖像。饱和的色彩已经富有趣味性的对比，让人印象深刻。</h>
+                     </div>
+				</div>
+		</div>
+	</div>
+</body>
+</html>

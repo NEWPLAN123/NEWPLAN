@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    padding:0;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    -webkit-top-highlight-color：rgba(0,0,0,0);
+}
+.top{
+    width: 100%;
+    top:1.28rem;
+    height:auto;
+    background: #fff;
+}
+.top-1{
+    width:100%;
+    height:4.28rem;
+}
+.top-s{
+    width:100%;
+    height:2.4rem;
+    margin-top: 1.08rem;
+}
+.top-ss{
+    margin-top:1.08rem;
+    width:7.5rem;
+    height:1.52rem;
+}
+.zuo{
+    width:3rem;
+    height:1.52rem;
+    float: left;
+}
+.zhong{
+    width:1.5rem;
+    height:1.5rem;
+    border-radius: 50%;
+    background:url(../images/cmj/zhong.png)no-repeat center center/cover;
+    float: left;
+}
+.you{
+    width:3rem;
+    height:1.52rem;
+    float: left;
+}
+.you-1{
+    width:0.58rem;
+    height:1.52rem;
+    margin-left: 1.07rem;
+}
+.you-1-1{
+    width:0.58rem;
+    height:0.58rem;
+    margin-top: 0.55rem;
+    background: url(../images/cmj/xin.png)no-repeat center center/cover;
+}
+.top-t{
+    width:100%;
+    height:0.88rem;
+}
+.top-t-t{
+    width:2.7rem;
+    height:0.88rem;
+    margin:0 auto;
+    text-align: center;
+}
+.top-t-t h1{
+    font-size:0.3rem;
+}
+.top-t-t p{
+    font-size:0.2rem;
+    font-weight: bold;
+    color: #ccc;
+    margin:0;
+}
+.xxk{
+    width:100%;
+    height: 0.66rem;
+    margin-top:0.8rem;
+}
+.xxk-z{
+    width:6.24rem;
+    height:0.65rem;
+    margin:0 auto;
+}
+#xxk-l{
+    width:1.72rem;
+    height:0.65rem;
+    background: url(../images/cmj/xxk.png)no-repeat center center/cover;
+    float: left;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.65rem;
+    font-weight: bold;
+}
+#xxk-o{
+    width:1.72rem;
+    height:0.65rem;
+    background: url(../images/cmj/xxk.png)no-repeat center center/cover;
+    float: left;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.65rem;
+    font-weight: bold;
+    margin-left: 0.49rem;
+}
+#xxk-r{
+    width:1.72rem;
+    height:0.65rem;
+    background: url(../images/cmj/xxk.png)no-repeat center center/cover;
+    float: left;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.65rem;
+    font-weight: bold;
+    margin-left: 0.49rem;
+}
+.ka{
+    width:6.76rem;
+    height:4.44rem;
+    margin:0 auto;
+    position: relative;
+}
+.ka-1{
+    width:100%;
+    height:100%;
+    text-align: center;
+    line-height:4.4rem;
+    position: absolute;
+    background: yellow;
+}
+.ka-2{
+    width:100%;
+    height:100%;
+    text-align: center;
+    line-height:4.4rem;
+    position: absolute;
+}
+.ka-3{
+    width:100%;
+    height:100%;
+    text-align: center;
+    line-height:4.4rem;
+    position: absolute;
+}
