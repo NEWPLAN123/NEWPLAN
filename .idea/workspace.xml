@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23cd8e4f-c02d-4f39-89ab-569a584b2a41" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/cmj_xiangqing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/zkcollection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/zkconcern.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/collectionList.css" afterPath="$PROJECT_DIR$/css/collectionList.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/personCenter.css" afterPath="$PROJECT_DIR$/css/personCenter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directive.js" afterPath="$PROJECT_DIR$/js/directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/zkpersonCenter.html" afterPath="$PROJECT_DIR$/tpl/zkpersonCenter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/zkpersonCenterUn.html" afterPath="$PROJECT_DIR$/tpl/zkpersonCenterUn.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tpl/zkcollectionList.html" afterPath="$PROJECT_DIR$/tpl/zkmyworks.html" />
-    </list>
+    <list default="true" id="23cd8e4f-c02d-4f39-89ab-569a584b2a41" name="默认的" comment="" />
     <ignored path="NEWPLAN.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -369,12 +358,12 @@
       <workItem from="1489483873919" duration="38000" />
       <workItem from="1489487423876" duration="2618000" />
       <workItem from="1489507440989" duration="4004000" />
-      <workItem from="1489538715536" duration="9609000" />
+      <workItem from="1489538715536" duration="9673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25732000" />
+    <option name="totallyTimeSpent" value="25796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
