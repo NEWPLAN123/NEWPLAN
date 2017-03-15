@@ -53,6 +53,7 @@
     padding-left: .6rem;
     box-sizing: border-box;
     border-radius: 5px;
+    padding-top: .2rem;
 }
 .kx_search_box li{
     font-size: .24rem;

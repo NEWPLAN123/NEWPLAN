@@ -33,12 +33,15 @@
 </cnitem>
     <!--搜索框开始-->
     <ul class="kx_search_box">
-        <li><span>新时代</span>简约风</li>
-        <li><span>新时代</span>UI设计师</li>
-        <li><span>新时代</span>海报设计排版</li>
-        <li><span>新时代</span>VIS设计风向</li>
-        <li><span>新时代</span>设计大师的杰作</li>
-        <li><span>新时代</span>设计流行趋势</li>
+        <li ng-repeat="v in work|filter:{title:name } track by $index ">
+             <span>新时代</span>{{v.title}}
+        </li>
+        <!--<li><span>新时代</span>简约风</li>-->
+        <!--<li><span>新时代</span>UI设计师</li>-->
+        <!--<li><span>新时代</span>海报设计排版</li>-->
+        <!--<li><span>新时代</span>VIS设计风向</li>-->
+        <!--<li><span>新时代</span>设计大师的杰作</li>-->
+        <!--<li><span>新时代</span>设计流行趋势</li>-->
     </ul>
     <!--搜索框结束-->
 

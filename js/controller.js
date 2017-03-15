@@ -6,7 +6,8 @@ ctrl.config(function($routeProvider) {
     $routeProvider.when("/",{
         templateUrl:"tpl/cnindex.html"  //首页
     }).when("/cnwatch",{
-        templateUrl:'tpl/cnwatch.html'  //watch列表页
+        templateUrl:'tpl/cnwatch.html',  //watch列表页
+        controller:"watch"
     }).when("/personCenter",{
         templateUrl:'tpl/zkpersonCenter.html' //个人中心
     }).when("/cnweb",{
@@ -35,6 +36,16 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/zkcollection.html'  //我的收藏
     }).when('/pinlun',{
         templateUrl:'tpl/wjy_pinlun.html'  //评论
+    })
+})
+
+
+ctrl.controller("watch",function ($scope,$http) {
+    $http({
+        url:"php/get_workList.php?lname=watch",
+        method:"GET"
+    }).then(function (data) {
+        $scope.watch = data.data;
     })
 })
 

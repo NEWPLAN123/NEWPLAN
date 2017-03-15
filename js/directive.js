@@ -7,6 +7,17 @@ direct.directive("cnitem",function(){
     return {
         templateUrl:"tpl/cntop.html",
         replace:true,
+        controller:function($scope,$http){
+            $http({
+                url:"php/get_work.php",
+                method:"GET"
+            }).then(function (data) {
+                //成功的时候执行
+                $scope.work = data.data;
+            },function () {
+                // 不成功的时候执行
+            })
+        },
         link:function(scope,element){
             // kx_js开始
             var kaa=document.querySelector('.kx_search_right');
@@ -42,7 +53,17 @@ direct.directive("cnitem",function(){
     }
 });
 
-
+direct.directive("watch",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            var wah=document.querySelector('.biggerimg');
+            var wat=document.querySelector('.cn-yy');
+            var wac=document.querySelector('.cn-zw');
+        }
+    }
+});
 direct.directive("hiddentop",function(){
     return {
         templateUrl:"",
