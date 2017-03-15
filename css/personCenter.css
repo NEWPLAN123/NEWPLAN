@@ -49,7 +49,7 @@ body{
 .portrait{
 	position: absolute;
 	left:50%;
-	top: .48rem;
+	top: 1.4rem;
 	width: 2rem;
 	height: 2rem;
 	margin-left: -1rem;
