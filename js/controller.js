@@ -20,7 +20,7 @@ ctrl.config(function($routeProvider) {
     }).when('/upload',{
         templateUrl:'tpl/zkupload.html'   //上传作品
     }).when('/myworks',{
-        templateUrl:'tpl/zkcollectionList.html'   //我的作品列表
+        templateUrl:'tpl/zkmyworks.html'   //我的作品列表
     }).when('unlogin',{
         templateUrl:'tpl/zkpersonCenterUn.html'    //个人中心未登录
     }).when('/setting',{
