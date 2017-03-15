@@ -32,8 +32,10 @@ ctrl.config(function($routeProvider) {
     }).when('/concern',{
         templateUrl:'tpl/zkconcern.html'  //我的关注
     }).when('/collection',{
-            templateUrl:'tpl/zkcollection.html'  //我的收藏
-        })
+        templateUrl:'tpl/zkcollection.html'  //我的收藏
+    }).when('/pinlun',{
+        templateUrl:'tpl/wjy_pinlun.html'  //评论
+    })
 })
 
 
