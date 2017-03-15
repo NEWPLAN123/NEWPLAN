@@ -151,15 +151,18 @@ direct.directive("myworks",function(){
             })
         },
         link:function(scope,element){
-            var movebox=$("");
+            var movebox=$(".zk-itembox .itemUp .inners");
+            console.log(1);
             var flag=true;
-            touch.on(movebox,"touchstart",function(){
+            touch.on(movebox,"swipe",function(e){
+                e.preventDefault;
+                e.propagaiton;
                 if(flag){
                     // console.log($(this));
-                    $(this).css("left","-1.23rem");
+                    $(this).parent().css("left","-1.23rem");
                     flag=false;
                 }else{
-                    $(this).css("left","0");
+                    $(this).parent().css("left","0");
                     flag=true;
                 }
             })

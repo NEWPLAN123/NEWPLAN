@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23cd8e4f-c02d-4f39-89ab-569a584b2a41" name="默认的" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tpl/cmj_xiangqing.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/designer_result.css" afterPath="$PROJECT_DIR$/css/designer_result.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/cmj_xiangqing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/zkcollection.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tpl/zkconcern.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/collectionList.css" afterPath="$PROJECT_DIR$/css/collectionList.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/personCenter.css" afterPath="$PROJECT_DIR$/css/personCenter.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/cnweb.html" afterPath="$PROJECT_DIR$/tpl/cnweb.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/kx_item.html" afterPath="$PROJECT_DIR$/tpl/kx_item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directive.js" afterPath="$PROJECT_DIR$/js/directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/zkpersonCenter.html" afterPath="$PROJECT_DIR$/tpl/zkpersonCenter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/zkpersonCenterUn.html" afterPath="$PROJECT_DIR$/tpl/zkpersonCenterUn.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tpl/zkcollectionList.html" afterPath="$PROJECT_DIR$/tpl/zkmyworks.html" />
     </list>
     <ignored path="NEWPLAN.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +36,10 @@
         <entry file="file://$PROJECT_DIR$/js/directive.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1140">
-              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-              <folding />
+              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+              <folding>
+                <marker date="1489556109608" expanded="true" signature="4075:4156" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +57,18 @@
       <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+            <state relative-caret-position="1050">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cmj_xiangqing.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/cmj_xiangqing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cmjxiangqing.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cmjxiangqing.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/cmjxiangqing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="64">
               <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -145,11 +160,11 @@
         <option value="$PROJECT_DIR$/tpl/cnweb.html" />
         <option value="$PROJECT_DIR$/tpl/cmj_xiangqing.html" />
         <option value="$PROJECT_DIR$/tpl/cnindex.html" />
-        <option value="$PROJECT_DIR$/js/controller.js" />
         <option value="$PROJECT_DIR$/css/designer_result.css" />
         <option value="$PROJECT_DIR$/tpl/kx_item.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/tpl/cmjxiangqing.html" />
+        <option value="$PROJECT_DIR$/js/controller.js" />
       </list>
     </option>
   </component>
@@ -354,12 +369,12 @@
       <workItem from="1489483873919" duration="38000" />
       <workItem from="1489487423876" duration="2618000" />
       <workItem from="1489507440989" duration="4004000" />
-      <workItem from="1489538715536" duration="9348000" />
+      <workItem from="1489538715536" duration="9609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25471000" />
+    <option name="totallyTimeSpent" value="25732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -406,7 +421,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1830">
           <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-          <folding />
+          <folding>
+            <marker date="1489556109608" expanded="true" signature="4075:4156" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -430,7 +447,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1489556109608" expanded="true" signature="4075:4156" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -485,7 +504,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1489556109608" expanded="true" signature="4075:4156" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -508,7 +529,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
-          <folding />
+          <folding>
+            <marker date="1489556109608" expanded="true" signature="4075:4156" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -560,7 +583,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2370">
           <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1489556109608" expanded="true" signature="4075:4156" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -632,7 +657,7 @@
         <state relative-caret-position="35">
           <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,8 +713,10 @@
     <entry file="file://$PROJECT_DIR$/js/directive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1140">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-          <folding />
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+          <folding>
+            <marker date="1489556109608" expanded="true" signature="4075:4156" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -716,14 +743,6 @@
           <folding>
             <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,11 +790,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/cmjxiangqing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
+        <state relative-caret-position="64">
           <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cmj_xiangqing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

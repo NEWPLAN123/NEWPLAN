@@ -27,6 +27,10 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/cmjxiangqing.html'    //详情未关注
     }).when('/sheji',{
         templateUrl:'tpl/cmj_sheji.html'    //设计师详情
+    }).when('unlogin',{
+        templateUrl:'tpl/zkpersonCenterUn.html'    //个人中心未登录
+    }).when('/setting',{
+        templateUrl:'tpl/zksetting.html'
     })
 })
 
