@@ -92,43 +92,14 @@ body{
 	background:url(../images/zk_images/arrow.png) center center/cover no-repeat;
 }
 .optionsbox .floor1 .fr .thumbs{
+	display: block;
 	height: 0.8rem;
 	width: 0.8rem;
 	margin-right: 0.5rem;
+	border-radius: 50%;
 	background: url(../images/zk_images/3.png) center center/cover no-repeat;
 }
-.thumbsselect{
-	display: none;
-	background: rgba(0,0,0,0.6);
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 9999;
-}
-.thumbsselect .thumbb{
-	height: 1.7rem;
-	width: 1.7rem;
-	border-radius: 0.1rem;
-	margin: auto;
-	/*margin-top:4rem ;*/
-	position: absolute;
-	left:0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	background: #7D7D7D;
-}
-.thumbsselect .thumbb>div{
-	width: 1.5rem;
-	height: 1.5rem;
-	border-radius: 0.2rem;
-	margin-top: 0.1rem;
-	margin-left: 0.1rem;
-	background:url(../images/zk_images/thumb.png) center center/cover no-repeat;
-}
-.thumbsselect input{
+#fileId3{
 	opacity: 0;
 	height: 1.5rem;
 	width: 1.5rem;
