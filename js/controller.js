@@ -28,7 +28,7 @@ ctrl.config(function($routeProvider) {
     }).when('/sheji',{
         templateUrl:'tpl/cmj_sheji.html'    //设计师详情
     }).when('/setting',{
-        templateUrl:'tpl/zksetting.html'
+        templateUrl:'tpl/zksetting.html'  //设置个人信息
     }).when('/concern',{
         templateUrl:'tpl/zkconcern.html'  //我的关注
     }).when('/collection',{
