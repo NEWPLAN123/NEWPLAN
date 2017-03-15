@@ -20,7 +20,7 @@ ctrl.config(function($routeProvider) {
     }).when('/upload',{
         templateUrl:'tpl/zkupload.html'   //上传作品
     }).when('/myworks',{
-        templateUrl:'tpl/zkcollectionList.html'   //我的作品列表
+        templateUrl:'tpl/zkmyworks.html'   //我的作品列表
     }).when('/unlogin',{
         templateUrl:'tpl/zkpersonCenterUn.html'    //个人中心未登录
     }).when('/xiangqing',{
@@ -29,7 +29,11 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/cmj_sheji.html'    //设计师详情
     }).when('/setting',{
         templateUrl:'tpl/zksetting.html'
-    })
+    }).when('/concern',{
+        templateUrl:'tpl/zkconcern.html'  //我的关注
+    }).when('/collection',{
+            templateUrl:'tpl/zkcollection.html'  //我的收藏
+        })
 })
 
 
