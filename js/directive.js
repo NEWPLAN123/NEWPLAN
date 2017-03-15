@@ -169,4 +169,28 @@ direct.directive("myworks",function(){
         }
     }
 })
+// 设置个人信息
+direct.directive("setting",function(){
+    return{
+        replace:true,
+        controller:function($scope,$http){
+            $http({
+                url:"php/"
+            }).then(function(data){
+                $scope.data=data;
+            })
+        },
+        link:function(scope,element){
+            var thumbBtn=$(".optionsbox .thumbs");
+            var hidemask=$(".thumbsselect");
+            console.log(thumbBtn);
+            touch.on(thumbBtn,"touchstart",function(){
+                hidemask.css("display","block");
+                touch.on(hidemask,"touchstart",function(){
+                    hidemask.css("display","none");
+                })
+            })
+        }
+    }
+})
 // zk结束
