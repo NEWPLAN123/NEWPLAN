@@ -21,8 +21,12 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/zkupload.html'   //上传作品
     }).when('/myworks',{
         templateUrl:'tpl/zkcollectionList.html'   //我的作品列表
-    }).when('unlogin',{
+    }).when('/unlogin',{
         templateUrl:'tpl/zkpersonCenterUn.html'    //个人中心未登录
+    }).when('/xiangqing',{
+        templateUrl:'tpl/cmjxiangqing.html'    //详情未关注
+    }).when('/sheji',{
+        templateUrl:'tpl/cmj_sheji.html'    //设计师详情
     })
 })
 

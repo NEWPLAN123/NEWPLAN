@@ -67,7 +67,7 @@
     padding-right: .20rem;
     box-sizing: border-box;
 }
-.kx_designer_pic span:nth-child(1){
+.kx_designer_pic a:nth-child(1){
     width: 100%;
     height: 100%;
     display: inline-block;
