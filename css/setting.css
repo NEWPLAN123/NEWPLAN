@@ -74,6 +74,15 @@ body{
 	width: 100%;
 	border-bottom: 1px solid #F5F5F5;
 }
+.optionsbox .floor3{
+	height: 2rem;
+	width: 100%;
+}
+.optionsbox .floor3 textarea{
+	width: 100%;
+	height: 100%;
+	text-indent: 0.15rem;
+}
 .optionsbox .floor span{
 	margin-left: 0.2rem;
 }
