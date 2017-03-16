@@ -1,4 +1,16 @@
+<link rel="stylesheet" href="css/mobiscroll-2.13.2.full.min.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/mobiscroll-2.13.2.full.min.js"></script>
+<style>
+	input.tmp{
+		opacity:0;
+	}
+</style>
 <setting>
+<ul id="sex-list" style="display: none">  
+	<li>先生</li>  
+	<li>女士</li>  
+</ul> 
 <div class="topbar0">
 	<div class="l fl">
 		<a href="#" class="cancle">取消</a>
@@ -32,7 +44,7 @@
 	</a>
 	<a href="javascript:;" class="floor">
 		<div class="fl">
-			<span>头衔</span>
+			<span>称号</span>
 		</div>
 		<div class="fr">
 			<input type="text" name="jobs" value="" placeholder="平面设计师" class="slh1">
@@ -41,19 +53,20 @@
 	</a>
 	<a href="javascript:;" class="floor">
 		<div class="fl">
-			<span>所属</span>
+			<span>专栏</span>
 		</div>
 		<div class="fr">
 			<input type="text" name="belong" value="" placeholder="专栏/签约/特邀" class="slh1">
 			<em></em>
 		</div>
 	</a>
-	<a href="javascript:;" class="floor">
+	<a href="javascript:;" class="floor"  id="sex">
 		<div class="fl">
-			<span>性别</span>
+			<span class="mbase-menu-title">性别</span>
 		</div>
 		<div class="fr">
-			<input type="text" name="sex slh1" value="" placeholder="男/女" class="slh1">
+			<!-- <input type="text" name="sex slh1" value="" placeholder="男/女" class="slh1"> -->
+			<div class="mbase-menu-txt">未设置</div> 
 			<em></em>
 		</div>
 	</a>
@@ -77,3 +90,5 @@
 	</a>
 </div>
 </setting>
+
+

@@ -152,7 +152,6 @@ direct.directive("hello",function(){
             var headerlogo=document.querySelector('.header_logo');
             headerlogo.style.background="url('images/cn/cn10.png') no-repeat center center/cover";
             //kx_js结束
-            
         }
     }
 })
@@ -217,16 +216,33 @@ direct.directive("setting",function(){
             })
         },
         link:function(scope,element){
-            var thumbBtn=$(".optionsbox .thumbs");
-            var hidemask=$(".thumbsselect");
-            console.log(thumbBtn);
-            touch.on(thumbBtn,"touchstart",function(){
-                hidemask.css("display","block");
-                touch.on(hidemask,"touchstart",function(){
-                    hidemask.css("display","none");
-                })
-            })
+             $("#sex").click(function () {  
+                var that = this;  
+                console.log($("#sex"));
+                $("#sex-list").mobiscroll().treelist({  
+                    theme: "android-ics",  
+                    lang: "zh",  
+                    display: 'bottom',  
+                    inputClass: 'tmp',  
+                    headerText: '请您选择',  
+                    onSelect: function (valueText) {  
+                        var m = $(this).find("li").eq(valueText).html(); 
+                        // alert(m); 
+                        /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) { 
+                            if (result == 'ok') { 
+                                $(that).find(".mbase-menu-txt").html(m); 
+                            } 
+                            else { 
+                                error('网络繁忙，请您稍后再试'); 
+                            } 
+                        });*/
+                        $("#sex .mbase-menu-txt").html(m);
+                    }  
+                });  
+                $("input[id^=sex-list]").focus();  
+            }); 
         }
+      
     }
 })
 // zk结束

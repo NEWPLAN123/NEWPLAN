@@ -2,12 +2,16 @@
 
 session_start();
 
-if($_SESSION['is_login']){
+//使用sessionStorage来保存信息
+
+$isLogin = sessionStorage.getItem(isLogin);
+
+if($isLogin){
     //如果是已经登录的状态，不做处理
 }else{
-    //给出提示信息并跳转到登录页面
-    $mes = "请登录";
-
+    //跳转到登录页面
+    header("Location:../wjy_denglu.html");
+    exit();
 }
 
 
