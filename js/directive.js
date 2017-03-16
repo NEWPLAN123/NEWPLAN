@@ -241,6 +241,33 @@ direct.directive("setting",function(){
                 });  
                 $("input[id^=sex-list]").focus();  
             }); 
+            $("#sex1").click(function () {  
+                    var that = this;  
+                    // console.log(1);
+                    $("#sex-list1").eq(0).mobiscroll().treelist({  
+                        theme: "android-ics",  
+                        lang: "zh",  
+                        display: 'bottom',  
+                        inputClass: 'tmp',  
+                        headerText: '请您选择',  
+                        onSelect: function (valueText) {  
+                            var m = $(this).find("li").eq(valueText).html(); 
+                            /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) { 
+                                if (result == 'ok') { 
+                                    $(that).find(".mbase-menu-txt").html(m); 
+                                } 
+                                else { 
+                                    error('网络繁忙，请您稍后再试'); 
+                                } 
+                            });*/
+                            $("#sex1 .mbase-menu-txt").html(m);
+                        }  
+                    });  
+                    $("input[id^=sex-list1]").focus();  
+                }); 
+            }
+        // }
+    }
         }
       
     }
