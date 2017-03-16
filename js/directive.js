@@ -152,7 +152,6 @@ direct.directive("hello",function(){
             var headerlogo=document.querySelector('.header_logo');
             headerlogo.style.background="url('images/cn/cn10.png') no-repeat center center/cover";
             //kx_js结束
-            
         }
     }
 })
