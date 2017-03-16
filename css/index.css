@@ -44,15 +44,15 @@
     background: url("../images/cn/cn9.png") no-repeat center center/cover;
 }
 .cnimgbox:nth-child(3){
-    /*width: 1.58rem;*/
-    /*height: .39rem;*/
+    background:url('../images/header_change_images/kx_first.png') no-repeat center center/cover;
+    width: 1.58rem;
+    height: .39rem;
     position: absolute;
     top:0;
     right: 0;
     bottom:0;
     left:0;
     margin: auto;
-    /*background: url("../images/cn/cn10.png") no-repeat center center/cover;*/
 }
 .cnimgbox:nth-child(5){
     width: 0.47rem;
