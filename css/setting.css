@@ -81,6 +81,10 @@ body{
 	height: 100%;
 	width: 2.2rem;	
 }
+.optionsbox .mbase-menu-txt{
+	height: 100%;
+	width: 2.2rem;
+}
 .optionsbox .fr{
 	display: flex;
 	align-items:center;
