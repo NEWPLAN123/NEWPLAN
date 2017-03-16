@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23cd8e4f-c02d-4f39-89ab-569a584b2a41" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/search_pages.css" afterPath="$PROJECT_DIR$/css/search_pages.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directive.js" afterPath="$PROJECT_DIR$/js/directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/cmjxiangqing.html" afterPath="$PROJECT_DIR$/tpl/cmjxiangqing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/cntop.html" afterPath="$PROJECT_DIR$/tpl/cntop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/cnwatch.html" afterPath="$PROJECT_DIR$/tpl/cnwatch.html" />
-    </list>
+    <list default="true" id="23cd8e4f-c02d-4f39-89ab-569a584b2a41" name="默认的" comment="" />
     <ignored path="NEWPLAN.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/js/directive.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+              <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -64,8 +54,8 @@
       <file leaf-file-name="cnwatch.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tpl/cnwatch.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="24" column="29" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="750">
+              <caret line="41" column="29" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -305,16 +295,16 @@
       <workItem from="1489487423876" duration="2618000" />
       <workItem from="1489507440989" duration="4004000" />
       <workItem from="1489538715536" duration="20172000" />
-      <workItem from="1489587906228" duration="7918000" />
+      <workItem from="1489587906228" duration="8106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44213000" />
+    <option name="totallyTimeSpent" value="44401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -705,8 +695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/cnwatch.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="750">
+          <caret line="41" column="29" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -730,7 +720,7 @@
     <entry file="file://$PROJECT_DIR$/js/directive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+          <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
           <folding />
         </state>
       </provider>
