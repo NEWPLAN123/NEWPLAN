@@ -40,19 +40,20 @@
 	<!-- 大p结束 -->
 	<div class="wjy_tow_santext">
 		<img src="images/wjy_img/wjy_m2.png" alt="">
+		<div class="error_mes"></div>
 	</div>
 	
 <!-- 搜索框开始 -->
 	<div class="wjy_tow_input_box">
 		<div class="wjy_tow_input_box_div">
-			<a href="##">EMAIL</a>
-			<a href="##">PASSWORD</a>
-			<a href="##">PHONE</a>
+			<a href="javascript:;">EMAIL</a>
+			<a href="javascript:;">PASSWORD</a>
+			<a href="javascript:;">PHONE</a>
 		</div>
 
 
 
-<!-- 登陆选项卡 -->
+<!-- 登录选项卡 -->
 
 <div class="wjy_paoma_bj">
 <div class="wjy_paoma">
@@ -62,22 +63,22 @@
 
 		<div class="wjy_tow_input_box_input_box">
 			<img src="images/wjy_img/wjy_m3.png" alt="" class="wangjiayi_img_3">
-		<input  class="wjy_tow_input_box_input_box_input" name="textfield" type="email"/>
+		<input maxlength="20" id="login_email"  class="wjy_tow_input_box_input_box_input" name="textfield" type="email"/>
 		</div>
 </div>
 <!-- 选项卡二 -->
 <div class="wjy_xuanxiangka">
 		<div class="wjy_tow_input_box_input_box">
 			<img src="images/wjy_img/wjy_n1.png" alt="" class="wjy_tow_input_box_input_box_img1">
-		<input  class="wjy_tow_input_box_input_box_input wjy_shoumima" name="textfield" type="password"/>
+		<input maxlength="20" id="login_password"  class="wjy_tow_input_box_input_box_input wjy_shoumima" name="textfield" type="password"/>
 		<div class="wjy_9x9_right">
 			<img src="images/wjy_img/wjy_n2.png" alt="">
 		</div>
 		</div>
-<!-- 登陆 -->
-<a href="">
+<!-- 登录 -->
+<a href="javascript:;">
 <div class="wjy_denglul">
-	登陆
+	登录
 </div>
 </a>
 </div>
@@ -86,7 +87,7 @@
 
 		<div class="wjy_tow_input_box_input_box">
 			<img src="images/wjy_img/wjy_shouji.png" alt="" class="wangjiayi_img_3">
-		<input  class="wjy_tow_input_box_input_box_input" name="textfield" type="text">
+		<input maxlength="11" id="login_phone"  class="wjy_tow_input_box_input_box_input" name="textfield" type="text" onkeyup="this.value=this.value.replace(/\D/g,'')">
 
 		</div>
 </div>
@@ -136,6 +137,6 @@
 	</div>
 </body>
 </html>
-<script src="js/zepto.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/wjy_js/wjy_deng.js"></script>

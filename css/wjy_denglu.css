@@ -118,6 +118,19 @@ font-size: 0.25rem;
 	height: 0.18rem;
 	margin-top:0.38rem;
 	float: left;
+	position: relative;
+}
+.wjy_tow_santext .error_mes{
+	position: absolute;
+	left:0;
+	right:0;
+	bottom: -0.8rem;
+	text-align: center;;
+	height:0.5rem;
+	margin: auto;
+	color: #fff;
+	border-radius: 0.05rem ;
+	line-height: 0.5rem;
 }
 .wjy_tow_santext img{
 	width: 5.27rem;

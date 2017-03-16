@@ -111,6 +111,67 @@ num++;
 wjy_hua()
 
 
+//获取登录按钮
+var login = $(".wjy_denglul");
+
+var loginEmail = $("#login_email");
+var loginPassword= $("#login_password");
+var loginPhone = $("#login_phone");
+
+var mes = $('.error_mes');
+
+var type="email";
+
+touch.on(login,"tap",function () {
+	//先判断帐号是否为空
+	if(!(loginEmail.val() || loginPhone.val())){
+        mes.html("帐号不能为空！");
+	}else{
+		//判断密码是否为空
+		if(!loginPassword.val()){
+			mes.html("密码不能为空！")
+		}else{
+            //判断是什么模式的登录的，如果两个都有就默认为邮箱登录
+            if(loginEmail.val() || loginPhone.val()){
+				if(loginEmail.val()){
+                    type = "email";
+                    //默认email登录
+				}else{
+                    //判断手机号长度是否正确
+                    if(loginPhone.val().length != 11){
+                        mes.html("请输入正确的手机号");
+                        return;
+                    }else{
+                        type = "phone";
+					}
+				}
+            }else{
+                mes.html("请输入帐号");
+            }
+            //发送ajax请求
+            $.ajax({
+                url:"php/login.php",
+				type:"POST",
+				data:{
+					type:type,
+					password:loginPassword.val()
+				},
+				success:function (data) {
+					var data = JSON.parse(data);
+					if(data.error == 1){
+						//如果发生了错误
+						mes.html(data.mes);
+					}else if(data.error == 0){
+						//跳转回首页
+						location.href="index.html"
+					}
+                }
+            })
+		}
+
+	}//else
+})
+
 
 
 

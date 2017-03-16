@@ -19,9 +19,6 @@
 //先查找用户名
  $sql = "select * from login where $type='$type'";
 
- var_dump($sql);
- exit();
-
  $rul = $mysqli->query($sql);
  if($rul->num_rows){
      //继续查询密码
@@ -30,18 +27,17 @@
      if($rul->num_rows){
          //登录成功
          $row = $rul->fetch_assoc();
-         echo "登陆成功";
+
          //设置session变量
          $_SESSION['is_login'] = true;
          $_SESSION['lid'] = $row['lid'];
+         echo json_encode(array('error'=>0,'mes'=>"登陆成功！"));
      }else{
-         echo "密码错误";
          //跳转回登录页面并给出提示信息
+         echo json_encode(array('error'=>1,'mes'=>"密码错误！"));
      }
  }else{  //如果没找到，说明用户名不存在
-     echo '用户名不存在';
+     echo json_encode(array('error'=>1,'mes'=>"用户名不存在！"));
  }
 
-
-echo 4;
 ?>
