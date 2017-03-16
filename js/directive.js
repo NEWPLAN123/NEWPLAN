@@ -268,9 +268,6 @@ direct.directive("setting",function(){
             }
         // }
     }
-        }
-      
-    }
 })
 // zk结束
 
