@@ -245,7 +245,6 @@ direct.directive("myworks",function(){
         },
         link:function(scope,element){
             var movebox=$(".zk-itembox .itemUp .inners");
-            console.log(1);
             var flag=true;
             touch.on(movebox,"swipe",function(e){
                 e.preventDefault;
@@ -266,13 +265,13 @@ direct.directive("myworks",function(){
 direct.directive("setting",function(){
     return{
         replace:true,
-        controller:function($scope,$http){
+        /*controller:function($scope,$http){
             $http({
                 url:"php/"
             }).then(function(data){
                 $scope.data=data;
             })
-        },
+        },*/
         link:function(scope,element){
                 $("#sex").click(function () {  
                     var that = this;  
@@ -284,15 +283,14 @@ direct.directive("setting",function(){
                         headerText: '请您选择',  
                         onSelect: function (valueText) {  
                             var m = $(this).find("li").eq(valueText).html(); 
-                            // alert(m); 
-                            $.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) { 
+                            /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) { 
                                 if (result == 'ok') { 
                                     $(that).find(".mbase-menu-txt").html(m); 
                                 } 
                                 else { 
                                     error('网络繁忙，请您稍后再试'); 
                                 } 
-                            });
+                            });*/
                             $("#sex .mbase-menu-txt").html(m);
                         }  
                     });  
