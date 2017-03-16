@@ -22,3 +22,39 @@ body{
 input,textarea{
 	outline: none;
 }
+/*单行文本*/
+.slh1{
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+
+/*两行文本*/
+.slh2{
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+
+
+
+/*三行文本*/
+.slh3{
+	-webkit-line-clamp:3;
+	-webkit-box-orient:vertical;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+
+.slh4{
+	-webkit-line-clamp:4;
+	-webkit-box-orient:vertical;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
