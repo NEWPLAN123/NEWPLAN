@@ -126,35 +126,93 @@ direct.directive('designer',function () {
 
     }
 });
-
-
-
-direct.directive("hello",function(){
+//头部动态获取logo开始
+direct.directive("ks",function(){
     return {
-        // templateUrl:"tpl/cntop.html",
         replace:true,
-        controller:function($scope,$http){
-        	//ajax请求
-        	$http({
-        		//发送请求   php?...
-        		url:"php/login.php?type=phone&passw0ord=123&acc=admin"
-        	}).then(function(data){
-        		//得到数据
-        		$scope.data = data
-        	})
-
-        },
         link:function(scope,element){
-        	// js代码会这里被触发 
-        	var a = $(".tou");
-        	// console.dir($("a",angular.element()));
             //kx_js开始
             var headerlogo=document.querySelector('.header_logo');
-            headerlogo.style.background="url('images/cn/cn10.png') no-repeat center center/cover";
+            headerlogo.style.background="url('images/header_change_images/kx_first.png') no-repeat center center/cover";
+           headerlogo.style.width='1.58rem';
+            headerlogo.style.height='.39rem';
             //kx_js结束
         }
     }
-})
+});
+
+direct.directive("kx",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            //kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/cn10.png') no-repeat center center/cover";
+            headerlogo.style.width='2.29rem';
+            headerlogo.style.height='.39rem';
+            //kx_js结束
+        }
+    }
+});
+
+direct.directive("ka",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            //kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/web_design.png') no-repeat center center/cover";
+            headerlogo.style.width='1.88rem';
+            headerlogo.style.height='.39rem';
+            //kx_js结束
+        }
+    }
+});
+
+direct.directive("kb",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            //kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/personal.png') no-repeat center center/cover";
+            console.log("url('images/header_change_images/personal.png') no-repeat center center/cover")
+            headerlogo.style.width='2.68rem';
+            headerlogo.style.height='.39rem';
+            console.dir(headerlogo);
+            //kx_js结束
+        }
+    }
+});
+//头部动态获取logo结束
+
+
+// direct.directive("hello",function(){
+//     return {
+//         // templateUrl:"tpl/cntop.html",
+//         replace:true,
+//         controller:function($scope,$http){
+//         	//ajax请求
+//         	$http({
+//         		//发送请求   php?...
+//         		url:"php/login.php?type=phone&passw0ord=123&acc=admin"
+//         	}).then(function(data){
+//         		//得到数据
+//         		$scope.data = data
+//         	})
+//
+//         },
+//         link:function(scope,element){
+//         	// js代码会这里被触发
+//         	var a = $(".tou");
+//         	// console.dir($("a",angular.element()));
+//             //kx_js开始
+//             var headerlogo=document.querySelector('.header_logo');
+//             headerlogo.style.background="url('images/cn/cn10.png') no-repeat center center/cover";
+//             //kx_js结束
+//         }
+//     }
+// });
 
 
 
