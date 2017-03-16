@@ -420,3 +420,23 @@ html,body{
 .page1 img{
     width: 100%;
 }
+.kx_regret{
+    background: url("../images/header_change_images/kx_regret.png") no-repeat center center/cover;
+    width: .57rem;
+    height: .29rem;
+    display: none;
+    position: absolute;
+    left: 0;
+    top:50%;
+    margin: -.145rem 0 0 0;
+}
+.kx_finish{
+    background: url("../images/header_change_images/finish.png") no-repeat center center/cover;
+    width: .58rem;
+    height: .28rem;
+    display: none;
+    position: absolute;
+    right: 0;
+    top:50%;
+    margin: -.14rem 0 0 0;
+}

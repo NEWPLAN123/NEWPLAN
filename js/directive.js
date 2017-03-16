@@ -77,6 +77,19 @@ direct.directive("hiddentop",function(){
         }
     }
 });
+direct.directive("showtop",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+            var hd=document.querySelector('.cn-top');
+            hd.style.display='block';
+
+            // kx_js结束
+        }
+    }
+});
 
 
 //头部隐藏添加标签开始
@@ -176,11 +189,110 @@ direct.directive("kb",function(){
             //kx_js开始
             var headerlogo=document.querySelector('.header_logo');
             headerlogo.style.background="url('images/header_change_images/personal.png') no-repeat center center/cover";
-            console.log("url('images/header_change_images/personal.png') no-repeat center center/cover")
             headerlogo.style.width='2.68rem';
             headerlogo.style.height='.39rem';
-            console.dir(headerlogo);
+            var left=document.querySelector('.kx_search_left2');
+            var right=document.querySelector('.kx_search_right');
+            var regret=document.querySelector('.kx_regret');
+            var finish=document.querySelector('.kx_finish');
+            left.style.display='inline-block';
+            right.style.display='inline-block';
+            regret.style.display='none';
+            finish.style.display='none';
             //kx_js结束
+        }
+    }
+});
+
+direct.directive("kc",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            //kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/upload.png') no-repeat center center/cover";
+            headerlogo.style.width='1.37rem';
+            headerlogo.style.height='.39rem';
+            var left=document.querySelector('.kx_search_left2');
+            var right=document.querySelector('.kx_search_right');
+            var regret=document.querySelector('.kx_regret');
+            var finish=document.querySelector('.kx_finish');
+            left.style.display='none';
+            right.style.display='none';
+            regret.style.display='inline-block';
+            finish.style.display='inline-block';
+            //kx_js结束
+        }
+    }
+});
+direct.directive("kd",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            //kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/search_result.png') no-repeat center center/cover";
+            headerlogo.style.width='2.47rem';
+            headerlogo.style.height='.4rem';
+            //kx_js结束
+        }
+    }
+});
+direct.directive("ke",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            //kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/designer_result.png') no-repeat center center/cover";
+            headerlogo.style.width='2.74rem';
+            headerlogo.style.height='.4rem';
+            //kx_js结束
+        }
+    }
+});
+direct.directive("kf",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/artist.png') no-repeat center center/cover";
+            headerlogo.style.width='1.13rem';
+            headerlogo.style.height='.39rem';
+
+            // kx_js结束
+        }
+    }
+});
+direct.directive("kg",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/comment.png') no-repeat center center/cover";
+            headerlogo.style.width='1.56rem';
+            headerlogo.style.height='.39rem';
+
+            // kx_js结束
+        }
+    }
+});
+direct.directive("kh",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/collection.png') no-repeat center center/cover";
+            headerlogo.style.width='1.86rem';
+            headerlogo.style.height='.39rem';
+
+            // kx_js结束
         }
     }
 });
