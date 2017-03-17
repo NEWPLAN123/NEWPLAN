@@ -140,6 +140,19 @@ direct.directive('designer',function () {
     }
 });
 //头部动态获取logo开始
+direct.directive("ks",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            //kx_js开始
+            var headerlogo=document.querySelector('.header_logo');
+            headerlogo.style.background="url('images/header_change_images/kx_first.png') no-repeat center center/cover";
+            headerlogo.style.width='1.58rem';
+            headerlogo.style.height='.39rem';
+            //kx_js结束
+        }
+    }
+});
 direct.directive("kx",function(){
     return {
         replace:true,
