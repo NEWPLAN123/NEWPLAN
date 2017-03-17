@@ -14,10 +14,16 @@
 //     $acc = $_REQUEST['email'];
 // }
 
+$zhanghao = $_REQUEST['zhanghao'];
+
+
  $password = md5($_REQUEST['password']);
 
 //先查找用户名
- $sql = "select * from login where $type='$type'";
+ $sql = "select * from login where $type='$zhanghao'";
+
+ var_dump($sql);
+ exit();
 
  $rul = $mysqli->query($sql);
  if($rul->num_rows){

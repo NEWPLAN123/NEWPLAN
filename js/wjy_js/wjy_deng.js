@@ -110,19 +110,20 @@ num++;
 
 wjy_hua()
 
-
+//登录验证
 //获取登录按钮
-var login = $(".wjy_denglul");
-
-var loginEmail = $("#login_email");
-var loginPassword= $("#login_password");
-var loginPhone = $("#login_phone");
+var login = $("#login");
 
 var mes = $('.error_mes');
 
 var type="email";
 
 touch.on(login,"tap",function () {
+
+    var loginEmail = $("#login_email");
+    var loginPassword= $("#login_password");
+    var loginPhone = $("#login_phone");
+
 	//先判断帐号是否为空
 	if(!(loginEmail.val() || loginPhone.val())){
         mes.html("帐号不能为空！");
@@ -131,11 +132,13 @@ touch.on(login,"tap",function () {
 		if(!loginPassword.val()){
 			mes.html("密码不能为空！")
 		}else{
+			var zhanghao;
             //判断是什么模式的登录的，如果两个都有就默认为邮箱登录
             if(loginEmail.val() || loginPhone.val()){
 				if(loginEmail.val()){
                     type = "email";
                     //默认email登录
+                    zhanghao = loginEmail
 				}else{
                     //判断手机号长度是否正确
                     if(loginPhone.val().length != 11){
@@ -163,7 +166,9 @@ touch.on(login,"tap",function () {
 						mes.html(data.mes);
 					}else if(data.error == 0){
 						//跳转回首页
-						location.href="index.html"
+						setTimeout(function () {
+                            location.href="index.html"
+                        },1500)
 					}
                 }
             })
@@ -171,6 +176,67 @@ touch.on(login,"tap",function () {
 
 	}//else
 })
+
+
+
+
+//注册验证
+//获取注册按钮
+var reg = $("#reg");
+
+var mes = $('.error_mes');
+
+
+touch.on(reg,"tap",function () {
+
+    var regEmail = $("#reg_email");
+    var regPassword= $("#reg_password");
+    var regPhone = $("#reg_phone");
+
+    //先判断帐号是否为空
+    if(!(regEmail.val() && regPhone.val())){
+        mes.html("帐号不能为空！");
+    }else{
+        //判断密码是否为空
+        if(!regPassword.val()){
+            mes.html("密码不能为空！")
+        }else{
+			//判断手机号长度是否正确
+			if(regPhone.val().length != 11){
+				mes.html("请输入正确的手机号");
+				return;
+			}
+            //发送ajax请求
+            $.ajax({
+                url:"php/reg.php",
+                type:"POST",
+                data:{
+                    phone:regPhone.val(),
+					email:regEmail.val(),
+                    password:regPassword.val()
+                },
+                success:function (data2) {
+                    var data = JSON.parse(data2);
+                    console.log(data)
+                    if(data.error == 1){
+                        //如果注册发生了错误
+                        mes.html(data.mes);
+                    }else if(data.error == 0){
+                        //跳转回登录页面
+                        mes.html(data.mes);
+                        setTimeout(function () {
+                            location.href="wjy_denglu.html"
+                        },1500)
+                    }
+                }
+            })
+        }
+
+    }//else
+})
+
+
+
 
 
 
