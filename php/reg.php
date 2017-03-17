@@ -29,6 +29,14 @@ if($rul->num_rows){
         $sql = "insert into  login(phone,email,password) values('$phone','$email','$password')";
         $mysqli->query($sql);
         if($mysqli->affected_rows){ //注册成功
+            //注册成功的同时，要同时新增一条对应的用户数据
+            //首先先找到新注册的用户的lid
+            $sql = "select * from login where phone='$phone' and email='$email' and password='$password'";
+            $rul = $mysqli->query($sql)->fetch_assoc();
+            $lid = $rul['lid'];
+            //设置默认数据
+            $sql = "insert into user(lid,name,sex,thumb) values('$lid','未设置','男','http://localhost/up/php/upload/2017-03-17/3.png')";
+            $mysqli->query($sql);
             echo json_encode(array('error'=>0,'mes'=>"注册成功！"));
         }else{
             echo json_encode(array('error'=>1,'mes'=>"注册失败！"));

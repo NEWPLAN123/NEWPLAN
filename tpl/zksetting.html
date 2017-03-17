@@ -11,8 +11,8 @@
 <hidden></hidden>
 <setting>
 <ul id="sex-list" style="display: none">  
-	<li>先生</li>  
-	<li>女士</li>  
+	<li>男</li>
+	<li>女</li>
 </ul> 
 <!--<div class="topbar0">-->
 	<!--<div class="l fl">-->
@@ -28,7 +28,7 @@
 <!-- 内容页 -->
 <div class="optionsbox">
 	<a href="javascript:;" class="floor1 floor">
-			<span>头像</span>
+			<span>头像</span><span id="mes"></span>
 		<div class="fr">
 			<div class="thumbs">
 				<input id="fileId3" type="file" multiple="multiple" name="file3" />
@@ -41,7 +41,7 @@
 			<span>昵称</span>
 		</div>
 		<div class="fr">
-			<input type="text" name="names" value="" class="slh1">
+			<input id="username" type="text" name="names" value="" class="slh1">
 			<em></em>
 		</div>
 	</a>
@@ -50,7 +50,7 @@
 			<span>称号</span>
 		</div>
 		<div class="fr">
-			<input type="text" name="jobs" value="" placeholder="平面设计师" class="slh1">
+			<input id="ch" type="text" name="jobs" value="" placeholder="平面设计师" class="slh1">
 			<em></em>
 		</div>
 	</a>
@@ -59,7 +59,7 @@
 			<span>专栏</span>
 		</div>
 		<div class="fr">
-			<input type="text" name="belong" value="" placeholder="专栏/签约/特邀" class="slh1">
+			<input id="zl" type="text" name="belong" value="" placeholder="专栏/签约/特邀" class="slh1">
 			<em></em>
 		</div>
 	</a>
@@ -68,7 +68,7 @@
 			<span class="mbase-menu-title">性别</span>
 		</div>
 		<div class="fr">
-			<div class="mbase-menu-txt">男</div> 
+			<div id="xingbie" class="mbase-menu-txt">男</div>
 			<em></em>
 		</div>
 	</a>
@@ -86,7 +86,7 @@
 			<span>一句话简介</span>
 		</div>
 		<div class="fr">
-			<input type="text" name="short" value="" class="slh1">
+			<input id="zym" type="text" name="short" value="" class="slh1">
 			<em></em>
 		</div>
 	</a>

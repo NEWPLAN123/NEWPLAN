@@ -447,8 +447,103 @@ direct.directive("setting",function(){
                         }  
                     });  
                     $("input[id^=sex-list1]").focus();  
-                }); 
-            }
+                });
+
+                var mes = $("#mes");
+                //张家强写的逻辑代码
+                    setTimeout(function () {
+                        //加0.2秒的延迟，保证dom元素已经加载好了
+
+                        //获取dom元素
+                        var images = $("#fileId3");      //图片
+                        var name = $("#username");      //昵称
+                        var ch = $("#ch");              //称号
+                        var zl = $("#zl");              //专栏
+                        var sex = $("#xingbie");      //性别
+                        var zym = $("#zym");      //座右铭
+                        var timg = "";
+
+                        //因为能进到这个页面的都是说明是已经登录的了
+                        var lid = 15;   //这个lid应该从scope中获取参数得到的
+                        //现在是已登录状态，先通过ajax从数据库中获取相应的内容
+                        //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+
+
+                        var toPerson = $(".kx_finish");
+                        toPerson.attr("href","javascript:;");
+                        touch.on(toPerson,"tap",function(){
+                            var thumb = images[0].files;
+                            //判断昵称是否为空
+                            if(!name.val()){
+                                mes.html("昵称不能为空！");
+                                return ;
+                            }else{
+                                //验证完毕，可以发送ajax请求
+                                //如果用户有更改或上传头像
+                                if(thumb.length != 0){
+                                    //判断上传的是不是图片
+                                    var files = thumb[0];
+                                    if(files.type.slice(0,5)!='image'){
+                                        mes.html("上传的文件只能是图片");
+                                        return ;
+                                    }
+                                    // 先上传头像
+                                    var fd = new FormData();
+                                    fd.append('files',files);
+                                    var xhr = new XMLHttpRequest(); //实例化ajax对象
+                                    xhr.open("post","php/upload_images.php");
+                                    xhr.send(fd);
+                                    xhr.onreadystatechange = function () {
+                                        if(xhr.readyState==4){
+                                            if(xhr.status==200){
+                                                var text = xhr.responseText;
+                                                var arr = JSON.parse(text);
+                                                if(!arr['error']){
+                                                    timg = arr['url'];
+                                                    //上传头像成功
+                                                }else{
+                                                    mes.html(arr['mes']);
+                                                    return ;
+                                                }//else
+
+                                            }
+                                        }
+                                    }//onreadystatechange
+                                }
+                                setTimeout(function(){
+                                    //延迟0.2秒发送，确保图片路径收到
+                                    $.ajax({
+                                        url:"php/upload.php",
+                                        type:"post",
+                                        data:{
+                                            lid:lid,
+                                            name:name.val(),
+                                            sex:sex.html(),
+                                            ch:ch.val(),
+                                            zl:zl.val(),
+                                            zym:zym.val(),
+                                            thumb:timg
+                                        },
+                                        success:function (data1) {
+                                            var data = JSON.parse(data1);
+                                            if(data['error']){
+                                                //如果发生了错误
+                                                mes.html(data['mes']);
+                                                return;
+                                            }else{
+                                                //跳转回去
+                                                mes.html(data['mes']);
+                                                setTimeout(function () {
+                                                    location.href="#!/personCenter";
+                                                },1500)
+                                            }
+                                        }
+                                    })
+                                },200)
+                            }
+                        })
+                    },200)
+                }//else 已登录
         // }
     }
 })
@@ -489,7 +584,6 @@ direct.directive("cnyouxia",function () {
             var flag=false;
             touch.on(meno,"tap",function(){
                 if (!flag){
-                    console.log(11)
                     flag=true;
                     for(i=0;i<list.length;i++){
                         var w=getXY(i*ang-30)
