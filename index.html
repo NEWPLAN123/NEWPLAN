@@ -35,7 +35,7 @@
 </cnitem>
     <!--搜索框开始-->
     <ul class="kx_search_box">
-        <li ng-repeat="v in work|filter:{title:name } track by $index ">
+        <li ng-repeat="v in work|filter:{title:name }|limitTo:6 track by $index ">
              <span>新时代</span>{{v.title}}
         </li>
         <!--<li><span>新时代</span>简约风</li>-->
