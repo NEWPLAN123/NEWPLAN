@@ -117,6 +117,7 @@ var login = $("#login");
 var mes = $('.error_mes');
 
 var type="email";
+var zhanghao = "";
 
 touch.on(login,"tap",function () {
 
@@ -132,19 +133,20 @@ touch.on(login,"tap",function () {
 		if(!loginPassword.val()){
 			mes.html("密码不能为空！")
 		}else{
-			var zhanghao;
+
             //判断是什么模式的登录的，如果两个都有就默认为邮箱登录
             if(loginEmail.val() || loginPhone.val()){
 				if(loginEmail.val()){
                     type = "email";
                     //默认email登录
-                    zhanghao = loginEmail
+                    zhanghao = loginEmail.val()
 				}else{
                     //判断手机号长度是否正确
                     if(loginPhone.val().length != 11){
                         mes.html("请输入正确的手机号");
                         return;
                     }else{
+                        zhanghao = loginPhone.val()
                         type = "phone";
 					}
 				}
@@ -157,15 +159,18 @@ touch.on(login,"tap",function () {
 				type:"POST",
 				data:{
 					type:type,
+					zhanghao:zhanghao,
 					password:loginPassword.val()
 				},
-				success:function (data) {
-					var data = JSON.parse(data);
+				success:function (data1) {
+					var data = JSON.parse(data1);
+					console.log(data)
 					if(data.error == 1){
 						//如果发生了错误
 						mes.html(data.mes);
 					}else if(data.error == 0){
 						//跳转回首页
+                        mes.html(data.mes);
 						setTimeout(function () {
                             location.href="index.html"
                         },1500)
@@ -217,7 +222,6 @@ touch.on(reg,"tap",function () {
                 },
                 success:function (data2) {
                     var data = JSON.parse(data2);
-                    console.log(data)
                     if(data.error == 1){
                         //如果注册发生了错误
                         mes.html(data.mes);

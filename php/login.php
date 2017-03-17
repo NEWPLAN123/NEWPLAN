@@ -16,19 +16,16 @@
 
 $zhanghao = $_REQUEST['zhanghao'];
 
-
  $password = md5($_REQUEST['password']);
 
 //先查找用户名
  $sql = "select * from login where $type='$zhanghao'";
 
- var_dump($sql);
- exit();
 
  $rul = $mysqli->query($sql);
  if($rul->num_rows){
      //继续查询密码
-     $sql = "select * from login where $acc='$acc' and password='$password'";
+     $sql = "select * from login where $type='$zhanghao' and password='$password'";
      $rul = $mysqli->query($sql);
      if($rul->num_rows){
          //登录成功
@@ -37,7 +34,7 @@ $zhanghao = $_REQUEST['zhanghao'];
          //设置session变量
          $_SESSION['is_login'] = true;
          $_SESSION['lid'] = $row['lid'];
-         echo json_encode(array('error'=>0,'mes'=>"登陆成功！"));
+         echo json_encode(array('error'=>0,'mes'=>"登录成功！"));
      }else{
          //跳转回登录页面并给出提示信息
          echo json_encode(array('error'=>1,'mes'=>"密码错误！"));
