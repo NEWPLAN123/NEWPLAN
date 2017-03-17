@@ -99,6 +99,7 @@ body{
 .itemUp .p1 span{
 	font-size: .2rem;
 	color: #ccc;
+	float: none!important;
 	/*margin-right: .05rem;*/
 }
 .itemUp .p2{
