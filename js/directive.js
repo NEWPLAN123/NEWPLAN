@@ -449,3 +449,63 @@ direct.directive("cnshuju",function(){
         templateUrl:"tpl/cnindex1.html",
     }
 })
+
+
+
+// 扇形菜单
+
+direct.directive("cnyouxia",function () {
+    return{
+        replac:true,
+        // templateUrl:"tpl/cnindex.html",
+        link:function (scope,element) {
+            var meno=$(".cn-meno")[0];
+            var group=$(".cn-group")[0];
+            var list=$("li",group);
+            var r=90;
+            var cnzhezhao=document.querySelector(".cn-zhezhao");
+            // console.log(cnzhezhao)
+            function getXY(deg) {
+                var hd=Math.PI/180*deg;
+                var x=Math.sin(hd)*r;
+                var y=Math.cos(hd)*r;
+                return {x:-x,y:-y}
+            }   
+            var ang=180/(list.length-1);
+            console.log(meno)
+            var flag=false;
+            touch.on(meno,"tap",function(){
+                if (!flag){
+                    console.log(11)
+                    flag=true;
+                    for(i=0;i<list.length;i++){
+                        var w=getXY(i*ang-30)
+                        list[i].style.transform=" translate("+w.x+"px,"+w.y+"px) ";
+                        list[i].style.transition="all 0.5s "+i*100+"ms";
+
+                    }
+                    cnzhezhao.style.display='block';
+
+                }else{
+                    console.log(22)
+                    flag=false;
+                    for(i=0;i<list.length;i++){
+                        list[i].style.transform="rotate(0deg) translate(0px,0px)";
+                        list[i].style.transition="all 0.5s "+(list.length-i)*100+"ms";
+                    }
+                    cnzhezhao.style.display='none';
+
+                }
+                // cnzhezhao.style.display='block';
+            })
+
+            touch.on( cnzhezhao,'tap',function () {
+                for(i=0;i<list.length;i++){
+                    list[i].style.transform="rotate(0deg) translate(0px,0px)";
+                    list[i].style.transition="all 0.5s "+(list.length-i)*100+"ms";
+                }
+                cnzhezhao.style.display='none';
+            })
+        }
+    }
+})
