@@ -1,20 +1,19 @@
 <?php
 
-$f = $_FILES['files'];
+//上传临时文件夹
 
-$time = date('Y-m-d');
+$f = $_FILES['files'];
 
 if(!file_exists('./upload')){
     mkdir('./upload');
 }
 
-if(!file_exists('./upload/'.$time)){
-    //如果没有 当天的文件夹 那么创建
-    mkdir('./upload/'.$time);
-}
-
 //设置相对路径
-$dir = 'upload/'.$time."/";
+$dir = 'upload/temp/';
+
+if(!file_exists('./upload/temp')){
+    mkdir('./upload/temp');
+}
 
 $randNum = rand(10000000,99999999);
 $time = date('Ymd').$randNum;   //随机名称

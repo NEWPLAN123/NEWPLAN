@@ -462,12 +462,58 @@ direct.directive("setting",function(){
                         var sex = $("#xingbie");      //性别
                         var zym = $("#zym");      //座右铭
                         var timg = "";
+                        var thumbs = $(".thumbs");  //头像的图片
 
                         //因为能进到这个页面的都是说明是已经登录的了
                         var lid = 15;   //这个lid应该从scope中获取参数得到的
                         //现在是已登录状态，先通过ajax从数据库中获取相应的内容
-                        //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+                        $.ajax({
+                            url:"php/get_user.php",
+                            type:"GET",
+                            data:{lid:lid},
+                            success:function(data1){
+                                var data = JSON.parse(data1);
+                                //设置相应的字段
 
+                                thumbs.css("background","url('"+data.thumb+"') no-repeat center center/cover");  //设置头像
+                                name.val(data.name);    //昵称
+                                ch.val(data.ch);    //称号
+                                zl.val(data.zl);    //专栏
+                                sex.val(data.sex);    //性别
+                                zym.val(data.zym);    //简介
+                            }
+                        })
+
+                        images.on("change",function(){
+                            //获取文件
+                            var thumb = images[0].files;
+                            var files = thumb[0];
+                            if(files.type.slice(0,5)!='image'){
+                                mes.html("上传的文件只能是图片");
+                                return ;
+                            }
+                            //先上传到临时文件夹，先替换
+                            var fd = new FormData();
+                            fd.append('files',files);
+                            var xhr = new XMLHttpRequest(); //实例化ajax对象
+                            xhr.open("post","php/temp_images.php");
+                            xhr.send(fd);
+                            xhr.onreadystatechange = function () {
+                                if(xhr.readyState==4){
+                                    if(xhr.status==200){
+                                        var text = xhr.responseText;
+                                        var arr = JSON.parse(text);
+                                        if(!arr['error']){
+                                            //更换临时头像
+                                            thumbs.css("background","url('"+arr['url']+"') no-repeat center center/cover");  //设置头像
+                                        }else{
+                                            return ;
+                                        }//else
+
+                                    }
+                                }
+                            }//onreadystatechange
+                        })
 
                         var toPerson = $(".kx_finish");
                         toPerson.attr("href","javascript:;");
@@ -502,7 +548,6 @@ direct.directive("setting",function(){
                                                     timg = arr['url'];
                                                     //上传头像成功
                                                 }else{
-                                                    mes.html(arr['mes']);
                                                     return ;
                                                 }//else
 

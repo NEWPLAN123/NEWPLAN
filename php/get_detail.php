@@ -4,7 +4,7 @@
 
 <?php
 
-//获取作品详情
+//获取作品详情，现在主表和副表融合在一起了
 $cid = $_REQUEST['cid'];    //获取作品cid
 
 $sql = "select * from work where cid='$cid'";
