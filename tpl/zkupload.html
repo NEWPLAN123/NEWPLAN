@@ -7,26 +7,26 @@
 </style>
 <kc></kc>
 <hidden></hidden>
-<setting>
-<ul id="sex-list" style="display: none">  
-	<li>金融</li>  
-	<li>旅游</li>  
-	<li>健康</li>  
-	<li>医疗</li>  
-	<li>社交</li>  
-	<li>动漫</li>  
-	<li>电商</li>  
-	<li>游戏</li>  
-	<li>工具</li>  
-	<li>美食</li>  
-	<li>视频</li>  
-	<li>教育</li>  
-	<li>生活</li>  
-</ul> 
-<ul id="sex-list1" style="display: none">  
-	<li>WEB</li>  
-	<li>APP</li>  
-	<li>WATCH</li>  
+<setwork>
+<ul id="sex-list" style="display: none">
+	<li>金融</li>
+	<li>旅游</li>
+	<li>健康</li>
+	<li>医疗</li>
+	<li>社交</li>
+	<li>动漫</li>
+	<li>电商</li>
+	<li>游戏</li>
+	<li>工具</li>
+	<li>美食</li>
+	<li>视频</li>
+	<li>教育</li>
+	<li>生活</li>
+</ul>
+<ul id="sex-list1" style="display: none">
+	<li>WEB</li>
+	<li>APP</li>
+	<li>WATCH</li>
 </ul>
 <!--<div class="topbar0">-->
 	<!--<div class="l fl">-->
@@ -41,21 +41,21 @@
 <!--</div>-->
 <!-- 内容页 -->
 <div class="optionsbox">
-	
+
 	<a href="javascript:;" class="floor2 floor">
 		<div class="fl">
 			<span>标题</span>
 		</div>
 		<div class="fr">
-			<input type="text" name="names" value="" class="slh1" placeholder="请输入标题">
+			<input type="text" name="names" id="title" value="" class="slh1" placeholder="请输入标题">
 			<em></em>
 		</div>
 	</a>
 	<a href="javascript:;" class="floor floor3">
-		<textarea name="" id="" cols="30" rows="10" placeholder="说点什么吧"></textarea>
+		<textarea name="" id="des" cols="30" rows="10" placeholder="作品介绍"></textarea>
 	</a>
 	<a href="javascript:;" class="floor1 floor">
-			<span>照片/视频</span>
+			<span>照片</span>
 		<div class="fr">
 			<div class="thumbs" style="background:url(images/zk_images/15.png) center center/cover no-repeat ;height:1rem;width:1rem;">
 				<input id="fileId3" type="file" multiple="multiple" name="file3" />
@@ -65,11 +65,11 @@
 	</a>
 	<a href="javascript:;" class="floor"  id="sex">
 		<div class="fl">
-			<span class="mbase-menu-title">所属行业</span>
+			<span id="hid" class="mbase-menu-title">所属行业</span>
 		</div>
 		<div class="fr">
 			<!-- <input type="text" name="sex slh1" value="" placeholder="男/女" class="slh1"> -->
-			<div class="mbase-menu-txt">金融</div> 
+			<div class="mbase-menu-txt">金融</div>
 			<em></em>
 		</div>
 	</a>
@@ -79,20 +79,11 @@
 		</div>
 		<div class="fr">
 			<!-- <input type="text" name="sex slh1" value="" placeholder="男/女" class="slh1"> -->
-			<div class="mbase-menu-txt">WEB</div> 
+			<div id="lname" class="mbase-menu-txt">WEB</div>
 			<em></em>
 		</div>
 	</a>
-	<!-- <a href="javascript:;" class="floor">
-		<div class="fl">
-			<span>邮箱</span>
-		</div>
-		<div class="fr">
-			<input type="e-mail" name="mail" value="" placeholder="邮箱地址" class="slh1">
-			<em></em>
-		</div>
-	</a> -->
 </div>
-</setting>
+</setwork>
 
 

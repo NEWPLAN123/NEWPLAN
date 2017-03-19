@@ -23,7 +23,8 @@ ctrl.config(function($routeProvider) {
     }).when('/designer_result',{
         templateUrl:'tpl/designer_result.html'   //搜索设计师结果
     }).when('/upload',{
-        templateUrl:'tpl/zkupload.html'   //上传作品
+        templateUrl:'tpl/zkupload.html',   //上传作品
+        controller:""
     }).when('/myworks',{
         templateUrl:'tpl/zkmyworks.html'   //我的作品列表
     }).when('/unlogin',{

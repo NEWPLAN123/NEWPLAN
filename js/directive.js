@@ -465,7 +465,7 @@ direct.directive("setting",function(){
                         var thumbs = $(".thumbs");  //头像的图片
 
                         //因为能进到这个页面的都是说明是已经登录的了
-                        var lid = scope.lid;   //这个lid应该从scope中获取参数得到的
+                        var lid = localStorage.getItem("lid");
                         //现在是已登录状态，先通过ajax从数据库中获取相应的内容
                         $.ajax({
                             url:"php/get_user.php",
@@ -585,10 +585,81 @@ direct.directive("setting",function(){
                                         }
                                     })
                                 },200)
-                            }
+                            }//else
                         })
                     },200)
                 }//else 已登录
+        // }
+    }
+})
+// zk结束
+
+// 设置上传作品信息
+direct.directive("setwork",function(){
+    return{
+        replace:true,
+        link:function(scope,element){
+            $("#sex").click(function () {
+                var that = this;
+                $("#sex-list").mobiscroll().treelist({
+                    theme: "android-ics",
+                    lang: "zh",
+                    display: 'bottom',
+                    inputClass: 'tmp',
+                    headerText: '请您选择',
+                    onSelect: function (valueText) {
+                        var m = $(this).find("li").eq(valueText).html();
+                        /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) {
+                         if (result == 'ok') {
+                         $(that).find(".mbase-menu-txt").html(m);
+                         }
+                         else {
+                         error('网络繁忙，请您稍后再试');
+                         }
+                         });*/
+                        $("#sex .mbase-menu-txt").html(m);
+                    }
+                });
+                $("input[id^=sex-list]").focus();
+            });
+
+            $("#sex1").click(function () {
+                var that = this;
+                // console.log(1);
+                $("#sex-list1").eq(0).mobiscroll().treelist({
+                    theme: "android-ics",
+                    lang: "zh",
+                    display: 'bottom',
+                    inputClass: 'tmp',
+                    headerText: '请您选择',
+                    onSelect: function (valueText) {
+                        var m = $(this).find("li").eq(valueText).html();
+                        /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) {
+                         if (result == 'ok') {
+                         $(that).find(".mbase-menu-txt").html(m);
+                         }
+                         else {
+                         error('网络繁忙，请您稍后再试');
+                         }
+                         });*/
+                        $("#sex1 .mbase-menu-txt").html(m);
+                    }
+                });
+                $("input[id^=sex-list1]").focus();
+            });
+            //获取完成按钮
+            var submit = $(".kx_finish");
+            //获取数据
+            var title = $("#title");
+            var des = $("#des");
+            var image = $("#image");
+            var hid = $("#hid");
+            var lname = $("#lname");
+            touch.on(submit,"tap",function(){
+                //当点击提交的时候，先进行数据的验证
+            })
+
+        }//else 已登录
         // }
     }
 })
