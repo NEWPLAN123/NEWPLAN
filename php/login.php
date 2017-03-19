@@ -30,11 +30,10 @@ $zhanghao = $_REQUEST['zhanghao'];
      if($rul->num_rows){
          //登录成功
          $row = $rul->fetch_assoc();
-
          //设置session变量
-         $_SESSION['is_login'] = true;
-         $_SESSION['lid'] = $row['lid'];
-         echo json_encode(array('error'=>0,'mes'=>"登录成功！"));
+//         $_SESSION['is_login'] = true;
+//         $_SESSION['lid'] = $row['lid'];
+         echo json_encode(array('error'=>0,'mes'=>"登录成功！",'lid'=>$row['lid']));
      }else{
          //跳转回登录页面并给出提示信息
          echo json_encode(array('error'=>1,'mes'=>"密码错误！"));

@@ -4,12 +4,16 @@ var ctrl=angular.module("ctrl",["ngRoute"]);
 
 ctrl.config(function($routeProvider) {
     $routeProvider.when("/",{
-        templateUrl:"tpl/cnindex.html"  //首页
+        templateUrl:"tpl/cnindex.html",  //首页
+    }).when("/cnapp:lid",{
+        templateUrl:"tpl/cnindex.html",  //app列表页
+        controller:"cnapp"
     }).when("/cnwatch",{
         templateUrl:'tpl/cnwatch.html',  //watch列表页
         controller:"watch"
     }).when("/personCenter",{
-        templateUrl:'tpl/zkpersonCenter.html' //个人中心
+        templateUrl:'tpl/zkpersonCenter.html', //个人中心
+        controller:"personCenter"
     }).when("/cnweb",{
         templateUrl:'tpl/cnweb.html'  //web列表页
     }).when('/search_pages',{
@@ -36,6 +40,8 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/zkcollection.html'  //我的收藏
     }).when('/pinlun',{
         templateUrl:'tpl/wjy_pinlun.html'  //评论
+    }).otherwise({  //如果都不匹配就跳转到首页
+        templateUrl:"tpl/cnindex.html"  //首页
     })
 })
 
@@ -48,6 +54,50 @@ ctrl.controller("watch",function ($scope,$http) {
         $scope.watch = data.data;
     })
 })
+
+
+//个人中心页面 控制器
+ctrl.controller("personCenter",function($scope,$http){
+    //判断是否已经登录
+    var lid = localStorage.getItem("lid");
+    $scope.name = "未登录";
+    $scope.thumb = "php/upload/man.png";
+
+    $scope.tishi = "退出登录";
+
+    $scope.toUpload = "#!myworks";
+    $scope.toFollow = "#!concern";
+    $scope.toCollect = "#!collection";
+
+    $scope.outLogin;
+
+    if(lid){
+        //如果已经登录，那么取出数据
+        $http({
+            url:"php/get_user.php?lid="+lid,
+            method:"GET"
+        }).then(function (data) {
+            //获取成功
+            $scope.name = data.data.name;       //设置用户名称
+            $scope.thumb = data.data.thumb;     //设置用户头像
+        })
+        $scope.outLogin = function () {
+            //点击退出登录的时候，清除localStorage缓存
+            localStorage.removeItem("lid");
+            location.href = "wjy_denglu.html";
+        }
+    }else{
+        //如果是没登录状态
+        $scope.toUpload = "wjy_denglu.html";
+        $scope.toUpload = "wjy_denglu.html";
+        $scope.toUpload = "wjy_denglu.html";
+        $scope.tishi = "登录/注册"
+        $scope.outLogin = function () {
+            location.href = "wjy_denglu.html";
+        }
+    }
+})
+
 
 
 

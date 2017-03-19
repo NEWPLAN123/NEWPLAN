@@ -5,29 +5,29 @@
 	
 </div>
 <div class="portrait">
-	<a href="#!setting" class="tou"><img src="images/zk_images/6.png" alt=""></a>
+	<a href="#!setting" class="tou"><img src="{{thumb}}" alt=""></a>
 </div>
 <div class="bgword">
 	
 </div>
 <hello>
 	<div class="personCenter comWidth">
-		<h4>Easy_Rui</h4>
-		<a id="ccc" href="#!myworks">
+		<h4>{{name}}</h4>
+		<a id="ccc" href="{{toUpload}}">
 			<em class="e1"></em>
 			<span>我的上传</span>
 		</a>
-		<a href="#!concern">
+		<a href="{{toFollow}}">
 			<em class="e2"></em>
 			<span>我的关注</span>
 		</a>
-		<a href="#!collection">
+		<a href="{{toCollect}}">
 			<em class="e3"></em>
 			<span>我的收藏</span>
 		</a>
-		<a href="./wjy_denglu.html">
+		<a ng-click="outLogin()" href="javascript:;">
 			<em class="e4"></em>
-			<span>退出登录</span>
+			<span>{{tishi}}</span>
 		</a>
 	</div>
 </hello>

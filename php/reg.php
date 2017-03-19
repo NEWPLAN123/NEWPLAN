@@ -35,7 +35,7 @@ if($rul->num_rows){
             $rul = $mysqli->query($sql)->fetch_assoc();
             $lid = $rul['lid'];
             //设置默认数据
-            $sql = "insert into user(lid,name,sex,thumb) values('$lid','未设置','男','http://localhost/up/php/upload/2017-03-17/3.png')";
+            $sql = "insert into user(lid,name,sex,thumb) values('$lid','未设置','男','http://localhost/up/php/upload/man.png')";
             $mysqli->query($sql);
             echo json_encode(array('error'=>0,'mes'=>"注册成功！"));
         }else{

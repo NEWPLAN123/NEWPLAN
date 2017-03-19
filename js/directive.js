@@ -465,7 +465,7 @@ direct.directive("setting",function(){
                         var thumbs = $(".thumbs");  //头像的图片
 
                         //因为能进到这个页面的都是说明是已经登录的了
-                        var lid = 15;   //这个lid应该从scope中获取参数得到的
+                        var lid = scope.lid;   //这个lid应该从scope中获取参数得到的
                         //现在是已登录状态，先通过ajax从数据库中获取相应的内容
                         $.ajax({
                             url:"php/get_user.php",
@@ -625,7 +625,6 @@ direct.directive("cnyouxia",function () {
                 return {x:-x,y:-y}
             }   
             var ang=180/(list.length-1);
-            console.log(meno)
             var flag=false;
             touch.on(meno,"tap",function(){
                 if (!flag){

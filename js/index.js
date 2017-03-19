@@ -34,15 +34,10 @@ var app=angular.module("app",["ngRoute","ctrl","direct"]);
 //顶部 
 
 
-
-
-
-
-
 app.controller('c',function($scope){
     $scope.data=shuju;
     $scope.name = "时尚";
-    
+
 });
 app.controller('kx_ctrl',function ($scope) {
     $scope.data=data;

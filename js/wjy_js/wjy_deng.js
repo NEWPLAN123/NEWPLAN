@@ -164,7 +164,6 @@ touch.on(login,"tap",function () {
 				},
 				success:function (data1) {
 					var data = JSON.parse(data1);
-					console.log(data)
 					if(data.error == 1){
 						//如果发生了错误
 						mes.html(data.mes);
@@ -172,8 +171,9 @@ touch.on(login,"tap",function () {
 						//跳转回首页
                         mes.html(data.mes);
 						setTimeout(function () {
-                            location.href="index.html"
-                        },1500)
+							localStorage.setItem("lid",data.lid)
+                            location.href="../NEWPLAN/#!/"
+                        },1000)
 					}
                 }
             })
