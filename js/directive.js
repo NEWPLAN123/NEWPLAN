@@ -491,7 +491,11 @@ direct.directive("setting",function(){
                             if(files.type.slice(0,5)!='image'){
                                 mes.html("上传的文件只能是图片");
                                 return ;
+                            }else if(thumb[0].size/1024 > 10240){
+                                mes.html("图片大小不得超过10M");
+                                return ;
                             }
+
                             //先上传到临时文件夹，先替换
                             var fd = new FormData();
                             fd.append('files',files);
@@ -531,6 +535,9 @@ direct.directive("setting",function(){
                                     var files = thumb[0];
                                     if(files.type.slice(0,5)!='image'){
                                         mes.html("上传的文件只能是图片");
+                                        return ;
+                                    }else if(thumb[0].size/1024 > 10240){
+                                        mes.html("上传的文件不得大于10M");
                                         return ;
                                     }
                                     // 先上传头像
@@ -594,76 +601,249 @@ direct.directive("setting",function(){
 })
 // zk结束
 
-// 设置上传作品信息
+// 设置上传作品信息************************************************************
 direct.directive("setwork",function(){
     return{
         replace:true,
-        link:function(scope,element){
-            $("#sex").click(function () {
-                var that = this;
-                $("#sex-list").mobiscroll().treelist({
-                    theme: "android-ics",
-                    lang: "zh",
-                    display: 'bottom',
-                    inputClass: 'tmp',
-                    headerText: '请您选择',
-                    onSelect: function (valueText) {
-                        var m = $(this).find("li").eq(valueText).html();
-                        /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) {
-                         if (result == 'ok') {
-                         $(that).find(".mbase-menu-txt").html(m);
-                         }
-                         else {
-                         error('网络繁忙，请您稍后再试');
-                         }
-                         });*/
-                        $("#sex .mbase-menu-txt").html(m);
-                    }
-                });
-                $("input[id^=sex-list]").focus();
-            });
-
-            $("#sex1").click(function () {
-                var that = this;
-                // console.log(1);
-                $("#sex-list1").eq(0).mobiscroll().treelist({
-                    theme: "android-ics",
-                    lang: "zh",
-                    display: 'bottom',
-                    inputClass: 'tmp',
-                    headerText: '请您选择',
-                    onSelect: function (valueText) {
-                        var m = $(this).find("li").eq(valueText).html();
-                        /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) {
-                         if (result == 'ok') {
-                         $(that).find(".mbase-menu-txt").html(m);
-                         }
-                         else {
-                         error('网络繁忙，请您稍后再试');
-                         }
-                         });*/
-                        $("#sex1 .mbase-menu-txt").html(m);
-                    }
-                });
-                $("input[id^=sex-list1]").focus();
-            });
-            //获取完成按钮
-            var submit = $(".kx_finish");
-            //获取数据
-            var title = $("#title");
-            var des = $("#des");
-            var image = $("#image");
-            var hid = $("#hid");
-            var lname = $("#lname");
-            touch.on(submit,"tap",function(){
-                //当点击提交的时候，先进行数据的验证
+        controller:function($scope,$routeParams,$http){
+            $scope.cid = $routeParams.cid;
+            if($scope.cid!=0){
+                $scope.type = "edit";
+            }else{
+                $scope.type = "add";
+            }
+            $http({
+                url:"php/get_worksByType.php?type=cid&val="+$scope.cid,
+                method:"GET"
+            }).then(function(data){
+                $scope.work = data.data[0];
             })
+        },
+        link:function(scope,element){
+            setTimeout(function () {//延迟2秒
+                $("#sex").click(function () {
+                    var that = this;
+                    $("#sex-list").mobiscroll().treelist({
+                        theme: "android-ics",
+                        lang: "zh",
+                        display: 'bottom',
+                        inputClass: 'tmp',
+                        headerText: '请您选择',
+                        onSelect: function (valueText) {
+                            var m = $(this).find("li").eq(valueText).html();
+                            /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) {
+                             if (result == 'ok') {
+                             $(that).find(".mbase-menu-txt").html(m);
+                             }
+                             else {
+                             error('网络繁忙，请您稍后再试');
+                             }
+                             });*/
+                            $("#sex .mbase-menu-txt").html(m);
+                        }
+                    });
+                    $("input[id^=sex-list]").focus();
+                });
+                $("#sex1").click(function () {
+                    var that = this;
+                    // console.log(1);
+                    $("#sex-list1").eq(0).mobiscroll().treelist({
+                        theme: "android-ics",
+                        lang: "zh",
+                        display: 'bottom',
+                        inputClass: 'tmp',
+                        headerText: '请您选择',
+                        onSelect: function (valueText) {
+                            var m = $(this).find("li").eq(valueText).html();
+                            /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) {
+                             if (result == 'ok') {
+                             $(that).find(".mbase-menu-txt").html(m);
+                             }
+                             else {
+                             error('网络繁忙，请您稍后再试');
+                             }
+                             });*/
+                            $("#sex1 .mbase-menu-txt").html(m);
+                        }
+                    });
+                    $("input[id^=sex-list1]").focus();
+                });
+                //获取完成按钮
+                var submit = $(".kx_finish");
+                //获取数据
+                var title = $("#title");    //标题
+                var des = $("#des");        //作品介绍
+                var image = $("#fileId3");  //上传文件
+                var hid = $("#hid");        //所属行业
+                var lname = $("#lname");    //所属栏目
+                var thumbs = $(".thumbs");  //头像的图片
+                var lid = localStorage.getItem("lid");  //获取用户lid
+                var hid2;
+                if(scope.cid!=0){
+                    //如果是修改信息，那么设置获取到的信息
+                    title.val(scope.work.title)
+                    des.val(scope.work.des)
+                    thumbs.css("background","url('"+scope.work.image+"') no-repeat center center/cover");
+                    switch(scope.work.hid){
+                        case "1":hid.html("金融");break;
+                        case "2":hid.html("旅游");break;
+                        case "3":hid.html("健康");break;
+                        case "4":hid.html("医疗");break;
+                        case "5":hid.html("社交");break;
+                        case "6":hid.html("动漫");break;
+                        case "7":hid.html("电商");break;
+                        case "8":hid.html("游戏");break;
+                        case "9":hid.html("工具");break;
+                        case "10":hid.html("美食");break;
+                        case "11":hid.html("视频");break;
+                        case "12":hid.html("教育");break;
+                        case "13":hid.html("生活");break;
+                    }
+                    lname.html(scope.work.lname)
+                    timg = scope.work.image;
+                }
+
+
+                //获取提示消息
+                var mes = $("#mes");
+                submit.attr("href","javascript:;")
+                //设置a标签的链接
+                submit.css("href","javascript:;")
+
+                //当选择了图片，那么先上传到临时文件先
+                image.on("change",function(){
+                    var thumb = image[0].files;
+                    //获取文件
+                    var files = thumb[0];
+                    if(files.type.slice(0,5)!='image'){
+                        mes.html("上传的文件只能是图片");
+                        return ;
+                    }else if(thumb[0].size/1024 > 10240){
+                        mes.html("图片大小不得大于10M");
+                        return ;
+                    }
+                    //先上传到临时文件夹，先替换
+                    var fd = new FormData();
+                    fd.append('files',files);
+                    var xhr = new XMLHttpRequest(); //实例化ajax对象
+                    xhr.open("post","php/temp_images.php");
+                    xhr.send(fd);
+                    xhr.onreadystatechange = function () {
+                        if(xhr.readyState==4){
+                            if(xhr.status==200){
+                                var text = xhr.responseText;
+                                var arr = JSON.parse(text);
+                                if(!arr['error']){
+                                    //更换临时头像
+                                    thumbs.css("background","url('"+arr['url']+"') no-repeat center center/cover");  //设置头像
+                                }else{
+                                    return ;
+                                }//else
+
+                            }
+                        }
+                    }//onreadystatechange
+                })
+                touch.on(submit,"tap",function(){
+                    var thumb = image[0].files; //获取作品图片文件
+                    var files = thumb[0];
+                    switch (hid.html()){
+                        case "金融": hid2 = 1;break;
+                        case "旅游": hid2 = 2;break;
+                        case "健康": hid2 = 3;break;
+                        case "医疗": hid2 = 4;break;
+                        case "社交": hid2 = 5;break;
+                        case "动漫": hid2 = 6;break;
+                        case "电商": hid2 = 7;break;
+                        case "游戏": hid2 = 8;break;
+                        case "工具": hid2 = 9;break;
+                        case "美食": hid2 = 10;break;
+                        case "视频": hid2 = 11;break;
+                        case "教育": hid2 = 12;break;
+                        case "生活": hid2 = 13;break;
+                    }
+
+                    //当点击提交的时候，先进行数据的验证
+                    if(!title.val()){
+                        mes.html("标题不能为空")
+                        return;
+                    }else if(!des.val()){
+                        mes.html("作品介绍不能为空")
+                        return;
+                    }else if(thumb.length == 0 && scope.cid==0){
+                        mes.html("图片不能为空")
+                        return;
+                    }else if( scope.cid==0 && thumb[0].size/1024 > 10240){
+                        mes.html("图片大小不得大于10M")
+                        return;
+                    }else{
+
+                        if(thumb.length != 0){
+                            //可以开始上传
+                            //先对图片进行上传
+                            var fd = new FormData();
+                            fd.append('files',files);
+                            var xhr = new XMLHttpRequest(); //实例化ajax对象
+                            xhr.open("post","php/upload_images.php");
+                            xhr.send(fd);
+                            xhr.onreadystatechange = function () {
+                                if(xhr.readyState==4){
+                                    if(xhr.status==200){
+                                        var text = xhr.responseText;
+                                        var arr = JSON.parse(text);
+                                        if(!arr['error']){
+                                            timg = arr['url'];
+                                            //上传头像成功
+                                        }else{
+                                            return ;
+                                        }//else
+
+                                    }
+                                }
+                            }//xhr
+                        }
+
+                        setTimeout(function () {
+                            //继续上传后续
+                            $.ajax({
+                                url:"php/add_work.php",
+                                type:"POST",
+                                data:{
+                                    type:scope.type,
+                                    cid:scope.cid,
+                                    lid:lid,
+                                    title:title.val(),
+                                    des:des.val(),
+                                    image:timg,
+                                    hid:hid2,
+                                    lname:lname.html()
+                                },
+                                success:function(data1){
+                                    var data = JSON.parse(data1)
+                                    if(data['error']){
+                                        //如果修改失败
+                                        mes.html(data.data['mes'])
+                                    }else{
+                                        //如果成功
+                                        mes.html(data['mes'])
+                                        setTimeout(function () {
+                                            location.href="#!/myworks"
+                                        },1000)
+                                    }
+                                }
+                            })
+                        },200)
+
+                    }
+                })
+            },200)
 
         }//else 已登录
         // }
     }
 })
 // zk结束
+//*******************************
 
 
 //cn数据

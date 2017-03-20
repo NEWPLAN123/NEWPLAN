@@ -2,41 +2,45 @@
 <myworks>
 <div class="hr_38"></div>
 <div class="bgword2">
-	<a class="addbtn" href="#!upload"></a>
+	<a class="addbtn" href="#!upload0"></a>
 </div>
-<div class="zk-itembox">
+
+
+<div class="zk-itembox" ng-repeat="v in workList track by $index">
 	<a class="itemUp" href="#">
 		<div class="inners">
-			<h3>Easy_Rui
-				<div class="touxiang" style="background: url(images/zk_images/6.png) center center/cover no-repeat"></div>
+			<h3>{{user.name}}
+				<div class="touxiang" style="background: url({{v.image}}) center center/cover no-repeat"></div>
 			</h3>
 			<p class="p1">
-				<span class="s1">#UI设计师#</span>
-				<span class="s2">#LOGO#</span>
-				<span class="s3">#BANNER#</span>
+				<span class="s1">{{v.title}}</span>
 			</p>
 			<p class="p2">
-				啊说分手快乐的减肥哈就是考虑对方哈克,啊说分手快乐的减肥哈就
+				{{v.des}}
 			</p>
 			<div class="dot"></div>
 			<div class="infobox clearfix">
 				<div class="fl">
-					<i></i><span>2016.10.31</span>
+					<i></i><span>{{v.time|limitTo:10:0}}</span>
 				</div>
 				<div class="fr">
-					<em></em><span class="note">111</span>
-					<b></b><span class="stars">111</span>
+					<em></em><span class="note">{{v.comNum}}</span>
+					<b></b><span class="stars">{{v.likes}}</span>
 				</div>
 			</div>
 		</div>
 	</a>
 	<div class="itemDown">
 		<div class="inner1">
-			<a class="write" href="#!/upload"></a>
-			<a class="del" href="javascript:;"></a>
+			<a class="write" href="#!/upload{{v.cid}}"></a>
+			<a class="del" ng-click="del(v.cid)" href="javascript:;"></a>
 		</div>
 	</div>
 </div>
+
+
+
+
 <div class="hr_38"></div>
 <div class="hr_38"></div>
 <div class="hr_38"></div>

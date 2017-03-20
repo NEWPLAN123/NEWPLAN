@@ -22,11 +22,11 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/search_result.html'  //搜索作品结果
     }).when('/designer_result',{
         templateUrl:'tpl/designer_result.html'   //搜索设计师结果
-    }).when('/upload',{
+    }).when('/upload:cid',{
         templateUrl:'tpl/zkupload.html',   //上传作品
-        controller:""
     }).when('/myworks',{
-        templateUrl:'tpl/zkmyworks.html'   //我的作品列表
+        templateUrl:'tpl/zkmyworks.html',   //我的作品列表
+        controller:"workList"
     }).when('/unlogin',{
         templateUrl:'tpl/zkpersonCenterUn.html'    //个人中心未登录
     }).when('/xiangqing',{
@@ -49,7 +49,7 @@ ctrl.config(function($routeProvider) {
 
 ctrl.controller("watch",function ($scope,$http) {
     $http({
-        url:"php/get_workList.php?lname=watch",
+        url:"php/get_works.php?lname=watch",
         method:"GET"
     }).then(function (data) {
         $scope.watch = data.data;
@@ -96,6 +96,43 @@ ctrl.controller("personCenter",function($scope,$http){
         $scope.outLogin = function () {
             location.href = "wjy_denglu.html";
         }
+    }
+})
+
+//作品列表 控制器
+ctrl.controller("workList",function($scope,$http,$filter){
+    //能进来这个页面说明是已经成功的登录了
+    $scope.lid = localStorage.getItem("lid");
+    //获取作者信息
+    $http({
+        url:"php/get_user.php?lid="+$scope.lid,
+        method:"GET",
+    }).then(function (data) {
+        $scope.user =data.data;
+    })
+    //获取作品列表
+    $http({
+        url:"php/get_worksByType.php?type=lid&val="+$scope.lid,
+        method:"GET",
+    }).then(function (data) {
+        $scope.workList =data.data;
+    })
+
+    //添加删除事件
+    $scope.del = function (cid) {
+        $http({
+            //删除对应的作品
+            url:"php/del_work.php?cid="+cid,
+            method:"POST"
+        }).then(function () {
+            //当成功删除作品后，重新获取作品
+            $http({
+                url:"php/get_worksByType.php?type=lid&val="+$scope.lid,
+                method:"GET",
+            }).then(function (data) {
+                $scope.workList =data.data;
+            })
+        })
     }
 })
 
