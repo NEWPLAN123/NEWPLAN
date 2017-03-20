@@ -27,7 +27,7 @@ body{
 input,textarea{
 	outline: none;
 }
-body,html{
+body{
 	width: 7.5rem;
 	height: auto;
 	font-size: 0.12rem;
