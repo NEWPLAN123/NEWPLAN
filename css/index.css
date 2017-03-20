@@ -6,6 +6,7 @@
     background: #141414;
     position: fixed;
     z-index: 998;
+    top:0;
 }
 .cn-mid{
     width: 7rem;

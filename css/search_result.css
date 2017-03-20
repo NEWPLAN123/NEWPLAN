@@ -150,8 +150,5 @@
 .kx_designer_result_list{
     width: 100%;
     height: auto;
-    padding-left: .43rem;
-    padding-right: .43rem;
-    box-sizing: border-box;
-    margin: 0 auto;
+    overflow: hidden;
 }
