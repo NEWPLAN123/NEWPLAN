@@ -911,4 +911,22 @@ direct.directive("cnyouxia",function () {
             })
         }
     }
-})
+});
+//详情的上拉效果开始
+direct.directive("ko",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+            var up=document.querySelector('#up');
+            up.addEventListener('touchstart',function (e){
+               console.log(e.screenY);
+            });
+
+            // kx_js结束
+        }
+    }
+});
+//详情的上拉效果结束
+
