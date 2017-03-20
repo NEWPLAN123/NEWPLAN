@@ -36,7 +36,8 @@ ctrl.config(function($routeProvider) {
     }).when('/setting',{
         templateUrl:'tpl/zksetting.html'  //设置个人信息
     }).when('/concern',{
-        templateUrl:'tpl/zkconcern.html'  //我的关注
+        templateUrl:'tpl/zkconcern.html',  //我的关注
+        controller:"follow"
     }).when('/collection',{
         templateUrl:'tpl/zkcollection.html'  //我的收藏
     }).when('/pinlun',{
@@ -46,6 +47,14 @@ ctrl.config(function($routeProvider) {
     })
 })
 
+ctrl.controller("follow",function ($scope,$http) {
+    $scope.lid= localStorage.getItem("lid")
+    $http({
+        url:"php/get_worksByType.php?type=lid&val="+$scope.lid,
+    }).then(function(data){
+        console.log(data)
+    })
+})
 
 ctrl.controller("watch",function ($scope,$http) {
     $http({
@@ -90,8 +99,8 @@ ctrl.controller("personCenter",function($scope,$http){
     }else{
         //如果是没登录状态
         $scope.toUpload = "wjy_denglu.html";
-        $scope.toUpload = "wjy_denglu.html";
-        $scope.toUpload = "wjy_denglu.html";
+        $scope.toFollow = "wjy_denglu.html";
+        $scope.toCollect = "wjy_denglu.html";
         $scope.tishi = "登录/注册"
         $scope.outLogin = function () {
             location.href = "wjy_denglu.html";

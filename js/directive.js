@@ -300,6 +300,7 @@ direct.directive("ki",function(){
         templateUrl:"",
         replace:true,
         link:function(scope,element){
+            console.log(scope.aa)
             // kx_js开始
             var headerlogo=document.querySelector('.header_logo');
             headerlogo.style.background="url('images/header_change_images/concern.png') no-repeat center center/cover";
