@@ -68,9 +68,8 @@ body{
 .content{
     background-color: rgb( 255, 255, 255 );
     left: 0px;
-    top: 8.4rem;
     width: 7.5rem;
-    height: 5.92rem;
+    height: 4.92rem;
     z-index: 4;
     position: fixed;
     bottom: 0;
