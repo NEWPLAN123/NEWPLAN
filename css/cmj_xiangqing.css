@@ -27,7 +27,7 @@ body{
 input,textarea{
 	outline: none;
 }
-body{
+body,html{
 	width: 7.5rem;
 	height: auto;
 	font-size: 0.12rem;
@@ -36,7 +36,7 @@ body{
 /*开始*/
 .details{
 	width: 7.5rem;
-	height: auto;
+	height: 100%;
 	margin: 0 auto;
 }
 .details img{
