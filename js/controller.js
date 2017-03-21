@@ -5,6 +5,7 @@ var ctrl=angular.module("ctrl",["ngRoute"]);
 ctrl.config(function($routeProvider) {
     $routeProvider.when("/",{
         templateUrl:"tpl/cnindex.html",  //首页
+        controller:"cnindex"
     }).when("/cnapp:lid",{
         templateUrl:"tpl/cnindex.html",  //app列表页
         controller:"cnapp"
@@ -43,18 +44,33 @@ ctrl.config(function($routeProvider) {
     }).when('/pinlun',{
         templateUrl:'tpl/wjy_pinlun.html'  //评论
     }).otherwise({  //如果都不匹配就跳转到首页
-        templateUrl:"tpl/cnindex.html"  //首页
+        templateUrl:"tpl/cnindex.html",  //首页
+        controller:"cnindex"
     })
 })
 
+
+//APP页面的控制器
+ctrl.controller("cnindex",function ($scope,$http) {
+    $scope.lid= localStorage.getItem("lid")
+    $scope.abc = 4;
+    $http({
+        url:"php/get_worksByType.php?type=lname&val=app",
+    }).then(function(data){
+        console.log(data.data[0])
+        $scope.app = data.data;
+    })
+})
+
+//个人关注列表 控制器
 ctrl.controller("follow",function ($scope,$http) {
     $scope.lid= localStorage.getItem("lid")
     $http({
-        url:"php/get_worksByType.php?type=lid&val="+$scope.lid,
+        url:"php/get_follow.php?lid="+$scope.lid,
     }).then(function(data){
         $scope.manList = data.data;
+        console.log(data.data)
     })
-
 })
 
 

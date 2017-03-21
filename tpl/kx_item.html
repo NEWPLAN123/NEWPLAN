@@ -1,15 +1,15 @@
 <div class="kx_show" ng-repeat="v in manList track by $index">
     <div class="kx_designer_pic">
-        <a href="#!/sheji" style="background: url({{v.src}}) no-repeat center center/cover;"></a>
-        <span>{{v.little_title}}</span>
+        <a href="#!/sheji" style="background: url({{v.thumb}}) no-repeat center center/cover;"></a>
+        <span>DESIGNER</span>
     </div>
     <div class="kx_designer_intro">
-        <p>{{v.title}}</p>
-        <p>{{v.job}}</p>
+        <p>{{v.ch}}-{{v.name}}</p>
+        <p>专栏-{{v.zl}}</p>
+        <span style="display:none"></span>
+        <span style="display:none" ></span>
         <span></span>
-        <span>{{v.article}}</span>
-        <span></span>
-        <span>{{v.like}}</span>
+        <span>{{v.fnum}}</span>
         <span></span>
     </div>
 </div>
