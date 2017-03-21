@@ -66,6 +66,16 @@ function huifu(){
 huifu()
 
 
+
+
+var huifuinput=document.querySelector(".huifuinput");
+huifuinput.onclick=function(){
+	this.value="";
+	if (this.value="") {
+		this.value="点击文字消失"
+	};
+}
+
 // function liugao(){
 // var aaaaa=$(".aaaaa");
 // var wjynum=184;
