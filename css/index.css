@@ -409,15 +409,76 @@ html,body{
     width: 100%;
     height:2.68rem;
     margin-bottom: .1rem;
+    position: relative;
 }
 
-.page1 a{
+.page1>a{
     width: 100%;
     height: 100%;
     display: block;
+    background: url(../images/cn/03.png) center center/cover no-repeat;
 }
-.page1 img{
-    width: 100%;
+ .right-bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0.1rem;
+    width: 2.4rem;
+    height: .46rem;
+    line-height: .46rem;
+    font-size: .2rem;
+} 
+.box111{
+    float: left;
+    line-height: .46rem;
+}
+.box222{
+    float: left;
+    line-height: .46rem;
+    margin-left: .22rem;
+}
+.right-bottom .s1{
+    width: .28rem;
+    height: .24rem;
+    margin-top: .08rem;
+    margin-right: .05rem;
+    background: url(../images/cn/3web_r2_c2.png) center center/contain no-repeat;
+}
+.right-bottom .e1{
+    color: #fff;
+}
+.right-bottom .e2{
+    color: #fff;
+}
+.right-bottom .s2{
+    margin-right: .05rem;
+    width: .2rem;
+    height: .2rem;
+    margin-top: .11rem;
+    background: url(../images/cn/cn7.png) center center/contain no-repeat;
+}
+
+.left-bottom{
+    position: absolute;
+    left: .35rem;
+    bottom: 0.1rem;
+    width: 2.8rem;
+    height: .84rem;
+    font-size: .2rem;
+}
+.left-bottom .p1{
+    font-size: .3rem;
+    color: #F0F0F0;
+}
+.left-bottom .p2{
+    font-size: .14rem;
+    color: #DED8D8;
+}
+.hxbox{
+    height: 0;
+    width: 1.2rem;
+    border-bottom: 1px solid #fff;
+    /*background: #fff;*/
+    padding: 0.03rem 0;
 }
 .kx_regret{
     background: url("../images/header_change_images/kx_regret.png") no-repeat center center/cover;
