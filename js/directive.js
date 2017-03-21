@@ -158,12 +158,8 @@ direct.directive("show",function(){
 
 direct.directive('designer',function () {
     return{
-        scope:{
-            data:"=data"
-        },
         templateUrl:"tpl/kx_item.html",
         link:function (scope,element) {
-
         }
 
 
@@ -330,13 +326,11 @@ direct.directive("ki",function(){
         templateUrl:"",
         replace:true,
         link:function(scope,element){
-            console.log(scope.aa)
             // kx_js开始
             var headerlogo=document.querySelector('.header_logo');
             headerlogo.style.background="url('images/header_change_images/concern.png') no-repeat center center/cover";
             headerlogo.style.width='1.48rem';
             headerlogo.style.height='.39rem';
-
             // kx_js结束
         }
     }

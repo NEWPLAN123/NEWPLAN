@@ -52,10 +52,14 @@ ctrl.controller("follow",function ($scope,$http) {
     $http({
         url:"php/get_worksByType.php?type=lid&val="+$scope.lid,
     }).then(function(data){
-        console.log(data)
+        $scope.manList = data.data;
     })
+
 })
 
+
+
+//watch的控制器
 ctrl.controller("watch",function ($scope,$http) {
     $http({
         url:"php/get_works.php?lname=watch",
