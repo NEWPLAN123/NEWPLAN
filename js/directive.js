@@ -974,7 +974,6 @@ direct.directive("pinglun",function(){
                 var wjynum=90;
                 var wjyaheight=$(window).height();
                 aaaaa.css("height",wjyaheight)
-                console.log(wjyaheight)
                 }
                 liugao()
                 // 选项卡结束
@@ -992,9 +991,8 @@ direct.directive("pinglun",function(){
 
                     fal=!fal
                     }else{
-                        wjy_liuyanbox.className="wjy_liuyanbox"
+                        wjy_liuyanbox.className="wjy_liuyanbox";
                         wjy_liuyanbox.style="height:auto";
-
                         wjy_jianimg.style="background:url(../images/wjy_img/wjy_z01-top.png)no-repeat center center/cover;"
                     fal=!fal
                         }
@@ -1018,14 +1016,15 @@ direct.directive("pinglun",function(){
                         // var nmm=parseInt($(".wjyjiayi").eq(index).text())+1;
                         // console.log()
                             }else{
-                            this.style="background:url(../images/wjy_img/wjy_xin.png)no-repeat center center/cover"
+                            this.style="background:url(../images/wjy_img/wjy_xin.png)no-repeat center center/cover";
+
                             }
                 fax=!fax;
                         }
                     }
                 }
                 taoxin()
-
+                // 王佳一评论
                 function huifu(){
                     var huifu1=document.querySelectorAll(".huifu");
                     var huifuinput=document.querySelector(".huifuinput");
@@ -1045,7 +1044,7 @@ direct.directive("pinglun",function(){
                 huifu()
 
 
-
+                // 点击文字消失
 
                 var huifuinput=document.querySelector(".huifuinput");
                 huifuinput.onclick=function(){
@@ -1054,11 +1053,6 @@ direct.directive("pinglun",function(){
                         this.value="点击文字消失"
                     };
                 }
-
-
-
-
-
             },300)//setTimeout
         }
     }
