@@ -1,11 +1,10 @@
-<div class="cn-content" style="margin-bottom: 0.6rem">
+<div class="cn-content" style="margin-bottom: 0.6rem" ng-repeat="v in app track by $index">
     <a href="#!xiangqing" style="display: block">
         <div class="cnshang">
-            <img src="images/cn/cn13.png" alt="">
+            <img ng-src="{{v.image}}" alt="">
         </div>
         <div class="cnzhong">
-            <i class="cn-1">新时代简约11111</i>
-
+            <i class="cn-1">{{v.title}}</i>
         </div>
     </a>
     <div class="cnxia">
@@ -13,13 +12,13 @@
            <div style="width: 0.23rem;height: 0.29rem">
                <img src="images/cn/cn7.png" alt="" style="width: 100%">
            </div>
-            <span style="color: #141414;font-size: 12px;margin-left: 0.1rem">5946</span>
+            <span style="color: #141414;font-size: 12px;margin-left: 0.1rem">{{v.comNum}}</span>
        </a>
         <div class="cnn-right cnn-left">
             <div style="width: 0.23rem;height: 0.29rem">
                 <img src="images/cn/2iwatch1_03.png" alt="" style="width: 100%">
             </div>
-            <span style="color: #141414;font-size: 12px;margin-left: 0.1rem">5946</span>
+            <span style="color: #141414;font-size: 12px;margin-left: 0.1rem">{{v.likes}}</span>
         </div>
         <div style="width: 0.47rem;height: 0.2rem;margin-left: 0.08rem;display: flex">
             <img src="images/cn/clike.png" alt="" style="width: 100%">
