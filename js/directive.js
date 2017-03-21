@@ -26,6 +26,20 @@ direct.directive("cnitem",function(){
             var kssearch=document.querySelector('#ks_search');
             var kbb=document.querySelector('.kx_search_quxiao');
             var kcc=document.querySelector('.kx_search_box');
+            // kaa.addEventListener('touchstart',function () {
+            //     kssearch.style.display='inline-block';
+            //     kaa.style.display='none';
+            //     kbb.style.display='inline-block';
+            //     kaab.style.display='inline-block';
+            //     kaac.style.display='none';
+            // });
+            // touch.on('.kx_search_right2','touchend',function (){
+            //     kssearch.style.display='inline-block';
+            //     kaa.style.display='none';
+            //     kbb.style.display='inline-block';
+            //     kaab.style.display='inline-block';
+            //     kaac.style.display='none';
+            // });
             kaa.onclick=function(){
                 kssearch.style.display='inline-block';
                 kaa.style.display='none';
@@ -33,6 +47,22 @@ direct.directive("cnitem",function(){
                 kaab.style.display='inline-block';
                 kaac.style.display='none';
             };
+            // touch.on('.kx_search_quxiao','touchstart',function () {
+            //     kssearch.style.display='none';
+            //     kbb.style.display='none';
+            //     kaa.style.display='inline-block';
+            //     kcc.style.display='none';
+            //     kaab.style.display='none';
+            //     kaac.style.display='inline-block';
+            // });
+            // kbb.addEventListener('touchstart',function () {
+            //     kssearch.style.display='none';
+            //     kbb.style.display='none';
+            //     kaa.style.display='inline-block';
+            //     kcc.style.display='none';
+            //     kaab.style.display='none';
+            //     kaac.style.display='inline-block';
+            // });
             kbb.onclick=function () {
                 kssearch.style.display='none';
                 kbb.style.display='none';
@@ -905,4 +935,22 @@ direct.directive("cnyouxia",function () {
             })
         }
     }
-})
+});
+//详情的上拉效果开始
+direct.directive("ko",function(){
+    return {
+        templateUrl:"",
+        replace:true,
+        link:function(scope,element){
+            // kx_js开始
+            var up=document.querySelector('#up');
+            up.addEventListener('touchstart',function (e){
+               console.log(e.screenY);
+            });
+
+            // kx_js结束
+        }
+    }
+});
+//详情的上拉效果结束
+
