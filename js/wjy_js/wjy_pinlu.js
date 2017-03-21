@@ -76,11 +76,11 @@ huifuinput.onclick=function(){
 	};
 }
 
-// function liugao(){
-// var aaaaa=$(".aaaaa");
-// var wjynum=184;
-// var wjyaheight=$(window).height()-wjynum;
-// alert(wjyaheight)
-// aaaaa.css("height",wjyaheight)
-// }
-// liugao()
+function liugao(){
+var aaaaa=$(".aaaaa");
+var wjynum=184;
+var wjyaheight=$(window).height()-wjynum;
+alert(wjyaheight)
+aaaaa.css("height",wjyaheight)
+}
+liugao()
