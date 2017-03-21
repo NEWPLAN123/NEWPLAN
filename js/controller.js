@@ -55,6 +55,26 @@ ctrl.config(function($routeProvider) {
 //APP页面的控制器
 ctrl.controller("cnindex",function ($scope,$http) {
     $scope.lid= localStorage.getItem("lid")
+    $http({
+        url:"php/get_worksByType.php?type=lname&val=app",
+    }).then(function(data){
+        $scope.app = data.data;
+    })
+})
+
+//WEB页面的控制器
+ctrl.controller("cnweb",function ($scope,$http) {
+    $scope.lid= localStorage.getItem("lid")
+    $http({
+        url:"php/get_worksByType.php?type=lname&val=web",
+    }).then(function(data){
+        $scope.web = data.data;
+    })
+})
+
+//APP页面的控制器
+ctrl.controller("cnindex",function ($scope,$http) {
+    $scope.lid= localStorage.getItem("lid")
     $scope.abc = 4;
     $http({
         url:"php/get_worksByType.php?type=lname&val=app",
@@ -119,6 +139,8 @@ ctrl.controller("personCenter",function($scope,$http){
     $scope.toFollow = "#!concern";
     $scope.toCollect = "#!collection";
 
+    $scope.toSetting = "#!setting";
+
     $scope.outLogin;
 
     if(lid){
@@ -141,6 +163,7 @@ ctrl.controller("personCenter",function($scope,$http){
         $scope.toUpload = "wjy_denglu.html";
         $scope.toFollow = "wjy_denglu.html";
         $scope.toCollect = "wjy_denglu.html";
+        $scope.toSetting = "wjy_denglu.html";
         $scope.tishi = "登录/注册"
         $scope.outLogin = function () {
             location.href = "wjy_denglu.html";

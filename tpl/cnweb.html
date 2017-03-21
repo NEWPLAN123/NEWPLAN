@@ -35,68 +35,70 @@
     <i class="text">
         EXCEI ENT WEB
     </i>
-    <div class="inner">
-        <div class="page1">
-            <a href="#!/xiangqing">
+    <web>
+        <div class="inner">
+        <div class="page1" ng-repeat="v in web track by $index">
+            <a href="#!/xiangqing{{v.cid}}" style="background:url({{v.image}}) center center/cover no-repeat;">
                 <div class="right-bottom">
-                    <a class="box111" href="#">
+                    <a class="toLogin" class="box111" href="javascript:;">
                         <span class="s1"></span>
-                        <em class="e1">5946</em>
+                        <em class="e1">{{v.likes}}</em>
                     </a>
-                    <a class="box222" href="#">
+                    <a class="box222" href="#!/pinlun{{v.cid}}">
                         <span class="s2"></span>
-                        <em class="e2">220</em>
+                        <em class="e2">{{v.comNum}}</em>
                     </a>
                 </div>
                 <div class="left-bottom">
-                    <p class="p1 slh1">阿斯顿斯柯达哈佛上</p>
+                    <p class="p1 slh1">{{v.title}}</p>
                     <div class="hxbox"></div>
-                    <p class="p2 slh1">ASDJHASFKHG SDFH</p>
+                    <p class="p2 slh1">{{v.des}}</p>
                 </div>
             </a>
         </div>
-        <div class="page1">
-            <a href="#!/xiangqing">
-                <div class="right-bottom">
-                    <a class="box111" href="#">
-                        <span class="s1"></span>
-                        <em class="e1">5946</em>
-                    </a>
-                    <a class="box222" href="#">
-                        <span class="s2"></span>
-                        <em class="e2">220</em>
-                    </a>
-                </div>
-                <div class="left-bottom">
-                    <p class="p1 slh1">阿斯顿斯柯达哈佛上</p>
-                    <div class="hxbox"></div>
-                    <p class="p2 slh1">ASDJHASFKHG SDFH</p>
-                </div>
-            </a>
-        </div>
-        <div class="page1">
-            <a href="#!/xiangqing">
-                <div class="right-bottom">
-                    <a class="box111" href="#">
-                        <span class="s1"></span>
-                        <em class="e1">5946</em>
-                    </a>
-                    <a class="box222" href="#">
-                        <span class="s2"></span>
-                        <em class="e2">220</em>
-                    </a>
-                </div>
-                <div class="left-bottom">
-                    <p class="p1 slh1">阿斯顿斯柯达哈佛上</p>
-                    <div class="hxbox"></div>
-                    <p class="p2 slh1">ASDJHASFKHG SDFH</p>
-                </div>
-            </a>
-        </div>
+        <!--<div class="page1">-->
+            <!--<a href="#!/xiangqing">-->
+                <!--<div class="right-bottom">-->
+                    <!--<a class="box111" href="#">-->
+                        <!--<span class="s1"></span>-->
+                        <!--<em class="e1">5946</em>-->
+                    <!--</a>-->
+                    <!--<a class="box222" href="#">-->
+                        <!--<span class="s2"></span>-->
+                        <!--<em class="e2">220</em>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="left-bottom">-->
+                    <!--<p class="p1 slh1">阿斯顿斯柯达哈佛上</p>-->
+                    <!--<div class="hxbox"></div>-->
+                    <!--<p class="p2 slh1">ASDJHASFKHG SDFH</p>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div class="page1">-->
+            <!--<a href="#!/xiangqing">-->
+                <!--<div class="right-bottom">-->
+                    <!--<a class="box111" href="#">-->
+                        <!--<span class="s1"></span>-->
+                        <!--<em class="e1">5946</em>-->
+                    <!--</a>-->
+                    <!--<a class="box222" href="#">-->
+                        <!--<span class="s2"></span>-->
+                        <!--<em class="e2">220</em>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="left-bottom">-->
+                    <!--<p class="p1 slh1">阿斯顿斯柯达哈佛上</p>-->
+                    <!--<div class="hxbox"></div>-->
+                    <!--<p class="p2 slh1">ASDJHASFKHG SDFH</p>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</div>-->
     </div>
+    </web>
 </section>
 
-  
+
 <div class="cn-box" style="z-index: 9999">
     <div class="cn-meno"></div>
     <ul class="cn-group">
@@ -109,7 +111,7 @@
 <cnyouxia></cnyouxia>
 <div class="cn-zhezhao">
 
-</div>  
+</div>
 <script>
 //     var swiper = new Swiper('.swiper-container', {
 //         pagination: '.swiper-pagination',

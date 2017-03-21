@@ -202,11 +202,13 @@ direct.directive("ka",function(){
         replace:true,
         link:function(scope,element){
             //kx_js开始
-            var headerlogo=document.querySelector('.header_logo');
-            headerlogo.style.background="url('images/header_change_images/web_design.png') no-repeat center center/cover";
-            headerlogo.style.width='1.88rem';
-            headerlogo.style.height='.39rem';
-            //kx_js结束
+            setTimeout(function () {
+                var headerlogo=document.querySelector('.header_logo');
+                headerlogo.style.background="url('images/header_change_images/web_design.png') no-repeat center center/cover";
+                headerlogo.style.width='1.88rem';
+                headerlogo.style.height='.39rem';
+                //kx_js结束
+            },300)
         }
     }
 });
@@ -974,6 +976,27 @@ direct.directive("ko",function(){
     }
 });
 //详情的上拉效果结束
+
+
+//web列表指令开始
+direct.directive("web",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            setTimeout(function () {
+                var toLogin = $(".toLogin")
+                //判断是否已经登录了
+                var lid = localStorage.getItem("lid");
+                if(lid){
+                }else{
+                    //如果是没登录状态，那么设置href
+                    toLogin.attr("href","wjy_denglu.html")
+                }
+            },300)
+        }
+    }
+});
+//web列表指令开始结束
 
 
 //评论获取高度

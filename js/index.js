@@ -42,7 +42,7 @@ app.controller('c',function($scope){
         $scope.dz = val;
         if($scope.lid){
             //如果用户已登录，才可以操作
-            console.log(456)
+
         }
     }
 
