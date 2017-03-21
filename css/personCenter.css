@@ -122,17 +122,59 @@ body{
 	position: absolute;
 	z-index: -1;
 	left: .15rem;
-	top:8rem;
+	top:8.76rem;
 	width: 7.2rem;
 	height:.55rem ;
 	background: url(../images/zk_images/4.png) no-repeat  left center/cover ;
 }
 /*最近收藏*/
 .collection{
+	padding-top: 0.76rem;
 	margin-left: .3rem;
-	height: .6rem;
+	height: 2.6rem;
 	width: 2.9rem;
-	background:url(../images/zk_images/8.png)  no-repeat left top/contain;
+	display: flex;
+	justify-content:;
+	/*align-items:center;*/
 }
-
-
+.collection .tus{
+	width: .45rem ;
+	height: .45rem;
+	background: url(../images/zk_images/collection11.png) no-repeat center center/contain;
+}
+.recent-collection{
+	display: flex;
+	flex-direction:column;
+	/*align-items:center;*/
+	margin-left: .1rem;
+}
+.recent-collection .h3{
+	font-size: .28rem!important;
+	display: flex;
+	align-items:center;
+	width: 1.2rem;
+	height: .28rem;
+	margin-bottom: .1rem;
+}
+.collection .recent-collection .h3 span{
+	color: #000;
+	font-size: .28rem!important;
+}
+.recent-collection .h3 em{
+	margin-left: .05rem;
+	font-weight: 400;
+} 
+.recent-collection .h4{
+	width: 2.35rem;
+	height: .18rem;
+	font-size: .18rem;
+	display: flex;
+	align-items:center;
+}
+.recent-collection .h4 span{
+	color: #000;
+}
+.recent-collection .h4 em{
+	margin-left: .05rem;
+	font-weight: 400;
+}
