@@ -1,17 +1,17 @@
-var shuju=[
-    {
-        title:'NEWSIMPLE',
-        src:'images/cn13.png',
-        liu:'5310',
-        xing:'4396'
-    },
-    {
-        title:'NEWSIMPLE',
-        src:'images/cn13.png',
-        liu:'5010',
-        xing:'4396'
-    }
-];
+// var shuju=[
+//     {
+//         title:'NEWSIMPLE',
+//         src:'images/cn13.png',
+//         liu:'5310',
+//         xing:'4396'
+//     },
+//     {
+//         title:'NEWSIMPLE',
+//         src:'images/cn13.png',
+//         liu:'5010',
+//         xing:'4396'
+//     }
+// ];
 // var data=[{
 //     id:1,src:'images/kx_images/designer.png',keyword:'黑鸭子',name:'vis 特殊排版',little_title:'designer',title:'日本平面设计大师-原研哉/ Kenya',job:'专栏 - 设计师',article:'4622',like:'2188'
 // },{
@@ -35,8 +35,11 @@ var app=angular.module("app",["ngRoute","ctrl","direct"]);
 
 
 app.controller('c',function($scope){
-    $scope.data=shuju;
+    // $scope.data=shuju;
     $scope.name = "时尚";
+    $scope.zan = function () {
+        console.log(456)
+    }
 
 });
 app.controller('kx_ctrl',function ($scope) {
