@@ -113,8 +113,10 @@ direct.directive("showtop",function(){
         replace:true,
         link:function(scope,element){
             // kx_js开始
-            var hd=document.querySelector('.cn-top');
-            hd.style.display='block';
+            setTimeout(function () {
+                var hd=document.querySelector('.cn-top');
+                hd.style.display='block';
+            },300)
 
             // kx_js结束
         }
@@ -171,11 +173,13 @@ direct.directive("ks",function(){
         replace:true,
         link:function(scope,element){
             //kx_js开始
-            var headerlogo=document.querySelector('.header_logo');
-            headerlogo.style.background="url('images/header_change_images/kx_first.png') no-repeat center center/cover";
-            headerlogo.style.width='1.58rem';
-            headerlogo.style.height='.39rem';
-            //kx_js结束
+            setTimeout(function () {
+                var headerlogo=document.querySelector('.header_logo');
+                headerlogo.style.background="url('images/header_change_images/kx_first.png') no-repeat center center/cover";
+                headerlogo.style.width='1.58rem';
+                headerlogo.style.height='.39rem';
+                //kx_js结束
+            },300)
         }
     }
 });
@@ -876,6 +880,16 @@ direct.directive("cnshuju",function(){
     return{
         replace:true,
         templateUrl:"tpl/cnindex1.html",
+        link:function(){
+           setTimeout(function () {
+               //每次进入进来先判断是否已经登录了
+               var lid = localStorage.getItem("lid");
+               if(!lid){
+                   //如果是没有登录的状态
+                   $(".cndz").attr("href","wjy_denglu.html")
+               }
+           },300)
+        }//link
     }
 })
 

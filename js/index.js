@@ -36,9 +36,14 @@ var app=angular.module("app",["ngRoute","ctrl","direct"]);
 
 app.controller('c',function($scope){
     // $scope.data=shuju;
+    $scope.lid = localStorage.getItem("lid");
     $scope.name = "时尚";
-    $scope.zan = function () {
-        console.log(456)
+    $scope.zan = function (val) {
+        $scope.dz = val;
+        if($scope.lid){
+            //如果用户已登录，才可以操作
+            console.log(456)
+        }
     }
 
 });
