@@ -23,10 +23,12 @@ $posfix =  strrchr($f['name'],"."); //后缀名
 //重新给文件起名字
 $fname = $time.$posfix;
 
-$url = $_SERVER["HTTP_REFERER"]."php/".$dir.$fname;
+//$url = $_SERVER["HTTP_REFERER"]."php/".$dir.$fname;
+$url = "php/".$dir.$fname;
 
 //文件的移动
 move_uploaded_file($f['tmp_name'],$dir.$fname);
+
 
 $mes = "上传头像失败";
 $error = 1;
