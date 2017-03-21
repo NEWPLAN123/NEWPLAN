@@ -892,6 +892,7 @@ direct.directive("cnyouxia",function () {
             var group=$(".cn-group")[0];
             var list=$("li",group);
             var r=90;
+             var dianji=$(".dianji");
             var cnzhezhao=document.querySelector(".cn-zhezhao");
             // console.log(cnzhezhao)
             function getXY(deg) {
@@ -912,6 +913,9 @@ direct.directive("cnyouxia",function () {
 
                     }
                     cnzhezhao.style.display='block';
+                     for (var i = 0; i < dianji.length; i++) {
+                        dianji[i].style.display="block";
+                    };
 
                 }else{
                     console.log(22)
@@ -921,6 +925,9 @@ direct.directive("cnyouxia",function () {
                         list[i].style.transition="all 0.5s "+(list.length-i)*100+"ms";
                     }
                     cnzhezhao.style.display='none';
+                     for (var i = 0; i < dianji.length; i++) {
+                        dianji[i].style.display="none";
+                    };
 
                 }
                 // cnzhezhao.style.display='block';
