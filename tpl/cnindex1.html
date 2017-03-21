@@ -1,5 +1,5 @@
 <div class="cn-content" style="margin-bottom: 0.6rem" ng-repeat="v in app track by $index">
-    <a href="#!xiangqing" style="display: block">
+    <a href="#!xiangqing{{v.cid}}" style="display: block">
         <div class="cnshang">
             <img ng-src="{{v.image}}" alt="">
         </div>
@@ -15,7 +15,7 @@
             <span style="color: #141414;font-size: 12px;margin-left: 0.1rem">{{v.comNum}}</span>
        </a>
         <div class="cnn-right cnn-left">
-            <div style="width: 0.23rem;height: 0.29rem">
+            <div style="width: 0.23rem;height: 0.29rem" ng-click="zan(v.cid)">
                 <img src="images/cn/2iwatch1_03.png" alt="" style="width: 100%">
             </div>
             <span style="color: #141414;font-size: 12px;margin-left: 0.1rem">{{v.likes}}</span>

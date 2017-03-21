@@ -16,7 +16,8 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/zkpersonCenter.html', //个人中心
         controller:"personCenter"
     }).when("/cnweb",{
-        templateUrl:'tpl/cnweb.html'  //web列表页
+        templateUrl:'tpl/cnweb.html',  //web列表页
+        controller:"cnweb"
     }).when('/search_pages',{
         templateUrl:'tpl/search_pages.html'  //搜索页面
     }).when('/search_result',{
@@ -30,9 +31,10 @@ ctrl.config(function($routeProvider) {
         controller:"workList"
     }).when('/unlogin',{
         templateUrl:'tpl/zkpersonCenterUn.html'    //个人中心未登录
-    }).when('/xiangqing',{
-        templateUrl:'tpl/cmjxiangqing.html'    //详情未关注
-    }).when('/sheji',{
+    }).when('/xiangqing:cid',{
+        templateUrl:'tpl/cmjxiangqing.html',    //作品详情信息
+        controller:"xiangqing"
+    }).when('/sheji:cid',{
         templateUrl:'tpl/cmj_sheji.html'    //设计师详情
     }).when('/setting',{
         templateUrl:'tpl/zksetting.html'  //设置个人信息
@@ -57,7 +59,6 @@ ctrl.controller("cnindex",function ($scope,$http) {
     $http({
         url:"php/get_worksByType.php?type=lname&val=app",
     }).then(function(data){
-        console.log(data.data[0])
         $scope.app = data.data;
     })
 })
@@ -69,10 +70,29 @@ ctrl.controller("follow",function ($scope,$http) {
         url:"php/get_follow.php?lid="+$scope.lid,
     }).then(function(data){
         $scope.manList = data.data;
-        console.log(data.data)
     })
 })
 
+
+//作品详情的控制器
+ctrl.controller("xiangqing",function ($scope,$http,$routeParams) {
+    $scope.lid= localStorage.getItem("lid")
+    $scope.cid = $routeParams.cid;
+    $http({     //获取作品信息
+        url:"php/get_worksbyType.php?type=cid&val="+$scope.cid,
+        method:"GET",
+    }).then(function(data){
+        $scope.xiangqing = data.data[0];
+        var lid = $scope.xiangqing.lid;
+        //查找作者信息
+        $http({
+            url:"php/get_user.php?lid="+lid,
+            method:"GET"
+        }).then(function(data){
+            $scope.user = data.data;
+        })//$http
+    })
+})
 
 
 //watch的控制器

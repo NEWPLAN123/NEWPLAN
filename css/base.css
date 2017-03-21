@@ -10,7 +10,7 @@ ul,li,ol,dl,dt,dd{
 a{
 	text-decoration: none;
 }
-input[type="button"],button,a{
+*{
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 img{
