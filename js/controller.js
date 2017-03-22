@@ -101,7 +101,6 @@ ctrl.controller("shejishi",function ($scope,$http,$routeParams) {
         url:"php/get_follow.php?lid="+$scope.id,
     }).then(function(data){
         $scope.follow = data.data;
-        console.log(data.data)
     })
 })
 

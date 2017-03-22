@@ -1105,13 +1105,7 @@ direct.directive("pinglun",function(){
 
                 }
                 huifu()
-<<<<<<< HEAD
-=======
-
-
                 // 点击文字消失
-
->>>>>>> origin/master
                 var huifuinput=document.querySelector(".huifuinput");
                 huifuinput.onclick=function(){
                     this.value="";
@@ -1119,8 +1113,6 @@ direct.directive("pinglun",function(){
                         this.value="点击文字消失"
                     };
                 }
-<<<<<<< HEAD
-
             },300)//setTimeout
         }
     }
@@ -1133,7 +1125,6 @@ direct.directive('cnleft',function(){
         link:function (scope,element) {
             
             var mask = $(".mask");
-console.log(mask)
             var li = $(".mask li");
             var ul = $(".mask ul");
             var ca=document.querySelector('.ca');
@@ -1212,9 +1203,6 @@ console.log(mask)
                 //     li.css("transform","translateX(-100%)");
                 //
                 // })
-=======
-            },300)//setTimeout
->>>>>>> origin/master
         }
     }
 })
