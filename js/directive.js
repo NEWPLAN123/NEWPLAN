@@ -297,6 +297,35 @@ direct.directive("kf",function(){
         }
     }
 });
+
+//设计师详情 页面指令 开始
+direct.directive("shejishi",function(){
+    return {
+        replace:true,
+        link:function(scope,element){
+            setTimeout(function () {
+                var xxk=document.querySelector(".xxk");
+                var gz=document.querySelectorAll(".xxk>ul>li");
+                var ka=document.querySelector(".ka")
+                var zp=document.querySelectorAll(".ka>div");
+                for(i=0;i<gz.length;i++){
+                    gz[i].index=[i];
+                    gz[i].onclick=function(){
+                        for(y=0;y<zp.length;y++){
+                            zp[y].style.display="none";
+                        }
+                        this.className="active";
+                        zp[this.index].style.display="block";
+                    }
+                }
+
+            },200)//setTimeout
+        }
+    }
+});
+//设计师详情 页面指令 结束
+
+
 direct.directive("kg",function(){
     return {
         templateUrl:"",

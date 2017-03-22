@@ -1,6 +1,5 @@
 body{
     margin:0;
-    padding:0;
 }
 html,body{
     width:100%;
@@ -14,9 +13,11 @@ a{
 }
 .top{
     width: 100%;
-    top:1.28rem;
+    /*top:1.28rem;*/
     height:auto;
     background: #fff;
+    position: relative;
+    padding-top: 1.28rem;
 }
 .top-1{
     width:100%;
@@ -41,7 +42,6 @@ a{
     width:1.5rem;
     height:1.5rem;
     border-radius: 50%;
-    background:url(../images/cmj/zhong.png)no-repeat center center/cover;
     float: left;
 }
 .you{
@@ -65,10 +65,13 @@ a{
     height:0.88rem;
 }
 .top-t-t{
-    width:2.7rem;
+    width:4.7rem;
     height:0.88rem;
     margin:0 auto;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .top-t-t h1{
     font-size:0.3rem;
@@ -122,30 +125,25 @@ a{
     margin-left: 0.49rem;
 }
 .ka{
-    width:6.76rem;
+    width:100%;
     height:4.44rem;
     margin:0 auto;
     position: relative;
+    padding-top: 0.5rem;
 }
 .ka-1{
     width:100%;
     height:100%;
-    text-align: center;
-    line-height:4.4rem;
+    background: #fff;
     position: absolute;
-    background: yellow;
 }
 .ka-2{
     width:100%;
     height:100%;
-    text-align: center;
-    line-height:4.4rem;
     position: absolute;
 }
 .ka-3{
     width:100%;
     height:100%;
-    text-align: center;
-    line-height:4.4rem;
     position: absolute;
 }

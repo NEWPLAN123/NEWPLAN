@@ -34,8 +34,9 @@ ctrl.config(function($routeProvider) {
     }).when('/xiangqing:cid',{
         templateUrl:'tpl/cmjxiangqing.html',    //作品详情信息
         controller:"xiangqing"
-    }).when('/sheji:cid',{
-        templateUrl:'tpl/cmj_sheji.html'    //设计师详情
+    }).when('/sheji:id',{
+        templateUrl:'tpl/cmj_sheji.html',    //设计师详情
+        controller:"shejishi"
     }).when('/setting',{
         templateUrl:'tpl/zksetting.html'  //设置个人信息
     }).when('/concern',{
@@ -70,6 +71,25 @@ ctrl.controller("cnweb",function ($scope,$http) {
     }).then(function(data){
         $scope.web = data.data;
     })
+})
+
+//设计师页面的控制器
+ctrl.controller("shejishi",function ($scope,$http,$routeParams) {
+    $scope.lid= localStorage.getItem("lid")
+    $scope.id= $routeParams.id; //从上个页面获取到设计师的lid
+    //根据设计师的lid找到对应的设计师信息
+    $http({
+        url:"php/get_user.php?lid="+$scope.id,
+    }).then(function(data){
+        $scope.user = data.data;
+    })
+    //根据设计师的lid找到对应的设计师的作品
+    $http({
+        url:"php/get_worksByType.php?type=lid&val="+$scope.id,
+    }).then(function(data){
+        $scope.app = data.data;
+    })
+
 })
 
 //APP页面的控制器
