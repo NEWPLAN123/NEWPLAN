@@ -421,28 +421,25 @@ direct.directive("ki",function(){
 direct.directive("myworks",function(){
     return{
         replace:true,
-        controller:function($scope,$http){
-            $http({
-                url:"php/"
-            }).then(function(data){
-                $scope.data=data;
-            })
-        },
         link:function(scope,element){
-            var movebox=$(".zk-itembox .itemUp .inners");
-            var flag=true;
-            touch.on(movebox,"swipe",function(e){
-                e.preventDefault;
-                e.propagaiton;
-                if(flag){
-                    // console.log($(this));
-                    $(this).parent().css("left","-1.23rem");
-                    flag=false;
-                }else{
-                    $(this).parent().css("left","0");
-                    flag=true;
-                }
-            })
+            setTimeout(function(){
+                var movebox=$(".item-mask>a");
+                var flag=true;
+                touch.on(movebox,"swipe",function(e){
+                    e.preventDefault;
+                    e.propagaiton;
+                    if(flag){
+                        // console.log($(this));
+                        $(this).parent().animate({left: '-1.23rem'}, "fast");
+                        $(this).parent().siblings(".itemUp").animate({left: '-1.23rem'}, "fast");
+                        flag=false;
+                    }else{
+                        $(this).parent().animate({left: '0'}, "fast");
+                        $(this).parent().siblings(".itemUp").animate({left: '0'}, "fast");
+                        flag=true;
+                    }
+                })
+            },200)
         }
     }
 })

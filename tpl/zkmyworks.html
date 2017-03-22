@@ -3,12 +3,24 @@
 	<div class="hr_38"></div>
 	<div class="hr_38"></div>
 	<div class="hr_38"></div>
+	<div class="hr_38"></div>
 <div class="bgword2">
 	<a class="addbtn" href="#!upload0"></a>
 </div>
 
 
 <div class="zk-itembox" ng-repeat="v in workList track by $index">
+	<div class="item-mask">
+		<a href="#">
+			
+		</a>
+		<div class="infobox1">
+			<div class="fr">
+				<a href="javascript:;" class="aa1"></a><span class="note">{{v.comNum}}</span>
+				<a href="#" class="aa2"></a><span class="stars">{{v.likes}}</span>
+			</div>
+		</div>
+	</div>
 	<a class="itemUp" href="#">
 		<div class="inners">
 			<h3>{{user.name}}
@@ -17,17 +29,13 @@
 			<p class="p1">
 				<span class="s1">{{v.title}}</span>
 			</p>
-			<p class="p2">
-				{{v.des}}
-			</p>
+			<div class="xiangqing">
+				<p class="p2">送到附近哈空间辅导书咖啡壶副科级啊轧空间的高房价 </p>
+			</div>
 			<div class="dot"></div>
 			<div class="infobox clearfix">
 				<div class="fl">
 					<i></i><span>{{v.time|limitTo:10:0}}</span>
-				</div>
-				<div class="fr">
-					<em></em><span class="note">{{v.comNum}}</span>
-					<b></b><span class="stars">{{v.likes}}</span>
 				</div>
 			</div>
 		</div>
