@@ -1106,12 +1106,14 @@ direct.directive("pinglun",function(){
                     })
 
                 }
-
                 huifu()
+<<<<<<< HEAD
+=======
 
 
                 // 点击文字消失
 
+>>>>>>> origin/master
                 var huifuinput=document.querySelector(".huifuinput");
                 huifuinput.onclick=function(){
                     this.value="";
@@ -1119,8 +1121,103 @@ direct.directive("pinglun",function(){
                         this.value="点击文字消失"
                     };
                 }
+<<<<<<< HEAD
+
             },300)//setTimeout
         }
     }
 });
+
+direct.directive('cnleft',function(){
+    return{
+        replace:true,
+        // templateUrl:"tpl/cnleft.html",
+        link:function (scope,element) {
+            
+            var mask = $(".mask");
+console.log(mask)
+            var li = $(".mask li");
+            var ul = $(".mask ul");
+            var ca=document.querySelector('.ca');
+            var len = li.length;
+
+            for(var i = 0 ; i < len/2 ; i++){
+                li.eq(i).css("transition","all 1s "+(i*50)+"ms");
+                li.eq(len-i).css("transition","all 1s "+(i*50)+"ms");
+            }
+
+
+//右滑动事件
+//             touch.on(document,"swiperight",function(){
+//                 //延迟显示 li
+//                 li.css("transform","translateX(0)");
+//             })
+
+//左滑动事件
+            touch.on(document,"swipeleft",function(){
+                //延迟隐藏 li
+                li.css("transform","translateX(-100%)");
+                mask.css({"display":"none"});
+            })
+
+//向上滑动事件，暂时当成mask的点击事件
+
+            touch.on(ul,"tap",function(){
+                //假设此时是上滑
+                shang()
+
+            })
+
+            function shang(){
+                var li = $(".mask li");
+                //操作dom节点
+                ul[0].appendChild(li.eq(0)[0]);
+
+            }
+
+
+            li.each(function(){
+                var index = $(this).index();
+                $(this).attr("i",index)
+                var num = index - 6;
+                touch.on($(this),"tap",function(){
+                    console.log($(this))
+                    // for(var i = 0 ; i < num ; i++){
+                    // 	shang();
+                    // }
+                })
+
+            })
+
+
+
+            var li2 = document.querySelectorAll("li");
+
+
+            for(var i = 0 ; i < li2.length ; i++){
+                li2[i].index = i;
+                console.log(li2[i])
+                touch.on(li2[i],"tap",function(){
+                    console.log(this)
+                    var index = this.index;
+
+                })
+            }
+
+
+            touch.on(ca,"touchstart",function(){
+                li.css("transform","translateX(0%)");
+                mask.css({"display":"block"});
+            })
+
+                // touch.on(mask,"touchstart",function(){
+                //     li.css("transform","translateX(-100%)");
+                //
+                // })
+=======
+            },300)//setTimeout
+>>>>>>> origin/master
+        }
+    }
+})
 
