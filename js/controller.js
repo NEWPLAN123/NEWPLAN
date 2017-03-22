@@ -43,7 +43,8 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/zkconcern.html',  //我的关注
         controller:"follow"
     }).when('/collection',{
-        templateUrl:'tpl/zkcollection.html'  //我的收藏
+        templateUrl:'tpl/zkcollection.html',  //我的收藏
+        controller:"collection"
     }).when('/pinlun',{
         templateUrl:'tpl/wjy_pinlun.html'  //评论
     }).otherwise({  //如果都不匹配就跳转到首页
@@ -90,6 +91,18 @@ ctrl.controller("shejishi",function ($scope,$http,$routeParams) {
         $scope.app = data.data;
     })
 
+})
+
+//我的收藏页面的控制器
+ctrl.controller("shejishi",function ($scope,$http,$routeParams) {
+    $scope.lid= localStorage.getItem("lid") //获取到自己的lid
+    //根据设计师的lid找到对应的设计师信息
+    $http({
+        url:"php/get_follow.php?lid="+$scope.id,
+    }).then(function(data){
+        $scope.follow = data.data;
+        console.log(data.data)
+    })
 })
 
 //APP页面的控制器

@@ -163,8 +163,6 @@ direct.directive('designer',function () {
         templateUrl:"tpl/kx_item.html",
         link:function (scope,element) {
         }
-
-
     }
 });
 //头部动态获取logo开始
