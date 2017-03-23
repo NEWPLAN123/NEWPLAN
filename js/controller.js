@@ -10,7 +10,8 @@ ctrl.config(function($routeProvider) {
         templateUrl:"tpl/cnindex.html",  //app列表页
         controller:"cnapp"
     }).when("/cnwatch",{
-        templateUrl:'tpl/cnwatch.html',  //watch列表页
+        templateUrl: "tpl/zz-watch.html",
+        // templateUrl:'tpl/cnwatch.html',  //watch列表页
         controller:"watch"
     }).when("/personCenter",{
         templateUrl:'tpl/zkpersonCenter.html', //个人中心
