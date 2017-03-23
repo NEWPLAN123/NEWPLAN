@@ -24,7 +24,8 @@ ctrl.config(function($routeProvider) {
     }).when('/search_result',{
         templateUrl:'tpl/search_result.html'  //搜索作品结果
     }).when('/designer_result',{
-        templateUrl:'tpl/designer_result.html'   //搜索设计师结果
+        templateUrl:'tpl/designer_result.html',   //搜索设计师结果
+        controller:"searchDesigner"
     }).when('/upload:cid',{
         templateUrl:'tpl/zkupload.html',   //上传作品
     }).when('/myworks',{
@@ -53,7 +54,11 @@ ctrl.config(function($routeProvider) {
         controller:"cnindex"
     })
 })
-
+//暂时数据开始
+// ctrl.controller('kx_ctrl',function ($scope) {
+//     $scope.data=data;
+// });
+//暂时数据结束
 
 //APP页面的控制器
 ctrl.controller("cnindex",function ($scope,$http) {
@@ -122,6 +127,17 @@ ctrl.controller("follow",function ($scope,$http) {
     $http({
         url:"php/get_follow.php?lid="+$scope.lid,
     }).then(function(data){
+        $scope.manList = data.data;
+    })
+})
+
+
+ctrl.controller("searchDesigner",function ($scope,$http) {
+    $scope.lid= localStorage.getItem("lid")
+    $http({
+        url:"php/get_follow.php?lid=15",
+    }).then(function(data){
+        console.log(data.data)
         $scope.manList = data.data;
     })
 })

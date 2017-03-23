@@ -160,6 +160,7 @@ direct.directive("show",function(){
 
 direct.directive('designer',function () {
     return{
+        replace:true,
         templateUrl:"tpl/kx_item.html",
         link:function (scope,element) {
         }
