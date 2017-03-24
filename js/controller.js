@@ -22,7 +22,8 @@ ctrl.config(function($routeProvider) {
     }).when('/search_pages',{
         templateUrl:'tpl/search_pages.html'  //搜索页面
     }).when('/search_result',{
-        templateUrl:'tpl/search_result.html'  //搜索作品结果
+        templateUrl:'tpl/search_result.html',    //搜索作品结果
+        controller:"searchResult"
     }).when('/designer_result',{
         templateUrl:'tpl/designer_result.html',   //搜索设计师结果
         controller:"searchDesigner"
@@ -68,7 +69,17 @@ ctrl.controller("cnindex",function ($scope,$http) {
     }).then(function(data){
         $scope.app = data.data;
     })
-})
+});
+//搜索结果控制器
+ctrl.controller("searchResult",function ($scope,$http) {
+    $scope.lid= localStorage.getItem("lid")
+    $http({
+        url:"php/get_worksByType.php?type=lname&val=app",
+    }).then(function(data){
+        $scope.app = data.data;
+    })
+});
+// 搜索结果控制器
 
 //WEB页面的控制器
 ctrl.controller("cnweb",function ($scope,$http) {
