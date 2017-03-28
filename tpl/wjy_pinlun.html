@@ -38,12 +38,11 @@
 
 		<section class="wjy_section_q">
 		<div class="wjy_section_q_left">
-			<a href=""><img src="images/wjy_img/wjy_z1.png" alt="" class="wjy_sectionq_img"></a>
+			<a href=""><img src="{{man.thumb}}" alt="" class="wjy_sectionq_img"></a>
 			<div class="wjy_sectionq_right">
-				<div class="wjy_sectionq_div1"><p>SUNNY-</p><span>YANG</span></div>
+				<div class="wjy_sectionq_div1"><p>{{man.name}}</p></div>
 				<div class="wjy_sectionq_div2">
-					<p>by</p><span>HOCKER</span>
-					<p class="wjy_toup_tow">feb</p><span>2017</span>
+					<span>{{work.time|limitTo:10}}</span>
 				</div>
 
 			</div>
@@ -54,16 +53,16 @@
 	<section class="section_w">
 		精彩评论
 	</section>
-	<div class="wjy_zhanweifu1"></div>		
-		<div class="wjy_sectione_img">
+	<div class="wjy_zhanweifu1"></div>
+		<div class="wjy_sectione_img" ng-repeat="v in pinglun track by $index">
 			<div class="wjy_sectione_one">
 				<div class="wjy_sectione_one_left">
 					<a href="">
 						<div><img src="images/wjy_img/wjy_z2.png" alt=""></div>
 					</a>
 					<div>
-						<p class="wjy_xiarimo">夏日宋</p>
-						<span>2017年1月8日</span>
+						<p class="wjy_xiarimo">{{v.owner}}</p>
+						<span>{{v.sendtime|limitTo:10}}</span>
 					</div>
 				</div>
 
@@ -76,14 +75,14 @@
 			</div>
 			<!-- 留言内容 -->
 			<div class="wjy_sectione_content">
-				坐在我斜对面的女生，愿我们能哈哈哈哈哈哈哈哈哈哈考上自己理想的学校。
+				{{v.content }}
 			</div>
 			<!-- 关注喜欢按钮 -->
 			<div class="wjy_sectione_btn">
 				<div class="wjy_sectione_right1">
 				<div class="wjy_sectione_btn_left">
 					<img src="images/wjy_img/wjy_z4.png" alt="">
-					<p id="wjy_btnp">1432</p>
+					<p id="wjy_btnp">{{v.more_num}}</p>
 				</div>
 				<div class="wjy_sectione_btn_right">
 					<img src="images/wjy_img/wjy_xin.png" alt="" class="wjyxin">
@@ -100,31 +99,20 @@
 			</div>
 			<div class="wjy_liuyanbox ov">
 			<!-- 回复留言 -->
-			<div class="wjy_sectione_liu">
-				<a href="">短发姑娘闪亮亮</a><span>:</span>
-				<p>很喜欢陈奕迅的好久不见你呢？</p>
-			</div>
+			<!--<div class="wjy_sectione_liu">-->
+				<!--<a href="">短发姑娘闪亮亮</a><span>:</span>-->
+				<!--<p>很喜欢陈奕迅的好久不见你呢？</p>-->
+			<!--</div>-->
 			<!-- 本人回复 -->
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
+				<div class="wjy_sectione_qi" ng-repeat="k in v.more track by $index">
+					<p>
+						<a href="javascript:;">{{k.owner}}</a>
+						<a href="javascript:;">回复 </a>
+						<a href="javascript:;">{{k.toname}}</a><span>:</span>
+						{{k.content}}
+					</p>
+				</div>
+
 			</div>
 			<!-- 下拉箭头 -->
 			<div class="wjy_sectione_ba">
@@ -136,167 +124,167 @@
 			</div>
 		</div>
 
-		<div class="wjy_sectione_img">
-			<div class="wjy_sectione_one">
-				<div class="wjy_sectione_one_left">
-					<a href="">
-						<div><img src="images/wjy_img/wjy_z2.png" alt=""></div>
-					</a>
-					<div>
-						<p class="wjy_xiarimo">夏日宋</p>
-						<span>2017年1月8日</span>
-					</div>
-				</div>
+		<!--<div class="wjy_sectione_img">-->
+			<!--<div class="wjy_sectione_one">-->
+				<!--<div class="wjy_sectione_one_left">-->
+					<!--<a href="">-->
+						<!--<div><img src="images/wjy_img/wjy_z2.png" alt=""></div>-->
+					<!--</a>-->
+					<!--<div>-->
+						<!--<p class="wjy_xiarimo">夏日宋</p>-->
+						<!--<span>2017年1月8日</span>-->
+					<!--</div>-->
+				<!--</div>-->
 
-				<!-- 回复按钮 -->
-				<a href="javaScript:;">
-				<div class="wjy_sectione_one_right huifu">
-					<img src="images/wjy_img/wjy_z3.png" alt="">
-				</div>
-				</a>
-			</div>
-			<!-- 留言内容 -->
-			<div class="wjy_sectione_content">
-				坐在我斜对面的女生，愿我们能哈哈哈哈哈哈哈哈哈哈考上自己理想的学校。
-			</div>
-			<!-- 关注喜欢按钮 -->
-			<div class="wjy_sectione_btn">
-				<div class="wjy_sectione_right1">
-				<div class="wjy_sectione_btn_left">
-					<img src="images/wjy_img/wjy_z4.png" alt="">
-					<p id="wjy_btnp">1432</p>
-				</div>
-				<div class="wjy_sectione_btn_right">
-					<img src="images/wjy_img/wjy_xin.png" alt="" class="wjyxin">
-					<p id="wjy_btnp2" class="wjyjiayi">9883</p>
+				<!--&lt;!&ndash; 回复按钮 &ndash;&gt;-->
+				<!--<a href="javaScript:;">-->
+				<!--<div class="wjy_sectione_one_right huifu">-->
+					<!--<img src="images/wjy_img/wjy_z3.png" alt="">-->
+				<!--</div>-->
+				<!--</a>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 留言内容 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_content">-->
+				<!--坐在我斜对面的女生，愿我们能哈哈哈哈哈哈哈哈哈哈考上自己理想的学校。-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 关注喜欢按钮 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_btn">-->
+				<!--<div class="wjy_sectione_right1">-->
+				<!--<div class="wjy_sectione_btn_left">-->
+					<!--<img src="images/wjy_img/wjy_z4.png" alt="">-->
+					<!--<p id="wjy_btnp">1432</p>-->
+				<!--</div>-->
+				<!--<div class="wjy_sectione_btn_right">-->
+					<!--<img src="images/wjy_img/wjy_xin.png" alt="" class="wjyxin">-->
+					<!--<p id="wjy_btnp2" class="wjyjiayi">9883</p>-->
 
-				</div>
-				</div>
-			</div>
-			<!-- 别人留言开始。 -->
-			<div class="wjy_sectione_wu">
-				<a><img src="images/wjy_img/wjy_z5.png" alt="">
-					短发姑娘闪亮亮、春风十里、默笙、小北鼻莱斯狗、
-				</a>
-			</div>
-			<div class="wjy_liuyanbox ov">
-			<!-- 回复留言 -->
-			<div class="wjy_sectione_liu">
-				<a href="">短发姑娘闪亮亮</a><span>:</span>
-				<p>很喜欢陈奕迅的好久不见你呢？</p>
-			</div>
-			<!-- 本人回复 -->
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			</div>
-			<!-- 下拉箭头 -->
-			<div class="wjy_sectione_ba">
-				<div class="wjy_sectione_ba_auto wjy_btn2">
-					<div class="wjy_jianimg">
-						
-					</div>
-				</div>
-			</div>
-		</div>
+				<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 别人留言开始。 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_wu">-->
+				<!--<a><img src="images/wjy_img/wjy_z5.png" alt="">-->
+					<!--短发姑娘闪亮亮、春风十里、默笙、小北鼻莱斯狗、-->
+				<!--</a>-->
+			<!--</div>-->
+			<!--<div class="wjy_liuyanbox ov">-->
+			<!--&lt;!&ndash; 回复留言 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_liu">-->
+				<!--<a href="">短发姑娘闪亮亮</a><span>:</span>-->
+				<!--<p>很喜欢陈奕迅的好久不见你呢？</p>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 本人回复 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_qi">-->
+				<!--<a href="">北方的姑娘</a><a>回复</a>-->
+				<!--<span>:</span>-->
+				<!--<p>我也是呢。</p>-->
+			<!--</div>-->
+			<!--<div class="wjy_sectione_qi">-->
+				<!--<a href="">北方的姑娘</a><a>回复</a>-->
+				<!--<span>:</span>-->
+				<!--<p>我也是呢。</p>-->
+			<!--</div>-->
+			<!--<div class="wjy_sectione_qi">-->
+				<!--<a href="">北方的姑娘</a><a>回复</a>-->
+				<!--<span>:</span>-->
+				<!--<p>我也是呢。</p>-->
+			<!--</div>-->
+			<!--<div class="wjy_sectione_qi">-->
+				<!--<a href="">北方的姑娘</a><a>回复</a>-->
+				<!--<span>:</span>-->
+				<!--<p>我也是呢。</p>-->
+			<!--</div>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 下拉箭头 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_ba">-->
+				<!--<div class="wjy_sectione_ba_auto wjy_btn2">-->
+					<!--<div class="wjy_jianimg">-->
+						<!---->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
 
-		<div class="wjy_sectione_img">
-			<div class="wjy_sectione_one">
-				<div class="wjy_sectione_one_left">
-					<a href="">
-						<div><img src="images/wjy_img/wjy_z2.png" alt=""></div>
-					</a>
-					<div>
-						<p class="wjy_xiarimo">夏日宋</p>
-						<span>2017年1月8日</span>
-					</div>
-				</div>
+		<!--<div class="wjy_sectione_img">-->
+			<!--<div class="wjy_sectione_one">-->
+				<!--<div class="wjy_sectione_one_left">-->
+					<!--<a href="">-->
+						<!--<div><img src="images/wjy_img/wjy_z2.png" alt=""></div>-->
+					<!--</a>-->
+					<!--<div>-->
+						<!--<p class="wjy_xiarimo">夏日宋</p>-->
+						<!--<span>2017年1月8日</span>-->
+					<!--</div>-->
+				<!--</div>-->
 
-				<!-- 回复按钮 -->
-				<a href="javaScript:;">
-				<div class="wjy_sectione_one_right huifu">
-					<img src="images/wjy_img/wjy_z3.png" alt="">
-				</div>
-				</a>
-			</div>
-			<!-- 留言内容 -->
-			<div class="wjy_sectione_content">
-				坐在我斜对面的女生，愿我们能哈哈哈哈哈哈哈哈哈哈考上自己理想的学校。
-			</div>
-			<!-- 关注喜欢按钮 -->
-			<div class="wjy_sectione_btn">
-				<div class="wjy_sectione_right1">
-				<div class="wjy_sectione_btn_left">
-					<img src="images/wjy_img/wjy_z4.png" alt="">
-					<p id="wjy_btnp">1432</p>
-				</div>
-				<div class="wjy_sectione_btn_right">
-					<img src="images/wjy_img/wjy_xin.png" alt="" class="wjyxin">
-					<p id="wjy_btnp2" class="wjyjiayi">9883</p>
+				<!--&lt;!&ndash; 回复按钮 &ndash;&gt;-->
+				<!--<a href="javaScript:;">-->
+				<!--<div class="wjy_sectione_one_right huifu">-->
+					<!--<img src="images/wjy_img/wjy_z3.png" alt="">-->
+				<!--</div>-->
+				<!--</a>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 留言内容 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_content">-->
+				<!--坐在我斜对面的女生，愿我们能哈哈哈哈哈哈哈哈哈哈考上自己理想的学校。-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 关注喜欢按钮 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_btn">-->
+				<!--<div class="wjy_sectione_right1">-->
+				<!--<div class="wjy_sectione_btn_left">-->
+					<!--<img src="images/wjy_img/wjy_z4.png" alt="">-->
+					<!--<p id="wjy_btnp">1432</p>-->
+				<!--</div>-->
+				<!--<div class="wjy_sectione_btn_right">-->
+					<!--<img src="images/wjy_img/wjy_xin.png" alt="" class="wjyxin">-->
+					<!--<p id="wjy_btnp2" class="wjyjiayi">9883</p>-->
 
-				</div>
-				</div>
-			</div>
-			<!-- 别人留言开始。 -->
-			<div class="wjy_sectione_wu">
-				<a><img src="images/wjy_img/wjy_z5.png" alt="">
-					短发姑娘闪亮亮、春风十里、默笙、小北鼻莱斯狗、
-				</a>
-			</div>
-			<div class="wjy_liuyanbox ov">
-			<!-- 回复留言 -->
-			<div class="wjy_sectione_liu">
-				<a href="">短发姑娘闪亮亮</a><span>:</span>
-				<p>很喜欢陈奕迅的好久不见你呢？</p>
-			</div>
-			<!-- 本人回复 -->
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			<div class="wjy_sectione_qi">
-				<a href="">北方的姑娘</a><a>回复</a>
-				<span>:</span>
-				<p>我也是呢。</p>
-			</div>
-			</div>
-			<!-- 下拉箭头 -->
-			<div class="wjy_sectione_ba">
-				<div class="wjy_sectione_ba_auto wjy_btn2">
-					<div class="wjy_jianimg">
-						
-					</div>
-				</div>
-			</div>
-		</div>
+				<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 别人留言开始。 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_wu">-->
+				<!--<a><img src="images/wjy_img/wjy_z5.png" alt="">-->
+					<!--短发姑娘闪亮亮、春风十里、默笙、小北鼻莱斯狗、-->
+				<!--</a>-->
+			<!--</div>-->
+			<!--<div class="wjy_liuyanbox ov">-->
+			<!--&lt;!&ndash; 回复留言 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_liu">-->
+				<!--<a href="">短发姑娘闪亮亮</a><span>:</span>-->
+				<!--<p>很喜欢陈奕迅的好久不见你呢？</p>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 本人回复 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_qi">-->
+				<!--<a href="">北方的姑娘</a><a>回复</a>-->
+				<!--<span>:</span>-->
+				<!--<p>我也是呢。</p>-->
+			<!--</div>-->
+			<!--<div class="wjy_sectione_qi">-->
+				<!--<a href="">北方的姑娘</a><a>回复</a>-->
+				<!--<span>:</span>-->
+				<!--<p>我也是呢。</p>-->
+			<!--</div>-->
+			<!--<div class="wjy_sectione_qi">-->
+				<!--<a href="">北方的姑娘</a><a>回复</a>-->
+				<!--<span>:</span>-->
+				<!--<p>我也是呢。</p>-->
+			<!--</div>-->
+			<!--<div class="wjy_sectione_qi">-->
+				<!--<a href="">北方的姑娘</a><a>回复</a>-->
+				<!--<span>:</span>-->
+				<!--<p>我也是呢。</p>-->
+			<!--</div>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; 下拉箭头 &ndash;&gt;-->
+			<!--<div class="wjy_sectione_ba">-->
+				<!--<div class="wjy_sectione_ba_auto wjy_btn2">-->
+					<!--<div class="wjy_jianimg">-->
+						<!---->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
 	</section>
 	<!-- 固定定位语音输入框 -->
 	<footer class="wjy_sectionr">

@@ -45,8 +45,9 @@ ctrl.config(function($routeProvider) {
     }).when('/collection',{
         templateUrl:'tpl/zkcollection.html',  //我的收藏
         controller:"collection"
-    }).when('/pinlun',{
-        templateUrl:'tpl/wjy_pinlun.html'  //评论
+    }).when('/pinlun:cid',{
+        templateUrl:'tpl/wjy_pinlun.html',  //评论
+        controller:"pinglun"
     }).otherwise({  //如果都不匹配就跳转到首页
         templateUrl:"tpl/cnindex.html",  //首页
         controller:"cnindex"
@@ -72,6 +73,33 @@ ctrl.controller("cnweb",function ($scope,$http) {
     }).then(function(data){
         $scope.web = data.data;
     })
+})
+
+//评论页面的控制器
+ctrl.controller("pinglun",function ($scope,$http,$routeParams) {
+    $scope.lid= localStorage.getItem("lid")
+    $scope.cid = $routeParams.cid;
+    // 先找到对应的作品的信息
+    $http({
+        url:"php/get_worksByType.php?type=cid&val="+$scope.cid,
+    }).then(function(data){
+        $scope.work = data.data[0];
+        $scope.manId = data.data[0].lid;
+        console.log($scope.work)
+        //获取该作者的信息
+        $http({
+            url:"php/get_user.php?lid="+$scope.manId
+        }).then(function(data){
+            $scope.man = data.data;
+        })//http 2
+        //获取评论信息
+        $http({
+            url:"php/get_comment.php?cid="+$scope.cid
+        }).then(function(data){
+            console.log(data.data)
+            $scope.pinglun = data.data;
+        })//http 3
+    })//http 1
 })
 
 //设计师页面的控制器

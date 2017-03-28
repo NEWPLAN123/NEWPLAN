@@ -1051,13 +1051,13 @@ direct.directive("pinglun",function(){
                     if (!fal) {
                         wjy_liuyanbox.className="wjy_liuyanbox ov";
                         wjy_liuyanbox.style="height:0.7rem";
-                        wjy_jianimg.style="background:url(../images/wjy_img/wjy_z01.png)no-repeat center center/cover;"
+                        wjy_jianimg.style="background:url(images/wjy_img/wjy_z01.png) no-repeat center center/cover;"
 
                     fal=!fal
                     }else{
                         wjy_liuyanbox.className="wjy_liuyanbox";
                         wjy_liuyanbox.style="height:auto";
-                        wjy_jianimg.style="background:url(../images/wjy_img/wjy_z01-top.png)no-repeat center center/cover;"
+                        wjy_jianimg.style="background:url(images/wjy_img/wjy_top.png) no-repeat center center/cover;"
                     fal=!fal
                         }
                     }
@@ -1081,7 +1081,6 @@ direct.directive("pinglun",function(){
                         // console.log()
                             }else{
                             this.style="background:url(../images/wjy_img/wjy_xin.png)no-repeat center center/cover";
-
                             }
                 fax=!fax;
                         }
