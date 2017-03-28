@@ -43,6 +43,9 @@ app.controller('c',function($scope){
     $scope.back=function () {
         history.go(-1);
     };
+    $scope.blur=function () {
+        location.href="#!/search_result"
+    };
     $scope.zan = function (val) {
         $scope.dz = val;
         if($scope.lid){
