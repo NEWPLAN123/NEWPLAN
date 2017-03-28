@@ -77,7 +77,7 @@ direct.directive("cnitem",function(){
             kssearch.onblur=function () {
                 kcc.style.display='none';
             };
-            
+
             // kx_js结束
         }
     }
@@ -456,53 +456,53 @@ direct.directive("setting",function(){
             })
         },*/
         link:function(scope,element){
-                $("#sex").click(function () {  
-                    var that = this;  
-                    $("#sex-list").mobiscroll().treelist({  
-                        theme: "android-ics",  
-                        lang: "zh",  
-                        display: 'bottom',  
-                        inputClass: 'tmp',  
-                        headerText: '请您选择',  
-                        onSelect: function (valueText) {  
-                            var m = $(this).find("li").eq(valueText).html(); 
-                            /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) { 
-                                if (result == 'ok') { 
-                                    $(that).find(".mbase-menu-txt").html(m); 
-                                } 
-                                else { 
-                                    error('网络繁忙，请您稍后再试'); 
-                                } 
+                $("#sex").click(function () {
+                    var that = this;
+                    $("#sex-list").mobiscroll().treelist({
+                        theme: "android-ics",
+                        lang: "zh",
+                        display: 'bottom',
+                        inputClass: 'tmp',
+                        headerText: '请您选择',
+                        onSelect: function (valueText) {
+                            var m = $(this).find("li").eq(valueText).html();
+                            /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) {
+                                if (result == 'ok') {
+                                    $(that).find(".mbase-menu-txt").html(m);
+                                }
+                                else {
+                                    error('网络繁忙，请您稍后再试');
+                                }
                             });*/
                             $("#sex .mbase-menu-txt").html(m);
-                        }  
-                    });  
-                    $("input[id^=sex-list]").focus();  
-                }); 
+                        }
+                    });
+                    $("input[id^=sex-list]").focus();
+                });
 
-                $("#sex1").click(function () {  
-                    var that = this;  
+                $("#sex1").click(function () {
+                    var that = this;
                     // console.log(1);
-                    $("#sex-list1").eq(0).mobiscroll().treelist({  
-                        theme: "android-ics",  
-                        lang: "zh",  
-                        display: 'bottom',  
-                        inputClass: 'tmp',  
-                        headerText: '请您选择',  
-                        onSelect: function (valueText) {  
-                            var m = $(this).find("li").eq(valueText).html(); 
-                            /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) { 
-                                if (result == 'ok') { 
-                                    $(that).find(".mbase-menu-txt").html(m); 
-                                } 
-                                else { 
-                                    error('网络繁忙，请您稍后再试'); 
-                                } 
+                    $("#sex-list1").eq(0).mobiscroll().treelist({
+                        theme: "android-ics",
+                        lang: "zh",
+                        display: 'bottom',
+                        inputClass: 'tmp',
+                        headerText: '请您选择',
+                        onSelect: function (valueText) {
+                            var m = $(this).find("li").eq(valueText).html();
+                            /*$.post("inc/person.org.php", {apart: "resume_base", sex: m}, function (result) {
+                                if (result == 'ok') {
+                                    $(that).find(".mbase-menu-txt").html(m);
+                                }
+                                else {
+                                    error('网络繁忙，请您稍后再试');
+                                }
                             });*/
                             $("#sex1 .mbase-menu-txt").html(m);
-                        }  
-                    });  
-                    $("input[id^=sex-list1]").focus();  
+                        }
+                    });
+                    $("input[id^=sex-list1]").focus();
                 });
 
                 var mes = $("#mes");
@@ -941,7 +941,7 @@ direct.directive("cnyouxia",function () {
                 var x=Math.sin(hd)*r;
                 var y=Math.cos(hd)*r;
                 return {x:-x,y:-y}
-            }   
+            }
             var ang=180/(list.length-1);
             var flag=false;
             touch.on(meno,"tap",function(){
@@ -1059,10 +1059,10 @@ direct.directive("pinglun",function(){
                     fal=!fal
                         }
                     }
-                }   
+                }
                     var wjy_btn2=document.getElementsByClassName("wjy_btn2")
                 for (var i = 0; i < wjy_btn2.length; i++) {
-                    wjy_jian(i) 
+                    wjy_jian(i)
                 };
                 //点击桃心亮
                 function taoxin(){
@@ -1093,7 +1093,7 @@ direct.directive("pinglun",function(){
                     touch.on(huifu1,"tap",function(){
                         wjy_sectionr_q.style="display: block;"
                         huifuinput.value="请输入回复"
-                    })  
+                    })
 
                     touch.on(wjy_sectionr_q,"tap",function(){
                         wjy_sectionr_q.style="display: none;"
@@ -1227,6 +1227,23 @@ direct.directive('cnleft',function(){
                 galleryTop.params.control = galleryThumbs;
                 galleryThumbs.params.control = galleryTop;
             }
-                
+
         }
     })
+
+//轮播
+direct.directive('cindex',function () {
+    return{
+        link:function (){
+            setTimeout(function() {
+                var swiper = new Swiper('.ccnn', {
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    direction: 'vertical',
+                    loop : true
+                })
+            },200)
+        }
+    }
+
+})
