@@ -20,7 +20,8 @@ ctrl.config(function($routeProvider) {
         templateUrl:'tpl/cnweb.html',  //web列表页
         controller:"cnweb"
     }).when('/search_pages',{
-        templateUrl:'tpl/search_pages.html'  //搜索页面
+        templateUrl:'tpl/search_pages.html',
+        controller:"kx_ctrl"      //搜索页面
     }).when('/search_result',{
         templateUrl:'tpl/search_result.html',    //搜索作品结果
         controller:"searchResult"
@@ -81,6 +82,7 @@ ctrl.controller("searchResult",function ($scope,$http) {
     })
 });
 // 搜索结果控制器
+
 
 //WEB页面的控制器
 ctrl.controller("cnweb",function ($scope,$http) {
