@@ -39,7 +39,7 @@ var app=angular.module("app",["ngRoute","ctrl","direct"]);
 app.controller('c',function($scope){
     // $scope.data=shuju;
     $scope.lid = localStorage.getItem("lid");
-    $scope.name = "时尚";
+    $scope.name = "新时代";
     $scope.back=function () {
         history.go(-1);
     };
