@@ -40,6 +40,9 @@ app.controller('c',function($scope){
     // $scope.data=shuju;
     $scope.lid = localStorage.getItem("lid");
     $scope.name = "时尚";
+    $scope.back=function () {
+        history.go(-1);
+    };
     $scope.zan = function (val) {
         $scope.dz = val;
         if($scope.lid){

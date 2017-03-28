@@ -160,6 +160,7 @@ direct.directive("show",function(){
 
 direct.directive('designer',function () {
     return{
+        replace:true,
         templateUrl:"tpl/kx_item.html",
         link:function (scope,element) {
         }
@@ -421,28 +422,25 @@ direct.directive("ki",function(){
 direct.directive("myworks",function(){
     return{
         replace:true,
-        controller:function($scope,$http){
-            $http({
-                url:"php/"
-            }).then(function(data){
-                $scope.data=data;
-            })
-        },
         link:function(scope,element){
-            var movebox=$(".zk-itembox .itemUp .inners");
-            var flag=true;
-            touch.on(movebox,"swipe",function(e){
-                e.preventDefault;
-                e.propagaiton;
-                if(flag){
-                    // console.log($(this));
-                    $(this).parent().css("left","-1.23rem");
-                    flag=false;
-                }else{
-                    $(this).parent().css("left","0");
-                    flag=true;
-                }
-            })
+            setTimeout(function(){
+                var movebox=$(".item-mask>a");
+                var flag=true;
+                touch.on(movebox,"swipe",function(e){
+                    e.preventDefault;
+                    e.propagaiton;
+                    if(flag){
+                        // console.log($(this));
+                        $(this).parent().animate({left: '-1.23rem'}, "fast");
+                        $(this).parent().siblings(".itemUp").animate({left: '-1.23rem'}, "fast");
+                        flag=false;
+                    }else{
+                        $(this).parent().animate({left: '0'}, "fast");
+                        $(this).parent().siblings(".itemUp").animate({left: '0'}, "fast");
+                        flag=true;
+                    }
+                })
+            },200)
         }
     }
 })
@@ -1120,19 +1118,21 @@ direct.directive("pinglun",function(){
 direct.directive('cnleft',function(){
     return{
         replace:true,
-        // templateUrl:"tpl/cnleft.html",
+        templateUrl:"tpl/cnleft.html",
         link:function (scope,element) {
-            
-            var mask = $(".mask");
-            var li = $(".mask li");
-            var ul = $(".mask ul");
-            var ca=document.querySelector('.ca');
-            var len = li.length;
 
-            for(var i = 0 ; i < len/2 ; i++){
-                li.eq(i).css("transition","all 1s "+(i*50)+"ms");
-                li.eq(len-i).css("transition","all 1s "+(i*50)+"ms");
-            }
+            setTimeout(function(){
+                var mask = $(".mask");
+                var li = $(".mask li");
+                console.log(li)
+                var ul = $(".mask ul");
+                var ca=document.querySelector('.ca');
+                var len = li.length;
+
+                for(var i = 0 ; i < len/2 ; i++){
+                    li.eq(i).css("transition","all 1s "+(i*50)+"ms");
+                    li.eq(len-i).css("transition","all 1s "+(i*50)+"ms");
+                }
 
 
 //右滑动事件
@@ -1142,67 +1142,92 @@ direct.directive('cnleft',function(){
 //             })
 
 //左滑动事件
-            touch.on(document,"swipeleft",function(){
-                //延迟隐藏 li
-                li.css("transform","translateX(-100%)");
-                mask.css({"display":"none"});
-            })
+                touch.on(document,"swipeleft",function(){
+                    //延迟隐藏 li
+                    li.css("transform","translateX(-100%)");
+                    mask.css({"display":"none"});
+                })
 
 //向上滑动事件，暂时当成mask的点击事件
 
-            touch.on(ul,"tap",function(){
-                //假设此时是上滑
-                shang()
-
-            })
-
-            function shang(){
-                var li = $(".mask li");
-                //操作dom节点
-                ul[0].appendChild(li.eq(0)[0]);
-
-            }
-
-
-            li.each(function(){
-                var index = $(this).index();
-                $(this).attr("i",index)
-                var num = index - 6;
-                touch.on($(this),"tap",function(){
-                    console.log($(this))
-                    // for(var i = 0 ; i < num ; i++){
-                    // 	shang();
-                    // }
-                })
-
-            })
-
-
-
-            var li2 = document.querySelectorAll("li");
-
-
-            for(var i = 0 ; i < li2.length ; i++){
-                li2[i].index = i;
-                console.log(li2[i])
-                touch.on(li2[i],"tap",function(){
-                    console.log(this)
-                    var index = this.index;
+                touch.on(ul,"tap",function(){
+                    //假设此时是上滑
+                    shang()
 
                 })
-            }
+
+                function shang(){
+                    var li = $(".mask li");
+                    //操作dom节点
+                    ul[0].appendChild(li.eq(0)[0]);
+
+                }
 
 
-            touch.on(ca,"touchstart",function(){
-                li.css("transform","translateX(0%)");
-                mask.css({"display":"block"});
-            })
+                li.each(function(){
+                    var index = $(this).index();
+                    $(this).attr("i",index)
+                    var num = index - 6;
+                    touch.on($(this),"tap",function(){
+                        // for(var i = 0 ; i < num ; i++){
+                        // 	shang();
+                        // }
+                    })
+
+                })
+
+
+
+                var li2 = document.querySelectorAll("li");
+
+
+                for(var i = 0 ; i < li2.length ; i++){
+                    li2[i].index = i;
+                    touch.on(li2[i],"tap",function(){
+                        console.log(this)
+                        var index = this.index;
+
+                    })
+                }
+
+                touch.on(ca,"tap",function(){
+                    // console.log(222,li,mask)
+                    li.css("transform","translateX(0%)");
+                    mask.css({"display":"block"});
+                })
 
                 // touch.on(mask,"touchstart",function(){
                 //     li.css("transform","translateX(-100%)");
                 //
                 // })
+            },200)
         }
     }
 })
-
+// watch页面
+ direct.directive('zz',function () {
+        return{
+            restrict:"AE",
+            templateUrl:"tpl/zz-sw.html",
+            link:function () {
+                var galleryTop = new Swiper('.gallery-top', {
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+                    spaceBetween: 10,
+                    loop:true,
+                    loopedSlides: 5 //looped slides should be the same
+                });
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    spaceBetween: 10,
+                    slidesPerView: 4,
+                    touchRatio: 0.2,
+                    loop:true,
+                    loopedSlides: 5, //looped slides should be the same
+                    slideToClickedSlide: true
+                });
+                galleryTop.params.control = galleryThumbs;
+                galleryThumbs.params.control = galleryTop;
+            }
+                
+        }
+    })

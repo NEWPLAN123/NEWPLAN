@@ -58,6 +58,23 @@ body{
 	margin-bottom: .86rem;
 	position: relative;
 }
+.item-mask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top :0;
+	z-index: 3;
+	border: 1px solid #E9E9E9;
+	border-radius: 10px;
+}
+.item-mask>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #E9E9E9;
+	border-radius: 10px;
+}
 .itemUp{
 	width: 100%;
 	height: 100%;
@@ -102,10 +119,14 @@ body{
 	float: none!important;
 	/*margin-right: .05rem;*/
 }
+.itemUp .xiangqing{
+	height:.9rem;
+	margin-bottom: .1rem;
+}
 .itemUp .p2{
 	font-size: .24rem;
 	margin-left: .86rem;
-	line-height: .36rem;
+	line-height: .4rem;
 	width: 4.9rem;
 	margin-bottom: .15rem;
 }
@@ -141,18 +162,27 @@ body{
 	color: #ccc;
 	margin-left: .12rem;
 }
-.infobox .fr .note{
-	margin-right:.6rem; 
+.infobox1 .fr .note{
+	padding-right:.6rem; 
 }
-.infobox .fr span{
+.infobox1 .fr span{
 	margin-left: .05rem;
 }
-.infobox em{
+.infobox1{
+	position: absolute;
+	left: 4.2rem;
+	top: 1.95rem;
+	font-size: .18rem;
+	z-index: 4;
+}
+.infobox1 .aa1{
+	float: left;
 	background: url(../images/zk_images/12.png) left top/contain no-repeat;
 	width: .28rem;
 	height: .28rem;
 }
-.infobox b{
+.infobox1 .aa2{
+	float: left;
 	background: url(../images/zk_images/13.png) left top/cover no-repeat;
 	width: .28rem;
 	height: .28rem;
