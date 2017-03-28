@@ -53,9 +53,9 @@ app.controller('c',function($scope){
 
 });
 
-// app.controller('kx_ctrl',function ($scope) {
-//     $scope.data=data;
-// })
+app.controller('kx_ctrl',function ($scope) {
+    $scope.data=data;
+})
 
 
 var aa=document.querySelector('#yi');

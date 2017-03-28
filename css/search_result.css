@@ -39,7 +39,9 @@
     margin: .5rem auto .8rem auto;
     box-shadow: 6px 6px 6px 6px #ECECEC;
     border-radius: 5px;
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
     z-index: 999;
 }
 
@@ -54,7 +56,6 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 3px 3px 3px 3px #ECECEC;
-
 
 }
 .kx_show_bg .kx_show .kx_designer_pic{
@@ -151,4 +152,5 @@
     width: 100%;
     height: auto;
     overflow: hidden;
+    padding-top: 3.5rem;
 }
