@@ -1124,7 +1124,6 @@ direct.directive('cnleft',function(){
             setTimeout(function(){
                 var mask = $(".mask");
                 var li = $(".mask li");
-                console.log(li)
                 var ul = $(".mask ul");
                 var ca=document.querySelector('.ca');
                 var len = li.length;

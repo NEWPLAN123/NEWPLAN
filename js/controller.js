@@ -139,15 +139,15 @@ ctrl.controller("shejishi",function ($scope,$http,$routeParams) {
 })
 
 //我的收藏页面的控制器
-ctrl.controller("shejishi",function ($scope,$http,$routeParams) {
-    $scope.lid= localStorage.getItem("lid") //获取到自己的lid
-    //根据设计师的lid找到对应的设计师信息
-    $http({
-        url:"php/get_follow.php?lid="+$scope.id,
-    }).then(function(data){
-        $scope.follow = data.data;
-    })
-})
+// ctrl.controller("shejishi",function ($scope,$http,$routeParams) {
+//     $scope.lid= localStorage.getItem("lid") //获取到自己的lid
+//     //根据设计师的lid找到对应的设计师信息
+//     $http({
+//         url:"php/get_follow.php?lid="+$scope.id,
+//     }).then(function(data){
+//         $scope.follow = data.data;
+//     })
+// })
 
 //APP页面的控制器
 ctrl.controller("cnindex",function ($scope,$http) {
