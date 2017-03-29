@@ -84,6 +84,18 @@ ctrl.controller("searchResult",function ($scope,$http) {
 // 搜索结果控制器
 
 
+//收藏控制器
+ctrl.controller("collection",function ($scope,$http) {
+    $scope.lid= localStorage.getItem("lid")
+    $http({
+        url:"php/get_worksByType.php?type=lname&val=app",
+    }).then(function(data){
+        $scope.app = data.data;
+    })
+});
+// 收藏控制器
+
+
 //WEB页面的控制器
 ctrl.controller("cnweb",function ($scope,$http) {
     $scope.lid= localStorage.getItem("lid")
