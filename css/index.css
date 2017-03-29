@@ -255,15 +255,13 @@
     height: 3.8rem;
     background: #fff;
     position: relative;
-    top:0;
-    left:0;
 }
 .cn-ban{
     position: absolute;
     width: 6.66rem;
     height: 2.5rem;
     background: #FEFEFE;
-    top: 1.13rem;
+    top: 0.2rem;
     left: 50%;
     margin-left: -3.33rem;
     z-index: 7;
@@ -272,11 +270,11 @@
 }
 .cn-bannertu{
     width: 6.16rem;
-    height: 2.13rem;
+    height: 3.13rem;
     position: absolute;
     left:50%;
     margin-left: -3.06rem;
-    top:0.5rem;
+    top:0;
     z-index: 8;
 }
 .cn-bannertu img{
@@ -287,7 +285,7 @@ width: 100%;
     margin-left: -3.04rem;
     top:1.18rem;
     width: 6.14rem;
-    height: 2.13rem;
+    height: 3.13rem;
     left:50%;
     z-index: 9999999999;
 }
