@@ -287,7 +287,7 @@ width: 100%;
     width: 6.14rem;
     height: 3.13rem;
     left:50%;
-    z-index: 9999999999;
+    z-index: 9;
 }
 .cn-lunbox img{
     width: 100%;
@@ -486,7 +486,7 @@ body,ul,li{
     position: absolute;
     left:0;
     top:0;
-    background:#fff  url("../images/cn/cncai.png") center center/100%;
+    background:  url("../images/cn/cncai.png") center center/100%;
     z-index:999;
     cursor: pointer;
 }
@@ -502,20 +502,20 @@ body,ul,li{
     position: absolute;
 }
 .cn-group .cn-yi{
-    background:#fff url("../images/cn/cnuser.png") no-repeat center center;
+    background: url("../images/cn/cnuser.png") no-repeat center center;
     background-size: 0.39rem 0.54rem;
 
 }
 .cn-group .cn-er{
-    background:#fff url("../images/cn/cnwa.png")no-repeat center center;
+    background: url("../images/cn/cnwa.png")no-repeat center center;
     background-size: 0.45rem 0.55rem;
 }
 .cn-group .cn-san{
-    background:#fff url("../images/cn/cnhphone.png")no-repeat center center;
+    background: url("../images/cn/cnhphone.png")no-repeat center center;
     background-size: 0.39rem 0.54rem;
 }
 .cn-group .cn-si{
-    background:#fff url("../images/cn/cnpc.png")no-repeat center center;
+    background: url("../images/cn/cnpc.png")no-repeat center center;
     background-size: 0.39rem 0.54rem;
 }
 .cn-group li {

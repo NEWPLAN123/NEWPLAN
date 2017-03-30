@@ -702,7 +702,6 @@ direct.directive("setwork",function(){
                 });
                 $("#sex1").click(function () {
                     var that = this;
-                    // console.log(1);
                     $("#sex-list1").eq(0).mobiscroll().treelist({
                         theme: "android-ics",
                         lang: "zh",
@@ -892,7 +891,7 @@ direct.directive("setwork",function(){
 
                     }
                 })
-            },200)
+            },200)//setTimeout
 
         }//else 已登录
         // }

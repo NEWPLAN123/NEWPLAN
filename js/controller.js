@@ -116,7 +116,6 @@ ctrl.controller("pinglun",function ($scope,$http,$routeParams) {
     }).then(function(data){
         $scope.work = data.data[0];
         $scope.manId = data.data[0].lid;
-        console.log($scope.work)
         //获取该作者的信息
         $http({
             url:"php/get_user.php?lid="+$scope.manId
@@ -127,7 +126,6 @@ ctrl.controller("pinglun",function ($scope,$http,$routeParams) {
         $http({
             url:"php/get_comment.php?cid="+$scope.cid
         }).then(function(data){
-            console.log(data.data)
             $scope.pinglun = data.data;
         })//http 3
     })//http 1
